@@ -1,0 +1,41 @@
+.markdown-section img {
+    display: block;
+    margin: 0 auto;
+}
+
+.localized-footer p {
+    font-size: 0.6em;
+    text-align: right;
+    font-style: italic;
+}
+
+a[href*="#cite"] {
+    vertical-align: super;
+    font-size: 0.8em;
+}
+
+a[title="查看运行效果"] {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #D91E18;
+    color: #F2F1EF;
+    border-radius: 3px;
+    border: 1px solid #CF000F;
+    box-shadow: 0px 3px 9px 2px #BFBFBF;
+    height: 2em;
+    width: 7em;
+    text-align: center;
+    margin-top: 5px;
+}
+
+a[title="查看运行效果"]:hover {
+    background-color: #F22613;
+    box-shadow: 0px 6px 9px 2px #BFBFBF;
+    text-decoration: none;
+}
+
+a[title="查看运行效果"]:active {
+    background-color: #D91E18;
+    box-shadow: 0px 3px 9px 2px #BFBFBF;
+    text-decoration: none;
+}
