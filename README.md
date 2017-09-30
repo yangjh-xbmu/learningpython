@@ -60,6 +60,52 @@ Python的创始人为Guido van Rossum。1989年圣诞节期间，在阿姆斯特
 
 Python支持多个平台，其中在Mac、类UNIX平台中已默认安装，Windows平台中的安装也非常简单，从官方网站下载安装包安装即可，注意安装时将Python所在目录添加到系统路径中即可。
 
+### 在MacOS 中安装Python 3
+在目前的MacOs中，内置的Python版本为2.7。如果要安装Python3，步骤如下：
+
+### 安装Xcode
+
+在终端中运行如下命令：
+``` bash
+xcode-select --install
+```
+
+### 安装Homebrew
+
+在终端中运行如下命令：
+
+``` bash
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Homebrew安装完后，使用vim或者其他编辑器将如下内容添加到`~/.profile`文件中。
+```
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+```
+
+### 安装Python3
+
+在终端中运行如下指令：
+
+``` bash
+brew install python3
+```
+
+### 使用Python3
+
+使用Homebrew安装Python3后，系统就有两个Python环境，如果要使用系统自带的Python2
+，则使用如下指令：
+
+``` bash
+python
+```
+
+而如果要使用Python3，则使用如下指令：
+
+``` bash
+python3
+```
+
 虽然Python自带编辑器，但其不够方便，推荐使用轻量级的编辑器Sublime Text。使用编辑器将文件保存成.py后缀，然后通过命令行调用即可执行，也可以在Sublime Text编辑器中使用编译命令（ctrl+b）查看运行结果。
 
 如在编辑器中键入如下内容：
@@ -72,6 +118,10 @@ print "hello world"
 
 或者通过命令行进入到脚本所在路径，键入脚本名称也可运行脚本。
 
+## 学习资源
+
+1. [简明Python教程](https://bop.molun.net/)
+1. [官方文档](https://www.python.org/doc/)
 
 
 
