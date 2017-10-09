@@ -1,8 +1,10 @@
 {
     "title": "Python基础",
     "author": "yangjh",
-    "links": {
-        "sidebar": {
+    "links":
+    {
+        "sidebar":
+        {
             "Home": "http://yangzh.cn"
         }
     },
@@ -18,14 +20,18 @@
         "-search",
         "search-pro",
         "collapsible-menu",
-        "bibtex-indexed-cite"
+        "bibtex-indexed-cite",
+        "-livereload"
     ],
 
-    "pluginsConfig": {
-        "theme-default": {
+    "pluginsConfig":
+    {
+        "theme-default":
+        {
             "showLevel": true
         },
-        "sharing": {
+        "sharing":
+        {
             "douban": false,
             "facebook": false,
             "google": false,
@@ -50,35 +56,42 @@
             ]
         },
 
-        "localized-footer": {
+        "localized-footer":
+        {
             "hline": true,
             "filename": "./FOOTER.md"
         },
 
-        "include-codeblock": {
+        "include-codeblock":
+        {
             "template": "ace",
             "unindent": true,
             "edit": false
         },
 
-        "quiz": {
-            "labels": {
+        "quiz":
+        {
+            "labels":
+            {
                 "check": "提交答案",
                 "showExplanation": "显示解释",
                 "showCorrect": "显示正确答案",
                 "explanationHeader": "释义"
             },
-            "text": {
+            "text":
+            {
                 "noChosen": "Choose at least one answer",
                 "incomplete": "Some correct answers are missing"
             },
-            "buttons": {
+            "buttons":
+            {
                 "showCorrect": true,
                 "showExplanation": true
             }
         },
 
-        "bibtex-indexed-cite": {
+        "bibtex-indexed-cite":
+        {
             "path": "./"
         }
     }
