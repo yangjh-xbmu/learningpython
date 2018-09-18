@@ -11,6 +11,7 @@ Python的创始人为Guido van Rossum。1989年圣诞节期间，在阿姆斯特
 截至目前，Python的版本为3.6.2，2017年7月17日发布。
 
 ## Python特点
+
 1. 简单 Python是一种代表简单主义思想的语言。阅读一个良好的Python程序就感觉像是在读英语一样。它使你能够专注于解决问题而不是去搞明白语言本身。
 2. 易学 Python很容易上手，一方面是由于Python有完善的说明文档，另一方面网络中有大量的教程，学习资源可谓丰富。本书的写作就参考了诸多网络教程。\cite{pythonguru，2015}
 3. 开源 开源意味着人们可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。Python有非常活跃的开源社区，来自世界各地的程序员不断完善着Python，如今Python拥有功能强大且门类齐全的扩展库。它可以帮助处理各种工作，包括正则表达式、文档生成、单元测试、线程、数据库、网页浏览器、CGI、FTP、电子邮件、XML、XML-RPC、HTML、WAV文件、密码系统、GUI（图形用户界面）、Tk和其他与系统有关的操作。Python语言及其众多的扩展库所构成的开发环境十分适合工程技术、科研人员处理实验数据、制作图表，甚至开发科学计算应用程序。
@@ -66,7 +67,8 @@ Python支持多个平台，其中在Mac、类UNIX平台中已默认安装，Wind
 ### 安装Xcode
 
 在终端中运行如下命令：
-``` bash
+
+```bash
 xcode-select --install
 ```
 
@@ -74,11 +76,12 @@ xcode-select --install
 
 在终端中运行如下命令：
 
-``` bash
+```bash
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 Homebrew安装完后，使用vim或者其他编辑器将如下内容添加到`~/.profile`文件中。
+
 ```
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 ```
@@ -87,7 +90,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 在终端中运行如下指令：
 
-``` bash
+```bash
 brew install python3
 ```
 
@@ -96,7 +99,7 @@ brew install python3
 使用Homebrew安装Python3后，系统就有两个Python环境，如果要使用系统自带的Python2
 ，则使用如下指令：
 
-``` bash
+```bash
 python
 ```
 
@@ -110,7 +113,7 @@ python3
 
 如在编辑器中键入如下内容：
 
-``` python
+```python
 print "hello world"
 ```
 
