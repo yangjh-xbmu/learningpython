@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>数字类型 · Python基础</title>
+        <title>循环 · Python基础</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -67,10 +67,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="operator.html" />
+    <link rel="next" href="oop.html" />
     
     
-    <link rel="prev" href="variable.html" />
+    <link rel="prev" href="function.html" />
     
 
     </head>
@@ -154,7 +154,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="numbers.html">
+        <li class="chapter " data-level="1.2.2" data-path="numbers.html">
             
                 <a href="numbers.html">
             
@@ -289,7 +289,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.11" data-path="loop.html">
+        <li class="chapter active" data-level="1.2.11" data-path="loop.html">
             
                 <a href="loop.html">
             
@@ -509,7 +509,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >数字类型</a>
+        <a href="." >循环</a>
     </h1>
 </div>
 
@@ -524,45 +524,79 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x6570;&#x5B57;&#x7C7B;&#x578B;">&#x6570;&#x5B57;&#x7C7B;&#x578B;</h2>
-<p>Python 3 &#x652F;&#x6301;3&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x3002;</p>
-<ol>
-<li>[int] &#x6574;&#x578B;&#x6570;&#x5B57;&#xFF0C;&#x6BD4;&#x5982;2015&#x3002;</li>
-<li>[float] &#x6D6E;&#x70B9;&#x578B;&#x6570;&#x5B57;&#xFF0C;&#x6BD4;&#x5982;3.14&#x3002;</li>
-<li>[complex] &#x590D;&#x6570;&#xFF0C;&#x6BD4;&#x5982;3+2j&#x3002;</li>
-</ol>
-<h3 id="&#x67E5;&#x770B;&#x53D8;&#x91CF;&#x7C7B;&#x578B;">&#x67E5;&#x770B;&#x53D8;&#x91CF;&#x7C7B;&#x578B;</h3>
-<p>Python &#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x51FD;&#x6570; type()&#x6765;&#x67E5;&#x770B;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x5728;Python&#x4E2D;&#xFF0C;&#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x4E9B;&#x9AD8;&#x6548;&#x5F3A;&#x5927;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF0C;&#x4F7F;&#x5F97;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x4E0D;&#x7528;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x8FDB;&#x884C;&#x7F16;&#x7A0B;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;Python&#x4E2D;&#x7684;&#x6BCF;&#x6837;&#x4E1C;&#x897F;&#x90FD;&#x662F;&#x5BF9;&#x8C61;&#x3002;&#x867D;&#x7136;Python&#x4E2D;&#x6CA1;&#x6709;&#x7C7B;&#x578B;&#x58F0;&#x660E;&#xFF0C;&#x4F46;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8BED;&#x6CD5;&#x51B3;&#x5B9A;&#x4E86;&#x521B;&#x5EFA;&#x548C;&#x4F7F;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x4E00;&#x65E6;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x5C31;&#x548C;&#x64CD;&#x4F5C;&#x96C6;&#x5408;&#x7ED1;&#x5B9A;&#x4E86;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x6240;&#x8C13;&#x7684;&#x52A8;&#x6001;&#x7C7B;&#x578B;&#x548C;&#x5F3A;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#x3002;&#x5373;Python&#x81EA;&#x52A8;&#x6839;&#x636E;&#x8868;&#x8FBE;&#x5F0F;&#x521B;&#x5EFA;&#x7C7B;&#x578B;&#xFF0C;&#x4E00;&#x65E6;&#x521B;&#x5EFA;&#x6210;&#x529F;&#xFF0C;&#x53EA;&#x80FD;&#x5BF9;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x9002;&#x5408;&#x8BE5;&#x7C7B;&#x578B;&#x7684;&#x6709;&#x6548;&#x64CD;&#x4F5C;&#x3002;</p>
-<pre><code class="lang-python">&gt;&gt;&gt; x = 12
-&gt;&gt;&gt; type(x)
- &lt;class &apos;int&apos;&gt;
+                                <h2 id="&#x5FAA;&#x73AF;">&#x5FAA;&#x73AF;</h2>
+<p>Python&#x53EA;&#x6709;&#x4E24;&#x79CD;&#x5FAA;&#x73AF;&#xFF1A;for&#x5FAA;&#x73AF;&#x548C;while&#x5FAA;&#x73AF;&#x3002;</p>
+<h3 id="for&#x5FAA;&#x73AF;">for&#x5FAA;&#x73AF;</h3>
+<p>for&#x5FAA;&#x73AF;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> iterable_object:
+   <span class="hljs-comment"># do something</span>
 </code></pre>
-<h3 id="&#x6574;&#x578B;">&#x6574;&#x578B;</h3>
-<p>&#x6574;&#x578B;&#xFF08;int&#xFF09;&#x5B57;&#x9762;&#x91CF;&#x5728;Python&#x4E2D;&#x5C5E;&#x4E8E;int&#x7C7B;&#x3002;</p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>i = <span class="hljs-number">100</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>i
-<span class="hljs-number">100</span>
+<p>&#x6240;&#x6709;&#x5728;for&#x5FAA;&#x73AF;&#x6216;&#x8005;while&#x5FAA;&#x73AF;&#x4E2D;&#x7684;&#x58F0;&#x660E;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x7F29;&#x8FDB;&#x503C;&#x3002;&#x5426;&#x5219;&#x4F1A;&#x51FA;&#x73B0;&#x8BED;&#x6CD5;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-python">mylist = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> mylist:
+    print(i)
 </code></pre>
-<p>&#x6570;&#x5B57;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5404;&#x79CD;&#x8FD0;&#x7B97;&#xFF0C;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-python"><span class="hljs-number">123</span> + <span class="hljs-number">345</span>
+<p>&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#x65F6;&#xFF0C;&#x503C;1&#x88AB;&#x4F20;&#x9012;&#x7ED9;i&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x5FAA;&#x73AF;&#x65F6;&#xFF0C;&#x503C;2&#x88AB;&#x4F20;&#x9012;&#x7ED9;i&#x3002;&#x5FAA;&#x73AF;&#x4E00;&#x76F4;&#x5230;&#x5217;&#x8868;&#x53D8;&#x91CF;mylist&#x6CA1;&#x6709;&#x66F4;&#x591A;&#x5143;&#x7D20;&#x65F6;&#x505C;&#x6B62;&#x3002;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-number">1</span>
+<span class="hljs-number">2</span>
+<span class="hljs-number">3</span>
+<span class="hljs-number">4</span>
 </code></pre>
-<p>&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6570;&#x5B66;&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#x8FD0;&#x7B97;&#xFF0C;&#x5982;&#x4EA7;&#x751F;&#x968F;&#x673A;&#x6570;&#x7B49;&#x7B49;&#xFF1A;</p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> random
-print(random.random())
+<h3 id="&#x8303;&#x56F4;&#x5FAA;&#x73AF;">&#x8303;&#x56F4;&#x5FAA;&#x73AF;</h3>
+<p>range()&#x51FD;&#x6570;&#x80FD;&#x591F;&#x6307;&#x5B9A;&#x5FAA;&#x73AF;&#x7684;&#x8D77;&#x59CB;&#x503C;&#x548C;&#x7ED3;&#x675F;&#x503C;&#xFF0C;&#x4ECE;&#x800C;&#x8BA9;&#x5FAA;&#x73AF;&#x4F53;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x8303;&#x56F4;&#x5185;&#x5FAA;&#x73AF;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):
+    print(i)                    <span class="hljs-comment"># 0-9</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>):
+    print(i)                    <span class="hljs-comment"># 1-9</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,<span class="hljs-number">10</span>,<span class="hljs-number">2</span>):
+    print(i)                    <span class="hljs-comment"># 1,3,5,7</span>
 </code></pre>
-<p>import&#x8868;&#x793A;&#x5F15;&#x5165;&#x6A21;&#x5757;&#xFF0C;import random&#x5C31;&#x662F;&#x5F15;&#x5165;&#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;&#x3002;</p>
-<h3 id="&#x6D6E;&#x70B9;&#x7C7B;&#x578B;">&#x6D6E;&#x70B9;&#x7C7B;&#x578B;</h3>
-<p>&#x6D6E;&#x70B9;&#x6570;&#xFF08;float&#xFF09;&#x662F;&#x6307;&#x6709;&#x5C0F;&#x6570;&#x70B9;&#x7684;&#x6570;&#x5B57;&#x3002;</p>
-<pre><code class="lang-python">&gt;&gt;&gt; f = 12.3
-&gt;&gt;&gt; type(f)
-&lt;class &apos;float&apos;&gt;
+<p>range()&#x51FD;&#x6570;&#x53EA;&#x6709;1&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x4ECE;0&#x5F00;&#x59CB;&#x5FAA;&#x73AF;&#xFF1B;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x8D77;&#x59CB;&#x503C;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x7ED3;&#x675F;&#x503C;&#xFF1B;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x8868;&#x793A;&#x5FAA;&#x73AF;&#x6B65;&#x957F;&#x3002;</p>
+<h3 id="while&#x5FAA;&#x73AF;">while&#x5FAA;&#x73AF;</h3>
+<p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">while</span> condition:
+    <span class="hljs-comment"># do something</span>
 </code></pre>
-<h3 id="&#x590D;&#x6570;">&#x590D;&#x6570;</h3>
-<p>&#x590D;&#x6570;&#xFF08;Complex number&#xFF09;&#x7531;&#x5B9E;&#x6570;&#x548C;&#x865A;&#x6570;&#x4E24;&#x90E8;&#x5206;&#x6784;&#x6210;&#xFF0C;&#x865A;&#x6570;&#x7528;j&#x8868;&#x793A;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x590D;&#x6570;&#xFF1A;</p>
-<pre><code class="lang-python">&gt;&gt;&gt; x = 2+3j
-&gt;&gt;&gt; type(x)
-&lt;class &apos;complex&apos;&gt;
+<p>While&#x5FAA;&#x73AF;&#x4F1A;&#x4E00;&#x76F4;&#x6267;&#x884C;&#x5FAA;&#x73AF;&#x4F53;&#x5185;&#x90E8;&#x7684;&#x58F0;&#x660E;&#xFF0C;&#x76F4;&#x5230;&#x6761;&#x4EF6;&#x53D8;&#x6210;false&#x3002;&#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x90FD;&#x4F1A;&#x68C0;&#x67E5;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x771F;&#xFF0C;&#x5C31;&#x7EE7;&#x7EED;&#x5FAA;&#x73AF;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-python">count = <span class="hljs-number">0</span>
+
+<span class="hljs-keyword">while</span> count &lt; <span class="hljs-number">10</span>:
+    print(count)
+    count += <span class="hljs-number">1</span>
 </code></pre>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x5C06;&#x4F1A;&#x6253;&#x5370;&#x51FA;0-9&#xFF0C;&#x76F4;&#x5230;count&#x7B49;&#x4E8E;10&#x3002;</p>
+<h3 id="&#x4E2D;&#x65AD;&#x5FAA;&#x73AF;">&#x4E2D;&#x65AD;&#x5FAA;&#x73AF;</h3>
+<p>&#x4F7F;&#x7528;break&#x8BED;&#x53E5;&#xFF0C;&#x53EF;&#x4EE5;&#x4E2D;&#x65AD;&#x5FAA;&#x73AF;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-python">count = <span class="hljs-number">0</span>
+
+<span class="hljs-keyword">while</span> count &lt; <span class="hljs-number">10</span>:
+    count += <span class="hljs-number">1</span>
+    <span class="hljs-keyword">if</span> count == <span class="hljs-number">5</span>:
+        <span class="hljs-keyword">break</span>
+    print(<span class="hljs-string">&quot;inside loop&quot;</span>, count)
+
+print(<span class="hljs-string">&quot;out of while loop&quot;</span>)
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-python">inside loop <span class="hljs-number">1</span>
+inside loop <span class="hljs-number">2</span>
+inside loop <span class="hljs-number">3</span>
+inside loop <span class="hljs-number">4</span>
+out of <span class="hljs-keyword">while</span> loop
+</code></pre>
+<h3 id="&#x7EE7;&#x7EED;&#x5FAA;&#x73AF;">&#x7EE7;&#x7EED;&#x5FAA;&#x73AF;</h3>
+<p>&#x5F53;&#x5FAA;&#x73AF;&#x4F53;&#x5185;&#x90E8;&#x51FA;&#x73B0;continue&#x58F0;&#x660E;&#x65F6;&#xFF0C;&#x4F1A;&#x7ED3;&#x675F;&#x672C;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;&#x5FAA;&#x73AF;&#x4F53;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#xFF0C;&#x5F00;&#x59CB;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-python">count = <span class="hljs-number">0</span>
+
+<span class="hljs-keyword">while</span> count &lt; <span class="hljs-number">10</span>:
+    count += <span class="hljs-number">1</span>
+    <span class="hljs-keyword">if</span> count % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">continue</span>
+    print(count)
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5C06;&#x6253;&#x5370;&#x51FA;1&#xFF0C;3&#xFF0C;5&#xFF0C;7&#xFF0C;9&#x3002;</p>
 <p><div id="page-footer" class="localized-footer"><hr><p><em>By <a href="http://yangzh.cn" target="_blank">yangzh</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03;</em></p>
 </div></p>
 
@@ -592,12 +626,12 @@ print(random.random())
 
             
                 
-                <a href="variable.html" class="navigation navigation-prev " aria-label="Previous page: 变量">
+                <a href="function.html" class="navigation navigation-prev " aria-label="Previous page: 函数">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="operator.html" class="navigation navigation-next " aria-label="Next page: 运算符">
+                <a href="oop.html" class="navigation navigation-next " aria-label="Next page: 面向对象编程">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -608,7 +642,7 @@ print(random.random())
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数字类型","level":"1.2.2","depth":2,"next":{"title":"运算符","level":"1.2.3","depth":2,"path":"operator.md","ref":"operator.md","articles":[]},"previous":{"title":"变量","level":"1.2.1","depth":2,"path":"variable.md","ref":"variable.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn"}},"gitbook":"*"},"file":{"path":"numbers.md","mtime":"2017-10-09T06:29:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-18T06:26:11.343Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"循环","level":"1.2.11","depth":2,"next":{"title":"面向对象编程","level":"1.3","depth":1,"path":"oop.md","ref":"oop.md","articles":[{"title":"类和对象","level":"1.3.1","depth":2,"path":"class.md","ref":"class.md","articles":[]},{"title":"操作符重载","level":"1.3.2","depth":2,"path":"overload.md","ref":"overload.md","articles":[]},{"title":"继承和多态","level":"1.3.3","depth":2,"path":"inheritance.md","ref":"inheritance.md","articles":[]}]},"previous":{"title":"函数","level":"1.2.10","depth":2,"path":"function.md","ref":"function.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn"}},"gitbook":"*"},"file":{"path":"loop.md","mtime":"2017-10-09T06:29:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-18T06:26:11.343Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
