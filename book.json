@@ -20,7 +20,6 @@
         "-search",
         "search-pro",
         "collapsible-menu",
-        "bibtex-indexed-cite",
         "-livereload"
     ],
 
@@ -88,11 +87,6 @@
                 "showCorrect": true,
                 "showExplanation": true
             }
-        },
-
-        "bibtex-indexed-cite":
-        {
-            "path": "./"
         }
     }
 }
