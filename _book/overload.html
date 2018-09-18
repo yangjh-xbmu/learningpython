@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>数字类型 · Python基础</title>
+        <title>操作符重载 · Python基础</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -67,10 +67,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="operator.html" />
+    <link rel="next" href="inheritance.html" />
     
     
-    <link rel="prev" href="variable.html" />
+    <link rel="prev" href="class.html" />
     
 
     </head>
@@ -154,7 +154,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="numbers.html">
+        <li class="chapter " data-level="1.2.2" data-path="numbers.html">
             
                 <a href="numbers.html">
             
@@ -340,7 +340,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="overload.html">
+        <li class="chapter active" data-level="1.3.2" data-path="overload.html">
             
                 <a href="overload.html">
             
@@ -509,7 +509,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >数字类型</a>
+        <a href="." >操作符重载</a>
     </h1>
 </div>
 
@@ -524,45 +524,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x6570;&#x5B57;&#x7C7B;&#x578B;">&#x6570;&#x5B57;&#x7C7B;&#x578B;</h2>
-<p>Python 3 &#x652F;&#x6301;3&#x79CD;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x3002;</p>
-<ol>
-<li>[int] &#x6574;&#x578B;&#x6570;&#x5B57;&#xFF0C;&#x6BD4;&#x5982;2015&#x3002;</li>
-<li>[float] &#x6D6E;&#x70B9;&#x578B;&#x6570;&#x5B57;&#xFF0C;&#x6BD4;&#x5982;3.14&#x3002;</li>
-<li>[complex] &#x590D;&#x6570;&#xFF0C;&#x6BD4;&#x5982;3+2j&#x3002;</li>
-</ol>
-<h3 id="&#x67E5;&#x770B;&#x53D8;&#x91CF;&#x7C7B;&#x578B;">&#x67E5;&#x770B;&#x53D8;&#x91CF;&#x7C7B;&#x578B;</h3>
-<p>Python &#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x51FD;&#x6570; type()&#x6765;&#x67E5;&#x770B;&#x53D8;&#x91CF;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x5728;Python&#x4E2D;&#xFF0C;&#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x4E9B;&#x9AD8;&#x6548;&#x5F3A;&#x5927;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF0C;&#x4F7F;&#x5F97;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x4E0D;&#x7528;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#x8FDB;&#x884C;&#x7F16;&#x7A0B;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;Python&#x4E2D;&#x7684;&#x6BCF;&#x6837;&#x4E1C;&#x897F;&#x90FD;&#x662F;&#x5BF9;&#x8C61;&#x3002;&#x867D;&#x7136;Python&#x4E2D;&#x6CA1;&#x6709;&#x7C7B;&#x578B;&#x58F0;&#x660E;&#xFF0C;&#x4F46;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x8BED;&#x6CD5;&#x51B3;&#x5B9A;&#x4E86;&#x521B;&#x5EFA;&#x548C;&#x4F7F;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x4E00;&#x65E6;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x5C31;&#x548C;&#x64CD;&#x4F5C;&#x96C6;&#x5408;&#x7ED1;&#x5B9A;&#x4E86;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x6240;&#x8C13;&#x7684;&#x52A8;&#x6001;&#x7C7B;&#x578B;&#x548C;&#x5F3A;&#x7C7B;&#x578B;&#x8BED;&#x8A00;&#x3002;&#x5373;Python&#x81EA;&#x52A8;&#x6839;&#x636E;&#x8868;&#x8FBE;&#x5F0F;&#x521B;&#x5EFA;&#x7C7B;&#x578B;&#xFF0C;&#x4E00;&#x65E6;&#x521B;&#x5EFA;&#x6210;&#x529F;&#xFF0C;&#x53EA;&#x80FD;&#x5BF9;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x9002;&#x5408;&#x8BE5;&#x7C7B;&#x578B;&#x7684;&#x6709;&#x6548;&#x64CD;&#x4F5C;&#x3002;</p>
-<pre><code class="lang-python">&gt;&gt;&gt; x = 12
-&gt;&gt;&gt; type(x)
- &lt;class &apos;int&apos;&gt;
+                                <h2 id="&#x64CD;&#x4F5C;&#x7B26;&#x91CD;&#x8F7D;">&#x64CD;&#x4F5C;&#x7B26;&#x91CD;&#x8F7D;</h2>
+<p>&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x5DF2;&#x7ECF;&#x770B;&#x5230;+&#x8FD0;&#x7B97;&#x7B26;&#x4E0D;&#x4F46;&#x80FD;&#x52A0;&#x6570;&#x5B57;&#xFF0C;&#x8FD8;&#x80FD;&#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8FD9;&#x4E4B;&#x6240;&#x4EE5;&#x53EF;&#x80FD;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;<code>+</code>&#x8FD0;&#x7B97;&#x7B26;&#x5728;int&#x7C7B;&#x548C;str&#x7C7B;&#x4E2D;&#x90FD;&#x88AB;&#x91CD;&#x8F7D;&#x3002;&#x8FD0;&#x7B97;&#x7B26;&#x5B9E;&#x9645;&#x4E0A;&#x5BF9;&#x5E94;&#x7740;&#x7C7B;&#x4E2D;&#x76F8;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x4E3A;&#x8FD0;&#x7B97;&#x7B26;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x6240;&#x8C13;&#x7684;&#x8FD0;&#x7B97;&#x7B26;&#x91CD;&#x8F7D;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x4E3A;&#x8BA9;&#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#x80FD;&#x4F7F;&#x7528;<code>+</code>&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x540D;&#x53EB;__add__&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x770B;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> math
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, radius)</span>:</span>
+        self.__radius = radius
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setRadius</span><span class="hljs-params">(self, radius)</span>:</span>
+        self.__radius = radius
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getRadius</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> self.__radius
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">area</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> math.pi * self.__radius ** <span class="hljs-number">2</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__add__</span><span class="hljs-params">(self, another_circle)</span>:</span>
+        <span class="hljs-keyword">return</span> Circle(self.__radius + another_circle.__radius)
+
+c1 = Circle(<span class="hljs-number">4</span>)
+print(c1.getRadius())
+
+c2 = Circle(<span class="hljs-number">5</span>)
+print(c2.getRadius())
+
+c3 = c1 + c2  <span class="hljs-comment"># &#x4E4B;&#x6240;&#x4EE5;&#x80FD;&#x4F7F;&#x7528;&#x52A0;&#x6CD5;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x662F;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E86;__add__&#x65B9;&#x6CD5;</span>
+print(c3.getRadius())
 </code></pre>
-<h3 id="&#x6574;&#x578B;">&#x6574;&#x578B;</h3>
-<p>&#x6574;&#x578B;&#xFF08;int&#xFF09;&#x5B57;&#x9762;&#x91CF;&#x5728;Python&#x4E2D;&#x5C5E;&#x4E8E;int&#x7C7B;&#x3002;</p>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>i = <span class="hljs-number">100</span>
-<span class="hljs-meta">&gt;&gt;&gt; </span>i
-<span class="hljs-number">100</span>
+<p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E3A;&#x7C7B;&#x6DFB;&#x52A0;&#x4E86;__add__&#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x5141;&#x8BB8;&#x4F7F;&#x7528;+&#x8FD0;&#x7B97;&#x7B26;&#x5BF9;&#x4E24;&#x4E2A;circle&#x5BF9;&#x8C61;&#x6C42;&#x548C;&#x3002;&#x5728;__add__&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x8FD4;&#x56DE;&#x7ED9;&#x8C03;&#x7528;&#x8005;&#x3002;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-number">4</span>
+<span class="hljs-number">5</span>
+<span class="hljs-number">9</span>
 </code></pre>
-<p>&#x6570;&#x5B57;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x5404;&#x79CD;&#x8FD0;&#x7B97;&#xFF0C;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-python"><span class="hljs-number">123</span> + <span class="hljs-number">345</span>
-</code></pre>
-<p>&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6570;&#x5B66;&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#x8FD0;&#x7B97;&#xFF0C;&#x5982;&#x4EA7;&#x751F;&#x968F;&#x673A;&#x6570;&#x7B49;&#x7B49;&#xFF1A;</p>
-<pre><code class="lang-python"><span class="hljs-keyword">import</span> random
-print(random.random())
-</code></pre>
-<p>import&#x8868;&#x793A;&#x5F15;&#x5165;&#x6A21;&#x5757;&#xFF0C;import random&#x5C31;&#x662F;&#x5F15;&#x5165;&#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;&#x3002;</p>
-<h3 id="&#x6D6E;&#x70B9;&#x7C7B;&#x578B;">&#x6D6E;&#x70B9;&#x7C7B;&#x578B;</h3>
-<p>&#x6D6E;&#x70B9;&#x6570;&#xFF08;float&#xFF09;&#x662F;&#x6307;&#x6709;&#x5C0F;&#x6570;&#x70B9;&#x7684;&#x6570;&#x5B57;&#x3002;</p>
-<pre><code class="lang-python">&gt;&gt;&gt; f = 12.3
-&gt;&gt;&gt; type(f)
-&lt;class &apos;float&apos;&gt;
-</code></pre>
-<h3 id="&#x590D;&#x6570;">&#x590D;&#x6570;</h3>
-<p>&#x590D;&#x6570;&#xFF08;Complex number&#xFF09;&#x7531;&#x5B9E;&#x6570;&#x548C;&#x865A;&#x6570;&#x4E24;&#x90E8;&#x5206;&#x6784;&#x6210;&#xFF0C;&#x865A;&#x6570;&#x7528;j&#x8868;&#x793A;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x590D;&#x6570;&#xFF1A;</p>
-<pre><code class="lang-python">&gt;&gt;&gt; x = 2+3j
-&gt;&gt;&gt; type(x)
-&lt;class &apos;complex&apos;&gt;
-</code></pre>
+<p>&#x5728;Python&#x4E2D;&#xFF0C;&#x9664;__add__&#x65B9;&#x6CD5;&#x5BF9;&#x5E94;<code>+</code>&#x8FD0;&#x7B97;&#x7B26;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x5176;&#x4ED6;&#x80FD;&#x591F;&#x91CD;&#x8F7D;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;&#x5982;__mul__&#x3001;__sub__&#x7B49;&#x7B49;&#x3002;</p>
 <p><div id="page-footer" class="localized-footer"><hr><p><em>By <a href="http://yangzh.cn" target="_blank">yangzh</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03;</em></p>
 </div></p>
 
@@ -592,12 +590,12 @@ print(random.random())
 
             
                 
-                <a href="variable.html" class="navigation navigation-prev " aria-label="Previous page: 变量">
+                <a href="class.html" class="navigation navigation-prev " aria-label="Previous page: 类和对象">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="operator.html" class="navigation navigation-next " aria-label="Next page: 运算符">
+                <a href="inheritance.html" class="navigation navigation-next " aria-label="Next page: 继承和多态">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -608,7 +606,7 @@ print(random.random())
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数字类型","level":"1.2.2","depth":2,"next":{"title":"运算符","level":"1.2.3","depth":2,"path":"operator.md","ref":"operator.md","articles":[]},"previous":{"title":"变量","level":"1.2.1","depth":2,"path":"variable.md","ref":"variable.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn"}},"gitbook":"*"},"file":{"path":"numbers.md","mtime":"2017-10-09T06:29:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-18T06:27:20.330Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"操作符重载","level":"1.3.2","depth":2,"next":{"title":"继承和多态","level":"1.3.3","depth":2,"path":"inheritance.md","ref":"inheritance.md","articles":[]},"previous":{"title":"类和对象","level":"1.3.1","depth":2,"path":"class.md","ref":"class.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","localized-footer","include-codeblock","ace","quiz","-lunr","-search","search-pro","collapsible-menu","-livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-menu":{},"ace":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"filename":"./FOOTER.md","hline":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"quiz":{"labels":{"check":"提交答案","showExplanation":"显示解释","showCorrect":"显示正确答案","explanationHeader":"释义"},"text":{"noChosen":"Choose at least one answer","incomplete":"Some correct answers are missing"},"buttons":{"showCorrect":true,"showExplanation":true}},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn"}},"gitbook":"*"},"file":{"path":"overload.md","mtime":"2018-09-18T06:27:14.376Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-18T06:27:20.330Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
