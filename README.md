@@ -105,9 +105,29 @@ python
 
 而如果要使用Python3，则使用如下指令：
 
-``` bash
+```bash
 python3
 ```
+
+### 使用python虚拟环境
+
+虽然使用python3这样的工具，能够使用python3解释器，但还不够方便，尤其是开发人员需要在不同的版本中安装扩展包时。因此，python提供了创建虚拟环境的工具enev，例如：
+
+```bash
+python3.7 -m venv python37
+```
+
+上面的命令将在当前目录中创建名为`python37`的目录，进入该目录后，运行：
+
+```bash
+source bin/activate
+```
+
+就会激活该虚拟环境，命令后会出现`(python37) `这样的提示符。
+
+在该目录中运行`deactivate`则会退出虚拟环境。
+
+### 编辑器
 
 虽然Python自带编辑器，但其不够方便，推荐使用轻量级的编辑器Sublime Text。使用编辑器将文件保存成.py后缀，然后通过命令行调用即可执行，也可以在Sublime Text编辑器中使用编译命令（ctrl+b）查看运行结果。
 
