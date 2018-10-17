@@ -24,4 +24,5 @@
 * [正则表达式](regular.md)
 -------
 * [flask](flask.md)
+    *[安装](flask/install.md)
 * [参考文献](References.md)

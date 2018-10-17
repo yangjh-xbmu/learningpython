@@ -145,6 +145,3 @@ print "hello world"
 
 1. [简明Python教程](https://bop.molun.net/)
 1. [官方文档](https://www.python.org/doc/)
-
-
-
