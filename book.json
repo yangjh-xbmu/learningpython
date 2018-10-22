@@ -10,7 +10,6 @@
     "plugins": [
         "-sharing",
         "sharing-plus",
-        "localized-footer",
         "include-codeblock",
         "ace",
         "-lunr",
