@@ -1,0 +1,63 @@
+.markdown-section img {
+    display: block;
+    margin: 0 auto;
+}
+
+.markdown-section h2:before {
+    /*内容显示为：计数器h2counter的值转换为中文数字格式+顿号，格式：一、*/
+    content: counter(h2counter, cjk-ideographic) '\3001';
+}
+
+.markdown-section h2 {
+    /*重置计数器h3counter的值*/
+    counter-reset: h3counter;
+    /*计数器h2counter的值增加1*/
+    counter-increment: h2counter;
+}
+
+.markdown-section h3:before {
+    /*内容显示为：计数器h2counter的值+点+计数器h3counter的值，格式：1.1*/
+    content: counter(h2counter) "." counter(h3counter) " ";
+}
+
+.markdown-section h3 {
+    /*计数器h3counter的值增加1*/
+    counter-increment: h3counter;
+}
+
+.localized-footer p {
+    font-size: 0.6em;
+    text-align: right;
+    font-style: italic;
+}
+
+a[href*="#cite"] {
+    vertical-align: super;
+    font-size: 0.8em;
+}
+
+a[title="查看运行效果"] {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #D91E18;
+    color: #F2F1EF;
+    border-radius: 3px;
+    border: 1px solid #CF000F;
+    box-shadow: 0px 3px 9px 2px #BFBFBF;
+    height: 2em;
+    width: 7em;
+    text-align: center;
+    margin-top: 5px;
+}
+
+a[title="查看运行效果"]:hover {
+    background-color: #F22613;
+    box-shadow: 0px 6px 9px 2px #BFBFBF;
+    text-decoration: none;
+}
+
+a[title="查看运行效果"]:active {
+    background-color: #D91E18;
+    box-shadow: 0px 3px 9px 2px #BFBFBF;
+    text-decoration: none;
+}
