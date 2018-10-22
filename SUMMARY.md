@@ -1,6 +1,9 @@
 # Summary
 
 * [简介](README.md)
+
+## 语法
+
 * [语法基础](syntax.md)
   * [变量](variable.md)
   * [数字类型](numbers.md)
@@ -20,12 +23,12 @@
 * [异常处理](exception.md)
 * [模块](module.md)
 
--------
+## 数据抓取
 
 * [网络爬虫](spider.md)
 * [正则表达式](regular.md)
 
--------
+## 网络应用开发
 
 * [flask](flask.md)
     *[安装](flask/install.md)
