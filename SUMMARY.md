@@ -21,6 +21,7 @@
   * [操作符重载](syntax/overload.md)
   * [继承和多态](syntax/inheritance.md)
 * [异常处理](syntax/exception.md)
+* [装饰器](syntax/decorator.md)
 * [模块](syntax/module.md)
 
 ## 数据抓取

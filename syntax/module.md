@@ -1,4 +1,3 @@
-
 # 模块
 
 Python模块是一个包含有函数、变量、类和常量等等内容的python文件。模块帮助我们将相关的代码组织在一起，例如math模块拥有数学相关的函数。
@@ -40,6 +39,7 @@ i am from mymodule.py
 from mymodule import foo
 print(foo)
 ```
+
 上述代码的运行结果为100。
 
 当使用from improt语句导入特定内容后，访问这些内容就不需要再使用模块名了。
