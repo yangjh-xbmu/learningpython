@@ -62,6 +62,7 @@ Python的创始人为Guido van Rossum。1989年圣诞节期间，在阿姆斯特
 Python支持多个平台，其中在Mac、类UNIX平台中已默认安装，Windows平台中的安装也非常简单，从官方网站下载安装包安装即可，注意安装时将Python所在目录添加到系统路径中即可。
 
 ### 在MacOS 中安装Python 3
+
 在目前的MacOs中，内置的Python版本为2.7。如果要安装Python3，步骤如下：
 
 ### 安装Xcode
@@ -77,12 +78,12 @@ xcode-select --install
 在终端中运行如下命令：
 
 ```bash
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 Homebrew安装完后，使用vim或者其他编辑器将如下内容添加到`~/.profile`文件中。
 
-```
+```bash
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 ```
 

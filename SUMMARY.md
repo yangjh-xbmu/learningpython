@@ -28,6 +28,5 @@
 -------
 
 * [flask](flask.md)
-  *[安装](flask/install.md)
-  *[应用的基本结构](flask/structure.md)
-* [参考文献](References.md)
+    *[安装](flask/install.md)
+    *[应用的基本结构](flask/structure.md)
