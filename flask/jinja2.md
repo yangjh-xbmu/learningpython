@@ -71,10 +71,6 @@ def user_t(name):
 | title      | 每个首字母大写   |
 | trim       | 删除收尾空白字符 |
 | striptags  | 删除HTML标签     |
-  
-## 参考资料
-
-1. [Jinja2中文手册](http://docs.jinkan.org/docs/jinja2/)
 
 ### 控制结构
 
@@ -82,7 +78,7 @@ Jinja2 提供了灵活的多种控制结构，用来改变模板的渲染流�
 
 ### 分支
 
-```html
+```django
 {% if user %}
     hello,{{ user }}!
 {% esle %}
@@ -92,10 +88,14 @@ Jinja2 提供了灵活的多种控制结构，用来改变模板的渲染流�
 
 ### 循环
 
-```html
+```django
 <ul>
     {% for comment in comments %}
         <li>{{ comment }}</li>
     {% endfor %}
 </ul>
 ```
+
+## 参考资料
+
+1. [Jinja2中文手册](http://docs.jinkan.org/docs/jinja2/)
