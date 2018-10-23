@@ -96,6 +96,65 @@ Jinja2 提供了灵活的多种控制结构，用来改变模板的渲染流�
 </ul>
 ```
 
+### 宏
+
+Jinja2中的宏类似Python中的函数。例如定义宏：
+
+```django
+{% macro render_comment(comment) %}
+    <li>{{ comment }}</li>
+{% endmacro %}
+```
+
+使用宏：
+
+```django
+{{render_comment(comment)}}
+```
+
+宏还可以单独存放，然后在需要使用的模板中导入：
+
+```django
+{% import 'macros.html' as macros %}
+{{ macros.render_comment(comment)}}
+```
+
+### 引用
+
+需要在多处重复使用的模板代码，可以单独存放，然后在需要使用的地方引入：
+
+```django
+{% include 'common.html' %}
+```
+
+### 块
+
+除了引入外，Jinja2模板引擎还可以继承。首先，定义可重用的区块（使用`block`和`endblock`指令），比如新建一个名为`base.html`的基础模板：
+
+```django
+<html>
+    <head>
+    {% block head %}
+    {% endblock %}
+    </head>
+    <body>
+    {% block body %}
+    {% endblock %}
+    </body>
+</html>
+```
+
+基础模板中定义的区块可以在衍生模板中覆盖：
+
+```django
+{% extends 'base.html' %}
+{% block body %}
+<h1>Hello，world!</h1>
+{% endblock %}
+```
+
+extends指令声明该模板继承自哪个基础模板。
+
 ## 参考资料
 
 1. [Jinja2中文手册](http://docs.jinkan.org/docs/jinja2/)
