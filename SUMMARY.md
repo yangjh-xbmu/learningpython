@@ -34,4 +34,4 @@
 * [Flask](flask/flask.md)
   * [安装Flask](flask/install.md)
   * [Flask应用的基本结构](flask/structure.md)
-  * [Jinja2模板](flask/jinja2.md)
+  * [Jinja2模板](flask/jinja.md)
