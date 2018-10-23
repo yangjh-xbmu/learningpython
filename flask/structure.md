@@ -28,7 +28,7 @@ app = Flask(__name__)
 
 ## 路由和视图函数
 
-处理URL和函数之间关系的程序成为**路由**，用来指定特定URL的请求，要求运行哪些代码。在Flask中最简便的定义路由的方式，就是使用app.route装饰器，例如：
+处理URL和函数之间关系的程序成为**路由**，用来指定特定URL的请求，要求运行哪些代码。在Flask中最简便的定义路由的方式，就是使用`app.route`装饰器，例如：
 
 ```python
 @app.route('/')
@@ -36,11 +36,11 @@ def index():
     return 'hello'
 ```
 
-上例中，定义了对根目录（`/`）的访问，都交给index()函数处理，类似index()处理入站请求的函数称为**视图函数**。
+上例中，定义了对根目录（`/`）的访问，都交给`index()`函数处理，类似`index()`处理入站请求的函数称为**视图函数**。
 
 ### 动态路由
 
-在实际应用中，很多地址中都包含可变部分，Flask要定义动态路由，只需要在app.route装饰器中使用特殊语法，如：
+在实际应用中，很多地址中都包含可变部分，Flask要定义动态路由，只需要在`app.route`装饰器中使用特殊语法，如：
 
 ```python
 @app.route('/user/<name>')
@@ -52,7 +52,7 @@ def user(name):
 
 ## Web开发服务器
 
-Flask自带Web开发服务器，通过flask run命令启动。如运行之前的hello.py应用，可在虚拟环境中启动Web服务器：
+Flask自带Web开发服务器，通过`flask run`命令启动。如运行之前的`hello.py`应用，可在虚拟环境中启动Web服务器：
 
 ```bash
 export FLASK_APP=hello.py
