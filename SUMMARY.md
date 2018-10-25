@@ -40,3 +40,4 @@
 ## 社会网络分析
 
 * [社会网络分析](sna/README.md)
+  * [社会网络分析](sna/graphtheory.md)
