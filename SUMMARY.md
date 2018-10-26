@@ -40,4 +40,6 @@
 ## 社会网络分析
 
 * [社会网络分析](sna/README.md)
-  * [社会网络分析](sna/graphtheory.md)
+  * [图论](sna/graphtheory.md)
+  * [中心性、权力与瓶颈](sna/centrality.md)
+  * [NetworkX](sna/NetworkX.md)
