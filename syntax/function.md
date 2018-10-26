@@ -150,6 +150,7 @@ named_args(name='jim', greeting='Hello')
 named_args(greeting='Hello', name='jim')
 named_args('jim', greeting='hello')
 ```
+
 上述代码运行结果都是“hello jim"。
 
 关键字参数使用“name=value”的名称、值对传递数据，正如上面代码演示的那样，使用关键字参数的时候，参数的顺序是可以调换的，而且位置参数和关键字参数可以混合使用（只能先使用位置参数，后使用关键字参数）。
@@ -209,3 +210,24 @@ Prints the maximum of two numbers.
 该文档字符串所约定的是一串多行字符串，其中第一行以某一大写字母开始，以句号结束。第二行为空行，后跟的第三行开始是任何详细的解释说明。强烈建议你的文档字符串中都遵循这一约定。
 
 我们可以通过使用函数的 `__doc__`（注意其中的双下划线）属性（属于函数的名称）来获取函数 print_max 的文档字符串属性。
+
+## lambda表达式
+
+Lambda表达式（或者Lambda形式）用来创建匿名函数。语法如下：
+
+```python
+lambda_expr        ::=  "lambda" [parameter_list]: expression
+```
+
+个人认为，lambda 是为了减少单行函数的定义而存在的，能够提高代码的简洁性。比如：
+
+```python
+g = lambda x:x+1
+```
+
+相当于：
+
+```python
+def g(x):
+    return x+1
+```
