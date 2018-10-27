@@ -24,6 +24,12 @@
 * [装饰器](syntax/decorator.md)
 * [模块](syntax/module.md)
 
+## 进阶
+
+* [内置函数](advanced/buildInFunctions.md)
+  * [dict函数](advanced/dict().md)
+* [可迭代对象](advanced/iterator.md)
+
 ## 数据抓取
 
 * [网络爬虫](spider/spider.md)
