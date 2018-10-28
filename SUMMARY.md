@@ -27,7 +27,10 @@
 ## 进阶
 
 * [内置函数](advanced/buildInFunctions.md)
-  * [dict函数](advanced/dict().md)
+  * [dict函数](advanced/dictfunction.md)
+  * [zip函数](advanced/zipfunction.md)
+  * [list函数](advanced/listfunction.md)
+  * [min函数](advanced/minfunction.md)
 * [可迭代对象](advanced/iterator.md)
 
 ## 数据抓取
