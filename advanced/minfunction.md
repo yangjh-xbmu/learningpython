@@ -18,24 +18,25 @@ min(arg1, arg2, *args[, key])
 ## 实例
 
 ```python
->>> min(1,2,3)
+>>> min(1,2,3)  # 求三个元素中的最小值
 1
->>> min(1,'2')
+>>> min(1,'2') # 不同类型的变量无法直接求最小值
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: '<' not supported between instances of 'str' and 'int'
->>> min('2','3')
+>>> min('2','3') # 可以对字符串求最小值，按字母顺序求值
 '2'
->>> min(-1,-2)
--2。≤>>> min(-1,-2,key = abs)
+>>> min(-1,-2) # 可以对负数求最小值
+-2
+>>> min(-1,-2,key = abs) # key参数可以是函数，例如abs()
 -1
->>> min(-1,'-2',key = int)
+>>> min(-1,'-2',key = int) # key参数为类型转换函数
 '-2'
->>> min([1,2],(1,1))
+>>> min([1,2],(1,1)) # 无法直接对元素和列表求最小值
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: '<' not supported between instances of 'tuple' and 'list'
->>> min([1,2],(1,1),key = lambda x:x[1])
+>>> min([1,2],(1,1),key = lambda x:x[1]) # key值可以是列表中的某个元素
 (1, 1)
 >>> min([1,2],(1,3),key = lambda x:x[1])
 [1, 2]
@@ -51,26 +52,4 @@ TypeError: '<' not supported between instances of 'tuple' and 'list'
 (1, 3, 3)
 >>> min([1,4,3],(1,3,3),key = lambda x:x[1])
 (1, 3, 3)
->>> min({},{})
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: '<' not supported between instances of 'dict' and 'dict'
->>> min({a:1,b:2},{a:1,b:3})
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'a' is not defined
->>> min({(a:1),(b:2)})
-  File "<stdin>", line 1
-    min({(a:1),(b:2)})
-           ^
-SyntaxError: invalid syntax
->>> a = [1,4,3]
->>> a[1]
-4
->>> a[0]
-1
->>> b = (1,2,3)
->>> b[0]
-1
->>> 
 ```
