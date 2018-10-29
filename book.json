@@ -21,6 +21,7 @@
         "prism",
         "-highlight",
         "url-embed",
+        "katex-gf",
         "page-footer-ex"
     ],
 
@@ -51,11 +52,6 @@
                 "weibo", "qq", "linkedin",
                 "qzone", "douban"
             ]
-        },
-
-        "localized-footer": {
-            "hline": true,
-            "filename": "./FOOTER.md"
         },
 
         "include-codeblock": {
