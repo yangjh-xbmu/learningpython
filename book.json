@@ -54,6 +54,11 @@
             ]
         },
 
+        "localized-footer": {
+            "hline": true,
+            "filename": "./FOOTER.md"
+        },
+
         "include-codeblock": {
             "template": "ace",
             "unindent": true,
