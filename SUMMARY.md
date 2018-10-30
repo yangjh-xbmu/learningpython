@@ -52,3 +52,8 @@
   * [图论](sna/graphtheory.md)
   * [中心性、权力与瓶颈](sna/centrality.md)
   * [NetworkX](sna/NetworkX.md)
+
+## 相关扩展包
+
+* [networkX](package/networkX.md)
+* [matplotlib](package/matplotlib.md)

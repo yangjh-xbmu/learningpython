@@ -87,6 +87,64 @@ net.write_pajek(g,'lj_friend.net')
 
 程度中心性（degree centrality），节点度（node degree）简单来说，就是所有与它有关的连接数量。程度中心度高，还要看联系及关系的性质。但无论如何，程度中心性是理解社会网络的一项非常有用的测量指标。
 
+在Python中，使用networkX的`degree()`方法可以非常方便地出计算程度中心性，例如：
+
+```python
+import sys
+import os
+import networkx as net
+import matplotlib.pyplot as plot
+
+# 读取网络数据
+g = net.read_pajek('russians.net')
+
+# 计算图的度，保存在变量deg
+deg = net.degree(g)
+
+# 将其转换为字典，方便排序和查找值
+deg = dict(deg)
+print('用户valerois在网络中的程度中心值为：', deg['valerois'])
+print('该网络中用户的最小程度中心值为：', min(deg.values()))
+print('该网络中用户的最大程度中心值为：', max(deg.values()))
+
+# 按照字典的值进行倒序排序
+def sorted_map(map):
+    ms = sorted(map.items(), key=lambda item: item[1], reverse=True)
+    return ms
+
+# 输出排序结果，显示程度中心值最大的前十位用户信息
+ds = sorted_map(deg)
+print(dict(ds[0:9]))
+
+# 用图形的方式展示程度中心性
+h = plot.hist(deg.values(), 100)
+plot.show()
+plot.loglog(h[1][1:], h[0])
+plot.show()
+```
+
+网络科研研究者普遍发现，绝大多数实际网络的度分布服从幂律分布。由于幂律分布具备标度不变性，因此，网络科学研究者将度分布服从幂律分布的网络统称为**无标度网络**（scale-free network）。
+
+如何找到网络中最核心的受欢迎者，我们可以选择某一标准（如程度中心性小于10，或者100）,删除一些节点以简化网络，方便对网络进行可视化处理。例如：
+
+```python
+# 定义删除节点的函数
+def trim_degrees(g, degree=1):
+    g2 = g.copy()
+    [g2.remove_node(k) for k, v in dict(g2.degree()).items() if v <= degree]
+    return g2
+
+print('网络中总共有：', len(g), '个节点')
+
+# 删除程度中心性小于10的节点
+core = trim_degrees(g, degree=10)
+print('删除程度中心性小于10的节点后，网络还有', len(core), '个节点')
+
+# 对网络进行可视化处理
+net.draw(core, with_labels=True)
+plot.show()
+```
+
 ### 发现八卦传播者
 
 ### 发现传播瓶颈或社会桥梁
@@ -96,8 +154,6 @@ net.write_pajek(g,'lj_friend.net')
 ### 谁是灰衣主教
 
 ### PageRank
-
-
 
 ## 中心性测量不能告诉我们什么
 
