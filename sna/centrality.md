@@ -145,6 +145,8 @@ net.draw(core, with_labels=True)
 plot.show()
 ```
 
+![网络结构图](/images/DegreeCentralityFigure.png)
+
 ### 发现八卦传播者
 
 ### 发现传播瓶颈或社会桥梁
