@@ -996,28 +996,163 @@ bs <span class="token operator">=</span> sorted_map<span class="token punctuatio
 <tbody>
 <tr>
 <td>&#x7A0B;&#x5EA6;&#x4E2D;&#x5FC3;&#x6027;&#x9AD8;</td>
-<td></td>
+<td>&#x2014;&#x2014;</td>
 <td>&#x201C;&#x81EA;&#x6211;&#x201D;&#x6240;&#x5D4C;&#x5165;&#x7684;&#x805A;&#x7C7B;&#x8FDC;&#x79BB;&#x7F51;&#x7EDC;&#x4E2D;&#x5176;&#x4ED6;&#x8282;&#x70B9;</td>
 <td>&#x201C;&#x81EA;&#x6211;&#x201D;&#x7684;&#x8054;&#x7CFB;&#x4EBA;&#x662F;&#x5197;&#x4F59;&#x7684;&#xFF0C;&#x6574;&#x4E2A;&#x4E16;&#x754C;&#x7ED5;&#x4ED6;&#x800C;&#x884C;</td>
 </tr>
 <tr>
 <td>&#x4EB2;&#x8FD1;&#x4E2D;&#x5FC3;&#x6027;&#x9AD8;</td>
 <td>&#x662F;&#x8054;&#x7CFB;&#x91CD;&#x8981;&#x4ED6;&#x4EBA;&#x6216;&#x6D3B;&#x8DC3;&#x4EBA;&#x7269;&#x7684;&#x5173;&#x952E;&#x4EBA;&#x7269;</td>
-<td></td>
+<td>&#x2014;&#x2014;</td>
 <td>&#x5728;&#x4E8B;&#x4EF6;&#x4E2D;&#xFF0C;&#x201C;&#x81EA;&#x6211;&#x201D;&#x4F4D;&#x4E8E;&#x4E00;&#x4E2A;&#x76F8;&#x4E92;&#x8054;&#x7CFB;&#x5BC6;&#x5207;&#x3001;&#x6D3B;&#x8DC3;&#x7684;&#x805A;&#x7C7B;&#x4E2D;&#xFF0C;&#x4E0E;&#x5F88;&#x591A;&#x8282;&#x70B9;&#x90FD;&#x5F88;&#x63A5;&#x8FD1;</td>
 </tr>
 <tr>
 <td>&#x5C45;&#x95F4;&#x4E2D;&#x5FC3;&#x6027;&#x9AD8;</td>
 <td>&#x201C;&#x81EA;&#x6211;&#x201D;&#x7684;&#x90E8;&#x5206;&#x5173;&#x7CFB;&#x5236;&#x7EA6;&#x7740;&#x6574;&#x4E2A;&#x7F51;&#x7EDC;&#x7684;&#x8D70;&#x5411;</td>
 <td>&#x201C;&#x81EA;&#x6211;&#x201D;&#x5784;&#x65AD;&#x4E86;&#x4ECE;&#x5C11;&#x6570;&#x4EBA;&#x5230;&#x591A;&#x6570;&#x4EBA;&#x7684;&#x5173;&#x7CFB;</td>
+<td>&#x2014;&#x2014;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF0C;&#x5C06;&#x4E09;&#x8005;&#x7ED3;&#x5408;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x8868;&#x683C;&#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">names1 <span class="token operator">=</span> <span class="token punctuation">[</span>x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> ds<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+names2 <span class="token operator">=</span> <span class="token punctuation">[</span>x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> cs<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+names3 <span class="token operator">=</span> <span class="token punctuation">[</span>x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> bs<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+
+names <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">set</span><span class="token punctuation">(</span>names1<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token builtin">set</span><span class="token punctuation">(</span>names2<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token builtin">set</span><span class="token punctuation">(</span>names3<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+table <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span>name<span class="token punctuation">,</span> d<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">,</span> b<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token keyword">for</span> name <span class="token keyword">in</span> names<span class="token punctuation">]</span>
+</code></pre>
+<p>&#x8868;&#x683C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x59D3;&#x540D;</th>
+<th>&#x7A0B;&#x5EA6;&#x4E2D;&#x5FC3;&#x6027;</th>
+<th>&#x4EB2;&#x8FD1;&#x4E2D;&#x5FC3;&#x6027;</th>
+<th>&#x5C45;&#x95F4;&#x4E2D;&#x5FC3;&#x6027;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&apos;samoleg&apos;</td>
+<td>2597</td>
+<td>0.4753846153846154</td>
+<td>0.01566368046337763</td>
+</tr>
+<tr>
+<td>&apos;doctor_liza&apos;</td>
+<td>3046</td>
+<td>0.48168355416991426</td>
+<td>0.020507259543668846</td>
+</tr>
+<tr>
+<td>&apos;tareeva&apos;</td>
+<td>2970</td>
+<td>0.47575057736720555</td>
+<td>0.0058846904873034196</td>
+</tr>
+<tr>
+<td>&apos;yelya&apos;</td>
+<td>582</td>
+<td>0.5369244135534318</td>
+<td>0.015239326752752018</td>
+</tr>
+<tr>
+<td>&apos;elladkin&apos;</td>
+<td>2616</td>
+<td>0.46466165413533833</td>
+<td>0.015728236400152962</td>
+</tr>
+<tr>
+<td>&apos;valerois&apos;</td>
+<td>232</td>
+<td>0.6137040714995035</td>
+<td>0.21148671833684918</td>
+</tr>
+<tr>
+<td>&apos;azbukivedi&apos;</td>
+<td>2541</td>
+<td>0.6155378486055777</td>
+<td>0.09068546983753605</td>
+</tr>
+<tr>
+<td>&apos;kirulya&apos;</td>
+<td>2398</td>
+<td>0.5364583333333334</td>
+<td>0.022601460496828554</td>
+</tr>
+<tr>
+<td>&apos;angerona&apos;</td>
+<td>752</td>
+<td>0.535064935064935</td>
+<td>0.01923800645354709</td>
+</tr>
+<tr>
+<td>&apos;masha_koroleva&apos;</td>
+<td>2683</td>
+<td>0.4959871589085072</td>
+<td>0.012624543545596001</td>
+</tr>
+<tr>
+<td>&apos;eprst2000&apos;</td>
+<td>2510</td>
+<td>0.5286569717707442</td>
+<td>0.021420612080769154</td>
+</tr>
+<tr>
+<td>&apos;cheger&apos;</td>
+<td>2887</td>
+<td>0.3992248062015504</td>
+<td>0.0007174304877532311</td>
+</tr>
+<tr>
+<td>&apos;karial&apos;</td>
+<td>2717</td>
+<td>0.5738161559888579</td>
+<td>0.049436498735116984</td>
+</tr>
+<tr>
+<td>&apos;kpoxa_e&apos;</td>
+<td>946</td>
+<td>0.5722222222222222</td>
+<td>0.040441270584172254</td>
+</tr>
+<tr>
+<td>&apos;bagira&apos;</td>
+<td>1481</td>
+<td>0.5896946564885496</td>
+<td>0.06415743377135999</td>
+</tr>
+<tr>
+<td>&apos;borisakunin&apos;</td>
+<td>4691</td>
+<td>0.53184165232358</td>
+<td>0.023042685592280548</td>
+</tr>
+<tr>
+<td>&apos;snorapp&apos;</td>
+<td>2707</td>
+<td>0.5300171526586621</td>
+<td>0.02624442003749055</td>
+</tr>
+<tr>
+<td>&apos;zina_korzina&apos;</td>
+<td>2596</td>
+<td>0.49282296650717705</td>
+<td>0.008964320341170728</td>
 </tr>
 </tbody>
 </table>
 <h3 id="&#x8C01;&#x662F;&#x7070;&#x8863;&#x4E3B;&#x6559;">&#x8C01;&#x662F;&#x7070;&#x8863;&#x4E3B;&#x6559;</h3>
+<p>&#x6240;&#x8C13;&#x7070;&#x8863;&#x4E3B;&#x6559;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x5728;&#x793E;&#x4F1A;&#x7F51;&#x7EDC;&#x4E2D;&#x6240;&#x5904;&#x4F4D;&#x7F6E;&#x5177;&#x6709;&#x5DE8;&#x5927;&#x529B;&#x91CF;&#x7684;&#x5E55;&#x540E;&#x5927;&#x4F6C;&#xFF0C;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x7A0B;&#x5EA6;&#x4E2D;&#x5FC3;&#x6027;&#x3001;&#x5C45;&#x95F4;&#x4E2D;&#x5FC3;&#x6027;&#x6216;&#x4EB2;&#x8FD1;&#x4E2D;&#x5FC3;&#x6027;&#x7B49;&#x6307;&#x6807;&#x5F88;&#x96BE;&#x53D1;&#x73B0;&#x6B64;&#x7C7B;&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x83F2;&#x5229;&#x666E;&#xB7;&#x535A;&#x7EB3;&#x897F;&#x79D1;&#x8BBE;&#x8BA1;&#x4E86;&#x4E00;&#x5957;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x4E2D;&#x5FC3;&#x6027;&#xFF08;eigenvector centrality&#xFF09;&#x7B97;&#x6CD5;&#xFF0C;&#x53EF;&#x7528;&#x6765;&#x68C0;&#x6D4B;&#x201C;&#x7070;&#x8863;&#x4E3B;&#x6559;&#x201D;&#xFF0C;&#x8FD9;&#x5957;&#x7B97;&#x6CD5;&#x5728;NetworkX&#x4E2D;&#x5C31;&#x662F;<code>eigenvector_centrality()</code>&#x65B9;&#x6CD5;&#x3002;</p>
 <h3 id="pagerank">PageRank</h3>
+<p>PageRank&#x7C7B;&#x4F3C;&#x4E8E;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x4E2D;&#x5FC3;&#x6027;&#xFF0C;&#x4F46;&#x5B83;&#x7684;&#x7B97;&#x6CD5;&#x5728;&#x5E9E;&#x5927;&#x793E;&#x4F1A;&#x7F51;&#x7EDC;&#x548C;&#x7F51;&#x7EDC;&#x7684;&#x65F6;&#x95F4;&#x63A8;&#x79FB;&#x4E2D;&#xFF0C;&#x6269;&#x5C55;&#x6027;&#x4F1A;&#x66F4;&#x597D;&#x3002;</p>
+<p>NetworkX&#x63D0;&#x4F9B;&#x4E86;PageRank&#x7B97;&#x6CD5;<code>pagerank()</code>&#x3002;</p>
 <h2 id="&#x4E2D;&#x5FC3;&#x6027;&#x6D4B;&#x91CF;&#x4E0D;&#x80FD;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x4EC0;&#x4E48;">&#x4E2D;&#x5FC3;&#x6027;&#x6D4B;&#x91CF;&#x4E0D;&#x80FD;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x4EC0;&#x4E48;</h2>
 <p>&#x4E2D;&#x5FC3;&#x5EA6;&#x6D4B;&#x91CF;&#x4E0D;&#x80FD;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#x4EBA;&#x4EEC;&#x4E3A;&#x4EC0;&#x4E48;&#x5728;&#x4E89;&#x8BBA;&#x4E2D;&#x7684;&#x7AD9;&#x961F;&#xFF0C;&#x662F;&#x4EC0;&#x4E48;&#x529B;&#x91CF;&#x4F7F;&#x5F97;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x53C8;&#x662F;&#x4EC0;&#x4E48;&#x79BB;&#x95F4;&#x4E86;&#x4ED6;&#x4EEC;&#x3002;&#x5BF9;&#x4E8E;&#x4E0A;&#x8FF0;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x6DF1;&#x5165;&#x8282;&#x70B9;&#x5C42;&#x9762;&#x7684;&#x6D4B;&#x91CF;&#x6307;&#x6807;&#xFF0C;&#x901A;&#x8FC7;&#x4E09;&#x5143;&#x7EC4;&#xFF0C;&#x53EF;&#x4EE5;&#x6316;&#x6398;&#x51FA;&#x66F4;&#x5927;&#x7684;&#x6D3E;&#x7CFB;&#x548C;&#x805A;&#x7C7B;&#x3002;</p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://yangzh.cn" target="_blank">yangzh</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2018-11-04 20:51:22 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://yangzh.cn" target="_blank">yangzh</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2018-11-04 22:23:40 </span> </footer>
                                 
                                 </section>
                             
@@ -1060,7 +1195,7 @@ bs <span class="token operator">=</span> sorted_map<span class="token punctuatio
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"中心性、权力与瓶颈","level":"6.1.2","depth":2,"next":{"title":"networkX","level":"7.1","depth":1,"path":"package/networkX.md","ref":"package/networkX.md","articles":[]},"previous":{"title":"图论","level":"6.1.1","depth":2,"path":"sna/graphtheory.md","ref":"sna/graphtheory.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","include-codeblock","ace","-lunr","-search","search-pro","collapsible-menu","-livereload","prism","-highlight","url-embed","katex-gf","page-footer-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"collapsible-menu":{},"ace":{},"page-footer-ex":{"copyright":"By [yangzh](http://yangzh.cn)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"hline":true,"filename":"./FOOTER.md"},"fontsettings":{"theme":"white","family":"sans","size":2},"url-embed":{},"katex-gf":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn","开始之前":"http://yangjh.gitee.io/appendix"}},"gitbook":"*"},"file":{"path":"sna/centrality.md","mtime":"2018-11-04T12:51:22.446Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-04T12:54:07.497Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"中心性、权力与瓶颈","level":"6.1.2","depth":2,"next":{"title":"networkX","level":"7.1","depth":1,"path":"package/networkX.md","ref":"package/networkX.md","articles":[]},"previous":{"title":"图论","level":"6.1.1","depth":2,"path":"sna/graphtheory.md","ref":"sna/graphtheory.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","include-codeblock","ace","-lunr","-search","search-pro","collapsible-menu","-livereload","prism","-highlight","url-embed","katex-gf","page-footer-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"collapsible-menu":{},"ace":{},"page-footer-ex":{"copyright":"By [yangzh](http://yangzh.cn)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"hline":true,"filename":"./FOOTER.md"},"fontsettings":{"theme":"white","family":"sans","size":2},"url-embed":{},"katex-gf":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn","开始之前":"http://yangjh.gitee.io/appendix"}},"gitbook":"*"},"file":{"path":"sna/centrality.md","mtime":"2018-11-04T14:23:40.881Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-04T14:24:06.525Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
