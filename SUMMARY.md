@@ -53,7 +53,6 @@
 * [社会网络分析](sna/README.md)
   * [图论](sna/graphtheory.md)
   * [中心性、权力与瓶颈](sna/centrality.md)
-  * [NetworkX](sna/NetworkX.md)
 
 ## 相关扩展包
 
