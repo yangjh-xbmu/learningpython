@@ -32,6 +32,7 @@
   * [list函数](advanced/listfunction.md)
   * [min函数](advanced/minfunction.md)
 * [可迭代对象](advanced/iterator.md)
+* [单、双下划线的区别](advanced/underline.md)
 
 ## 数据抓取
 
@@ -45,6 +46,7 @@
   * [Flask应用的基本结构](flask/structure.md)
   * [Jinja2模板](flask/jinja.md)
   * [表单](flask/wtf.md)
+  * [数据库](flask/database.md)
 
 ## 社会网络分析
 
