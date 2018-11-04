@@ -95,6 +95,41 @@ class User(db.Model):
 
 ## 关系
 
+关系型数据库使用关系把不同表中的行联系起来。使用`relationship()`方法建立模型中的关系：
+
+```python
+class Role(db.Model):
+    __tablename__ = 'roles'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), unique=True)
+    users = db.relationship('User', backref='role')
+
+    def __repr__(self):
+        return '<Role %r>' % self.name
+
+
+class User(db.Model):
+    __tablename__ = 'users'
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), unique=True, index=True)
+    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+
+    def __repr__(self):
+        return '<User %r>' % self.username
+```
+
+常用的SQLAlchemy关系选项：
+
+|    选项名     |                         说明                         |
+| ------------- | ---------------------------------------------------- |
+| backref       | 在关系的另一个模型中添加反向引用                     |
+| primaryjoin   | 明确指定两个模型之间使用的连接条件                   |
+| lazy          | 指定如何加载相关记录                                 |
+| uselist       | 如果设为False，不使用列表，而使用标量值              |
+| order_by      | 指定关系中记录的排序方式                             |
+| secondary     | 指定多对多关系中关联表的名称                         |
+| secondaryjoin | SQLAlchemy无法决定是，指定多对多关系中的二级联结条件 |
+
 ## 数据库操作
 
 ## 在视图函数中操作数据库
