@@ -54,6 +54,7 @@
 * [社会网络分析](sna/README.md)
   * [图论](sna/graphtheory.md)
   * [中心性、权力与瓶颈](sna/centrality.md)
+  * [派系、聚类和组元](sna/component.md)
 
 ## 相关扩展包
 

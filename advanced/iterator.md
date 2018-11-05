@@ -19,3 +19,43 @@ Python中经常使用`for`来对某个对象进行遍历，此时被遍历的这
 1. 可迭代对象包含迭代器。
 1. 如果一个对象拥有`__iter__`方法，其是可迭代对象；如果一个对象拥有next方法，其是迭代器。
 1. 定义可迭代对象，必须实现`__iter__`方法；定义迭代器，必须实现`__iter__`和next方法。
+
+## 迭代器长度的计算
+
+迭代器（包括生成器）是不能直接使用len()方法计算长度的，例如：
+
+```python
+>>>l = (i for i in xrange(100) if i&1)
+
+>>>len(l)
+
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+TypeError: object of type 'generator' has no len()
+```
+
+计算迭代器的长度，我们可以先将其转化为列表再计算，但如果迭代器规模较大，这将消耗大量内存，并不是很好的解决方案：
+
+```python
+>>>len(list(l))
+```
+
+我们可以使用更为简洁的方式，即通过循环求和的方式得到迭代器的长度：
+
+```python
+>>sum(1 for _ in l)
+50
+```
+
+在此基础上，我们可以定义一个函数，专门用来求迭代器（生成器）的长度：
+
+```python
+def leniter(iterator):
+    """leniter(iterator): return the length of an iterator,consuming it."""
+    if hasattr(iterator, "__len__"):
+        return len(iterator)
+    nelements = 0
+    for _ in iterator:
+        nelements += 1
+    return nelements
+```
