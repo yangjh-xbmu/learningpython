@@ -47,6 +47,7 @@
   * [Jinja2模板](flask/jinja.md)
   * [表单](flask/wtf.md)
   * [数据库](flask/database.md)
+  * [电子邮件](flask/mail.md)
 
 ## 社会网络分析
 
