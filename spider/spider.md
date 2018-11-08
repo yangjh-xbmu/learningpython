@@ -1,7 +1,5 @@
 # 网络爬虫
 
-## 什么是网络爬虫
-
 网络爬虫就是能够按照一定规则，自动收集网络中的数据的程序。
 
 ## 网络爬虫原理
@@ -9,6 +7,7 @@
 1. 请求网页，获取网页源代码
 2. 提取信息
 3. 存储数据
+4. 自动化程序
 
 网页本质上是一个存储在指定位置的文本文件（不一定是静态的，可能是由远程计算机根据一定条件计算出来的），因此，网络爬虫的任务，就是获取远程文本文件，然后，对文件进行分析，提取出我们想要的数据。
 
@@ -29,6 +28,7 @@ Web浏览器向Web服务器发送请求，Web服务器处理请求并返回适�
 浏览器对文件进行解释、展现
 
 ### URL
+
 统一资源定位符(Uniform Resource Locator) 是互联网上标准资源的地址。互联网上的每个文件都有一个唯一的URL。
 基本URL包含模式（或称协议）、服务器名称（或IP地址）、路径和文件名，
 
@@ -42,20 +42,25 @@ http://alumni.xjtu.edu.cn:9090/donation/namelist?pageNo=1&pageSize=10&billnum=&d
 ### 请求方式
 
 #### GET
+
 GET方法是默认的HTTP请求方法，我们日常用GET方法来提交表单数据，然而用GET方法提交的表单数据只经过了简单的编码，同时它将作为URL的一部分向Web服务器发送。
 
 #### POST
+
 POST方法是GET方法的一个替代方法，它主要是向Web服务器提交表单数据，尤其是大批量的数据。POST方法克服了GET方法的一些缺点。通过POST方法提交表单数据时，数据不是作为URL请求的一部分而是作为标准数据传送给Web服务器，这就克服了GET方法中的信息无法保密和数据量太小的缺点。
 
 ### requests包
+
 Requests 是 Python 中的 HTTP 库，Requests库允许你发送符合标准的 HTTP/1.1 请求，无需手工劳动。你不需要手动为 URL 添加查询字串，也不需要对 POST 数据进行表单编码。Keep-alive 和 HTTP 连接池的功能是 100% 自动化的。
 
-官方网站：http://cn.python-requests.org/zh_CN/latest/
+官方网站：[http://cn.python-requests.org/zh_CN/latest/](http://cn.python-requests.org/zh_CN/latest/)
 
 安装方式：
-``` shell
+
+```shell
 pip install requests
 ```
+
 ## 编码
 
 ### 编码方式
@@ -72,9 +77,11 @@ pip install requests
 通常是要以Unicode作为中间编码进行转换，即先将其他编码的字符串解码（decode）成 Unicode，再从 Unicode编码（encode）成另一种编码。
 
 ## 存储
+
 存储的时候，可以将字符串编码之后，再存储到文件。
 
 ### 存储到文件
+
 使用open函数，可以创建文件，并将内容写入到文件中。
 
 ``` python

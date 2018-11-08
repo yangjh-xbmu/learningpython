@@ -1,6 +1,6 @@
 # 简介
 
-在这本电子书中，我们将学习Python的基础知识，最终达到抓取网络数据、分析数据的目的。
+在这本电子书(在线阅读地址为：[http://yangjh.gitee.io/learningpython/](http://yangjh.gitee.io/learningpython/))中，我们将学习Python的基础知识，最终达到抓取网络数据、分析数据的目的。
 
 > Life is short, you need Python。Bruce Eckel
 
@@ -8,7 +8,7 @@
 
 Python的创始人为Guido van Rossum。1989年圣诞节期间，在阿姆斯特丹，Guido为了打发圣诞节的无趣，决心开发一个新的脚本解释程序，做为ABC 语言的一种继承。之所以选中Python（大蟒蛇的意思）作为程序的名字，是因为他是一个叫Monty Python的喜剧团体的爱好者。ABC是由Guido参加设计的一种教学语言。就Guido本人看来，ABC 这种语言非常优美和强大，是专门为非专业程序员设计的。但是ABC语言并没有成功，究其原因，Guido 认为是非开放造成的。Guido 决心在 Python 中避免这一错误。同时，他还想实现在 ABC 中闪现过但未曾实现的东西。
 
-截至目前，Python的版本为3.6.2，2017年7月17日发布。
+截至目前，Python的版本为3.7.1，2018年10月20日发布。
 
 ## Python特点
 
