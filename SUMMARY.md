@@ -33,11 +33,13 @@
   * [min函数](advanced/minfunction.md)
 * [可迭代对象](advanced/iterator.md)
 * [单、双下划线的区别](advanced/underline.md)
+* [正则表达式](re/regular.md)
 
 ## 数据抓取
 
 * [网络爬虫](spider/spider.md)
-* [正则表达式](re/regular.md)
+  * [基本库的使用](spider/HTTPPackage.md)
+
 
 ## 网络应用开发
 

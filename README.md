@@ -124,23 +124,29 @@ python3.7 -m venv python37
 source bin/activate
 ```
 
-就会激活该虚拟环境，命令后会出现`(python37) `这样的提示符。
+就会激活该虚拟环境，命令后会出现`(python37)`这样的提示符。
 
 在该目录中运行`deactivate`则会退出虚拟环境。
 
 ### 编辑器
 
-虽然Python自带编辑器，但其不够方便，推荐使用轻量级的编辑器Sublime Text。使用编辑器将文件保存成.py后缀，然后通过命令行调用即可执行，也可以在Sublime Text编辑器中使用编译命令（ctrl+b）查看运行结果。
+虽然Python自带编辑器，但其不够方便，推荐使用轻量级的编辑器Sublime Text或者visual studio code。使用编辑器将文件保存成`.py`后缀，然后通过命令行调用即可执行。
 
 如在编辑器中键入如下内容：
 
 ```python
-print "hello world"
+print("hello world")
 ```
 
-保存为hello.py，注意设置文件编码方式为UTF-8，然后使用ctrl+b即可在编辑器内部查看运行结果。
+保存为`hello.py`（文件名最好不要与Python的各种函数、库名相同），注意设置文件编码方式为`UTF-8`。
 
-或者通过命令行进入到脚本所在路径，键入脚本名称也可运行脚本。
+启动终端，进入到脚本所在路径，执行：
+
+```bash
+python hello.py
+```
+
+即可看到运行结果。
 
 ## 学习资源
 
