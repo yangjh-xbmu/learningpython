@@ -247,6 +247,85 @@ name=yangzh&age=21
 pip install requests
 ```
 
+### 发起请求
+
+利用params参数，可以非常方便地构造请求地址：
+
+```python
+import requests
+data = {
+    "name": "yangjh",
+    "age": 20
+}
+r = requests.get('http://httpbin.org/get', params=data)
+print(r.text)
+```
+
+上述代码将会构造`http://httpbin.org/get?name=yangjh&age=20`的地址，并以字符串的形式返回请求结果。对于返回结果是JSON格式，还可以使用json()方法转化为字典。
+
+利用headers参数，可以构造出浏览器标识信息。例如：
+
+```python
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/63.0'
+}
+r = requests.get('https://www.zhihu.com/explore', headers=headers)
+```
+
+除了GET方法之外，还可以使用POST、PUT、DELETE等方法。
+
+#### 处理响应
+
+可以通过`text`、`content`、`status_code`、`headers`、`cookies`、`url`、`history`等属性获得服务器返回请求的内容。其中`status_code`的值和HTTP状态码一一对应，比如`404`可以用`requests.codes.not_found`来对比。
+
+#### 会话维持
+
+使用Session方法，可以维持同一个会话，不用每次都设置cookies的值，相当于在浏览器中新建选项卡打开网址，而不是重新打开一个浏览器。
+
+```python
+s = requests.Session()
+s.get('http://httpbin.org/cookies/set/age/20')
+r = s.get('http://httpbin.org/cookies')
+print(r.text)
+```
+
+使用Session，可以模拟登陆成功之后再进行下一步操作。
+
+#### 超时设置
+
+为了防止长时间等待，提高效率，我们有必要通过timeout属性设置超时时间，例如：
+
+```python
+r = requests.get('https://www.baidu.com', timeout=1)
+print(r.status_code)
+
+r = requests.get('https://www.taobao.com', timeout=(5, 30))
+print(r.status_code)
+```
+
+如果timeout只有1个值，则指的是从发出请求到服务器返回响应的总时间；如果timeout的值是有俩值的元组，则第一个元素为请求时间，第二个元素为响应时间。
+
+#### Request对象
+
+可以先构造好请求，再使用send方法发送请求，这样可以达到处理不同请求的目的。
+
+```python
+url = 'http://httpbin.org/post'
+data = {
+    'age': 20
+}
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:63.0) Gecko/20100101 Firefox/63.0'
+}
+s = requests.Session()
+req = requests.Request('POST', url, data=data, headers=headers)
+preped = s.prepare_request(req)
+r = s.send(preped)
+print(r.text)
+```
+
+使用Request这个对象，我们可以将方面的构造出请求。
+
 ## 参考资料
 
 1. [https://docs.python.org/3/library/urllib.html](https://docs.python.org/3/library/urllib.html)
