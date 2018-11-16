@@ -1,11 +1,10 @@
-
-## 控制声明
+# 控制声明
 
 在程序中，常常要根据一些条件执行相应的命令。
 
-### 分支判断
+## 分支判断
 
-Python使用if-else进行控制声明。语法如下：
+Python使用`if-else`进行控制声明。语法如下：
 
 ```python
 if boolean-expression:
@@ -69,3 +68,22 @@ else:
     print("normal working day")
 ```
 
+## 三元运算符
+
+在其他语言中，有类似`condition？true：false`的三元运算符，在Python中，可以这样实现：
+
+```python
+true if condition else false
+```
+
+例如：
+
+```python
+def b(a):
+    return a+2 if a > 10 else 5
+
+
+print(b(11), b(4))
+```
+
+上面的代码将输出`13 6`。
