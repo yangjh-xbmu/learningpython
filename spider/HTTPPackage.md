@@ -324,7 +324,7 @@ r = s.send(preped)
 print(r.text)
 ```
 
-使用Request这个对象，我们可以将方面的构造出请求。
+使用Request这个对象，我们可以方便地构造出请求。
 
 ## 参考资料
 
