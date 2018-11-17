@@ -42,6 +42,7 @@
 
 * [网络爬虫](spider/spider.md)
   * [基本库的使用](spider/HTTPPackage.md)
+  * [解析库pyquery](spider/pyquery.md)
 
 ## 网络应用开发
 

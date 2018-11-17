@@ -326,6 +326,17 @@ print(r.text)
 
 使用Request这个对象，我们可以方便地构造出请求。
 
+## 网页编码检测及转换
+
+有时，页面虽然申明的编码方式是`utf-8`，但输出的时候却产生乱码，因此需要先检测页面编码方式，再将其转化为utf编码。例如：
+
+```python
+html = requests.get(url, headers=headers, cookies=jar)
+print(html.text.encode(html.encoding).decode('utf8'))
+```
+
+使用requests库中的`encoding`属性，可以获得返回对象的编码方式，然后按照其编码方式编码，再按照utf8方式解码，即可得到UTF编码方式的内容。
+
 ## 参考资料
 
 1. [https://docs.python.org/3/library/urllib.html](https://docs.python.org/3/library/urllib.html)
