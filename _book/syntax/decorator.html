@@ -1,0 +1,1207 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>装饰器 · Python基础</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yangjh">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex-gf/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="module.html" />
+    
+    
+    <link rel="prev" href="exception.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://yangzh.cn" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://yangjh.gitee.io/appendix" target="_blank" class="custom-link">开始之前</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">语法</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="syntax.html">
+            
+                <a href="syntax.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    语法基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="variable.html">
+            
+                <a href="variable.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="numbers.html">
+            
+                <a href="numbers.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    数字类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="operator.html">
+            
+                <a href="operator.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="sequence.html">
+            
+                <a href="sequence.html">
+            
+                    
+                        <b>2.1.4.</b>
+                    
+                    序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="string.html">
+            
+                <a href="string.html">
+            
+                    
+                        <b>2.1.5.</b>
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="list.html">
+            
+                <a href="list.html">
+            
+                    
+                        <b>2.1.6.</b>
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="dictionary.html">
+            
+                <a href="dictionary.html">
+            
+                    
+                        <b>2.1.7.</b>
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="tuple.html">
+            
+                <a href="tuple.html">
+            
+                    
+                        <b>2.1.8.</b>
+                    
+                    元组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="if.html">
+            
+                <a href="if.html">
+            
+                    
+                        <b>2.1.9.</b>
+                    
+                    分支控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                        <b>2.1.10.</b>
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="loop.html">
+            
+                <a href="loop.html">
+            
+                    
+                        <b>2.1.11.</b>
+                    
+                    循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="oop.html">
+            
+                <a href="oop.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    面向对象编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="overload.html">
+            
+                <a href="overload.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    操作符重载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="inheritance.html">
+            
+                <a href="inheritance.html">
+            
+                    
+                        <b>2.2.3.</b>
+                    
+                    继承和多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="exception.html">
+            
+                <a href="exception.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="decorator.html">
+            
+                <a href="decorator.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="module.html">
+            
+                <a href="module.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">进阶</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../advanced/buildInFunctions.html">
+            
+                <a href="../advanced/buildInFunctions.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../advanced/dictfunction.html">
+            
+                <a href="../advanced/dictfunction.html">
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    dict函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../advanced/zipfunction.html">
+            
+                <a href="../advanced/zipfunction.html">
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    zip函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../advanced/listfunction.html">
+            
+                <a href="../advanced/listfunction.html">
+            
+                    
+                        <b>3.1.3.</b>
+                    
+                    list函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../advanced/minfunction.html">
+            
+                <a href="../advanced/minfunction.html">
+            
+                    
+                        <b>3.1.4.</b>
+                    
+                    min函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../advanced/iterator.html">
+            
+                <a href="../advanced/iterator.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    可迭代对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../advanced/yield.html">
+            
+                <a href="../advanced/yield.html">
+            
+                    
+                        <b>3.2.1.</b>
+                    
+                    yield
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../advanced/underline.html">
+            
+                <a href="../advanced/underline.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    单、双下划线的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../re/regular.html">
+            
+                <a href="../re/regular.html">
+            
+                    
+                        <b>3.4.</b>
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../advanced/argparse.html">
+            
+                <a href="../advanced/argparse.html">
+            
+                    
+                        <b>3.5.</b>
+                    
+                    命令行参数模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据抓取</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../spider/spider.html">
+            
+                <a href="../spider/spider.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    网络爬虫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../spider/HTTPPackage.html">
+            
+                <a href="../spider/HTTPPackage.html">
+            
+                    
+                        <b>4.1.1.</b>
+                    
+                    基本库的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../spider/pyquery.html">
+            
+                <a href="../spider/pyquery.html">
+            
+                    
+                        <b>4.1.2.</b>
+                    
+                    解析库pyquery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../spider/MySQL.html">
+            
+                <a href="../spider/MySQL.html">
+            
+                    
+                        <b>4.1.3.</b>
+                    
+                    MySQL的存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">网络应用开发</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../flask/flask.html">
+            
+                <a href="../flask/flask.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Flask
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../flask/install.html">
+            
+                <a href="../flask/install.html">
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    安装Flask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../flask/structure.html">
+            
+                <a href="../flask/structure.html">
+            
+                    
+                        <b>5.1.2.</b>
+                    
+                    Flask应用的基本结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../flask/jinja.html">
+            
+                <a href="../flask/jinja.html">
+            
+                    
+                        <b>5.1.3.</b>
+                    
+                    Jinja2模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../flask/wtf.html">
+            
+                <a href="../flask/wtf.html">
+            
+                    
+                        <b>5.1.4.</b>
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../flask/database.html">
+            
+                <a href="../flask/database.html">
+            
+                    
+                        <b>5.1.5.</b>
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../flask/mail.html">
+            
+                <a href="../flask/mail.html">
+            
+                    
+                        <b>5.1.6.</b>
+                    
+                    电子邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">社会网络分析</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../sna/">
+            
+                <a href="../sna/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    社会网络分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../sna/graphtheory.html">
+            
+                <a href="../sna/graphtheory.html">
+            
+                    
+                        <b>6.1.1.</b>
+                    
+                    图论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../sna/centrality.html">
+            
+                <a href="../sna/centrality.html">
+            
+                    
+                        <b>6.1.2.</b>
+                    
+                    中心性、权力与瓶颈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../sna/component.html">
+            
+                <a href="../sna/component.html">
+            
+                    
+                        <b>6.1.3.</b>
+                    
+                    派系、聚类和组元
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">相关扩展包</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../package/networkX.html">
+            
+                <a href="../package/networkX.html">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    networkX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../package/matplotlib.html">
+            
+                <a href="../package/matplotlib.html">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    matplotlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >装饰器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="python-&#x88C5;&#x9970;&#x5668;">Python &#x88C5;&#x9970;&#x5668;</h1>
+<p>&#x88C5;&#x9970;&#x5668;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x4E2A; Python &#x51FD;&#x6570;&#x6216;&#x7C7B;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x8BA9;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#x6216;&#x7C7B;&#x5728;&#x4E0D;&#x9700;&#x8981;&#x505A;&#x4EFB;&#x4F55;&#x4EE3;&#x7801;&#x4FEE;&#x6539;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#x589E;&#x52A0;&#x989D;&#x5916;&#x529F;&#x80FD;&#xFF0C;&#x88C5;&#x9970;&#x5668;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;/&#x7C7B;&#x5BF9;&#x8C61;&#x3002;&#x6709;&#x4E86;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x62BD;&#x79BB;&#x51FA;&#x5927;&#x91CF;&#x4E0E;&#x51FD;&#x6570;&#x529F;&#x80FD;&#x672C;&#x8EAB;&#x65E0;&#x5173;&#x7684;&#x96F7;&#x540C;&#x4EE3;&#x7801;&#x5230;&#x88C5;&#x9970;&#x5668;&#x4E2D;&#x5E76;&#x7EE7;&#x7EED;&#x91CD;&#x7528;&#x3002;&#x6982;&#x62EC;&#x7684;&#x8BB2;&#xFF0C;&#x88C5;&#x9970;&#x5668;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x4E3A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;&#x88C5;&#x9970;&#x5668;">&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;&#x88C5;&#x9970;&#x5668;</h2>
+<p>&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x4F8B;&#x5B50;&#xFF0C;&#x867D;&#x7136;&#x5B9E;&#x9645;&#x4EE3;&#x7801;&#x53EF;&#x80FD;&#x6BD4;&#x8FD9;&#x590D;&#x6742;&#x5F88;&#x591A;&#xFF0C;&#x5047;&#x5982;&#x5DF2;&#x7ECF;&#x6709;&#x5982;&#x4E0B;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x8F93;&#x51FA;&#x7279;&#x5B9A;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5DF2;&#x88AB;&#x5176;&#x4ED6;&#x7A0B;&#x5E8F;&#x7247;&#x6BB5;&#x4F7F;&#x7528;&#x591A;&#x6B21;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;i am foo&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6709;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x5E0C;&#x671B;&#x53EF;&#x4EE5;&#x8BB0;&#x5F55;&#x4E0B;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x65E5;&#x5FD7;&#xFF0C;&#x4E8E;&#x662F;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x6DFB;&#x52A0;&#x65E5;&#x5FD7;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;i am foo&apos;</span><span class="token punctuation">)</span>
+    logging<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token string">&quot;foo is running&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x51FD;&#x6570; bar()&#x3001;bar2() &#x4E5F;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x600E;&#x4E48;&#x505A;&#xFF1F;&#x518D;&#x5199;&#x4E00;&#x4E2A; logging &#x5728; bar &#x51FD;&#x6570;&#x91CC;&#xFF1F;&#x8FD9;&#x6837;&#x5C31;&#x9020;&#x6210;&#x5927;&#x91CF;&#x96F7;&#x540C;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4E3A;&#x4E86;&#x51CF;&#x5C11;&#x91CD;&#x590D;&#x5199;&#x4EE3;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x505A;&#xFF0C;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4E13;&#x95E8;&#x5904;&#x7406;&#x65E5;&#x5FD7; &#xFF0C;&#x65E5;&#x5FD7;&#x5904;&#x7406;&#x5B8C;&#x4E4B;&#x540E;&#x518D;&#x6267;&#x884C;&#x771F;&#x6B63;&#x7684;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">use_logging</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    logging<span class="token punctuation">.</span>warn<span class="token punctuation">(</span><span class="token string">&quot;%s is running&quot;</span> <span class="token operator">%</span> func<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>
+    func<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;i am foo&apos;</span><span class="token punctuation">)</span>
+
+use_logging<span class="token punctuation">(</span>foo<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x505A;&#x903B;&#x8F91;&#x4E0A;&#x662F;&#x6CA1;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x529F;&#x80FD;&#x662F;&#x5B9E;&#x73B0;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x518D;&#x662F;&#x8C03;&#x7528;&#x771F;&#x6B63;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91; foo &#x51FD;&#x6570;&#xFF0C;&#x800C;&#x662F;&#x6362;&#x6210;&#x4E86; use_logging &#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x5C31;&#x7834;&#x574F;&#x4E86;&#x539F;&#x6709;&#x7684;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x4E0D;&#x5F97;&#x4E0D;&#x6BCF;&#x6B21;&#x90FD;&#x8981;&#x628A;&#x539F;&#x6765;&#x7684;&#x90A3;&#x4E2A; foo &#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9; use_logging &#x51FD;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x6709;&#x6CA1;&#x6709;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#x7684;&#x5462;&#xFF1F;&#x5F53;&#x7136;&#x6709;&#xFF0C;&#x7B54;&#x6848;&#x5C31;&#x662F;&#x88C5;&#x9970;&#x5668;&#x3002;</p>
+<h2 id="&#x7B80;&#x5355;&#x88C5;&#x9970;&#x5668;">&#x7B80;&#x5355;&#x88C5;&#x9970;&#x5668;</h2>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">use_logging</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        logging<span class="token punctuation">.</span>warn<span class="token punctuation">(</span><span class="token string">&quot;%s is running&quot;</span> <span class="token operator">%</span> func<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> func<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token comment"># &#x628A; foo &#x5F53;&#x505A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x8FDB;&#x6765;&#x65F6;&#xFF0C;&#x6267;&#x884C;func()&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x6267;&#x884C;foo()</span>
+    <span class="token keyword">return</span> wrapper
+
+<span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;i am foo&apos;</span><span class="token punctuation">)</span>
+
+foo <span class="token operator">=</span> use_logging<span class="token punctuation">(</span>foo<span class="token punctuation">)</span>  <span class="token comment"># &#x56E0;&#x4E3A;&#x88C5;&#x9970;&#x5668; use_logging(foo) &#x8FD4;&#x56DE;&#x7684;&#x65F6;&#x51FD;&#x6570;&#x5BF9;&#x8C61; wrapper&#xFF0C;&#x8FD9;&#x6761;&#x8BED;&#x53E5;&#x76F8;&#x5F53;&#x4E8E;  foo = wrapper</span>
+foo<span class="token punctuation">(</span><span class="token punctuation">)</span>                   <span class="token comment"># &#x6267;&#x884C;foo()&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x6267;&#x884C; wrapper()</span>
+</code></pre>
+<p><code>use_logging()</code> &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5B83;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x628A;&#x6267;&#x884C;&#x771F;&#x6B63;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x7684;&#x51FD;&#x6570; func &#x5305;&#x88F9;&#x5728;&#x5176;&#x4E2D;&#xFF0C;&#x770B;&#x8D77;&#x6765;&#x50CF; foo &#x88AB; use_logging &#x88C5;&#x9970;&#x4E86;&#x4E00;&#x6837;&#xFF0C;use_logging &#x8FD4;&#x56DE;&#x7684;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x540D;&#x5B57;&#x53EB; wrapper&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x51FD;&#x6570;&#x8FDB;&#x5165;&#x548C;&#x9000;&#x51FA;&#x65F6;&#xFF0C;&#x88AB;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x6A2A;&#x5207;&#x9762;&#xFF0C;&#x8FD9;&#x79CD;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x88AB;&#x79F0;&#x4E3A;&#x9762;&#x5411;&#x5207;&#x9762;&#x7684;&#x7F16;&#x7A0B;&#x3002;</p>
+<h2 id="&#x8BED;&#x6CD5;&#x7CD6;">@ &#x8BED;&#x6CD5;&#x7CD6;</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x63A5;&#x89E6; Python &#x6709;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x4E86;&#x7684;&#x8BDD;&#xFF0C;&#x60F3;&#x5FC5;&#x4F60;&#x5BF9; <code>@</code> &#x7B26;&#x53F7;&#x4E00;&#x5B9A;&#x4E0D;&#x964C;&#x751F;&#x4E86;&#xFF0C;&#x6CA1;&#x9519; <code>@</code> &#x7B26;&#x53F7;&#x5C31;&#x662F;&#x88C5;&#x9970;&#x5668;&#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x5B83;&#x653E;&#x5728;&#x51FD;&#x6570;&#x5F00;&#x59CB;&#x5B9A;&#x4E49;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x6700;&#x540E;&#x4E00;&#x6B65;&#x518D;&#x6B21;&#x8D4B;&#x503C;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">use_logging</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        logging<span class="token punctuation">.</span>warn<span class="token punctuation">(</span><span class="token string">&quot;%s is running&quot;</span> <span class="token operator">%</span> func<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> func<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> wrapper
+
+@use_logging
+<span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;i am foo&quot;</span><span class="token punctuation">)</span>
+
+foo<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5982;&#x4E0A;&#x6240;&#x793A;&#xFF0C;&#x6709;&#x4E86; <code>@</code> &#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x7701;&#x53BB;<code>foo = use_logging(foo)</code>&#x8FD9;&#x4E00;&#x53E5;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528; <code>foo()</code> &#x5373;&#x53EF;&#x5F97;&#x5230;&#x60F3;&#x8981;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x4F60;&#x4EEC;&#x770B;&#x5230;&#x4E86;&#x6CA1;&#x6709;&#xFF0C;<code>foo()</code> &#x51FD;&#x6570;&#x4E0D;&#x9700;&#x8981;&#x505A;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#xFF0C;&#x53EA;&#x9700;&#x5728;&#x5B9A;&#x4E49;&#x7684;&#x5730;&#x65B9;&#x52A0;&#x4E0A;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x8FD8;&#x662F;&#x548C;&#x4EE5;&#x524D;&#x4E00;&#x6837;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x7C7B;&#x4F3C;&#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x8C03;&#x7528;&#x88C5;&#x9970;&#x5668;&#x6765;&#x4FEE;&#x9970;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x91CD;&#x590D;&#x4FEE;&#x6539;&#x51FD;&#x6570;&#x6216;&#x8005;&#x589E;&#x52A0;&#x65B0;&#x7684;&#x5C01;&#x88C5;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x63D0;&#x9AD8;&#x4E86;&#x7A0B;&#x5E8F;&#x7684;&#x53EF;&#x91CD;&#x590D;&#x5229;&#x7528;&#x6027;&#xFF0C;&#x5E76;&#x589E;&#x52A0;&#x4E86;&#x7A0B;&#x5E8F;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x3002;</p>
+<p>&#x88C5;&#x9970;&#x5668;&#x5728; Python &#x4F7F;&#x7528;&#x5982;&#x6B64;&#x65B9;&#x4FBF;&#x90FD;&#x8981;&#x5F52;&#x56E0;&#x4E8E; Python &#x7684;&#x51FD;&#x6570;&#x80FD;&#x50CF;&#x666E;&#x901A;&#x7684;&#x5BF9;&#x8C61;&#x4E00;&#x6837;&#x80FD;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x5176;&#x4ED6;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x8D4B;&#x503C;&#x7ED9;&#x5176;&#x4ED6;&#x53D8;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x5B9A;&#x4E49;&#x5728;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5185;&#x3002;</p>
+<h2 id="args&#x3001;kwargs"><code>*args</code>&#x3001;<code>**kwargs</code></h2>
+<p>&#x53EF;&#x80FD;&#x6709;&#x4EBA;&#x95EE;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x51FD;&#x6570; foo &#x9700;&#x8981;&#x53C2;&#x6570;&#x600E;&#x4E48;&#x529E;&#xFF1F;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;i am %s&quot;</span> <span class="token operator">%</span> name<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x5B9A;&#x4E49; wrapper &#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        logging<span class="token punctuation">.</span>warn<span class="token punctuation">(</span><span class="token string">&quot;%s is running&quot;</span> <span class="token operator">%</span> func<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> func<span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> wrapper
+</code></pre>
+<p>&#x8FD9;&#x6837; foo &#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x7684;&#x53C2;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x5728; wrapper &#x51FD;&#x6570;&#x4E2D;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;&#x53C8;&#x6709;&#x4EBA;&#x8981;&#x95EE;&#x4E86;&#xFF0C;&#x5982;&#x679C; foo &#x51FD;&#x6570;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x5462;&#xFF1F;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x5462;&#xFF1F;&#x66F4;&#x6709;&#x751A;&#x8005;&#xFF0C;&#x6211;&#x53EF;&#x80FD;&#x4F20;&#x5F88;&#x591A;&#x4E2A;&#x3002;&#x5F53;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x77E5;&#x9053; foo &#x5230;&#x5E95;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528; *args &#x6765;&#x4EE3;&#x66FF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        logging<span class="token punctuation">.</span>warn<span class="token punctuation">(</span><span class="token string">&quot;%s is running&quot;</span> <span class="token operator">%</span> func<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> wrapper
+</code></pre>
+<p>&#x5982;&#x6B64;&#x4E00;&#x6765;&#xFF0C;&#x752D;&#x7BA1; foo &#x5B9A;&#x4E49;&#x4E86;&#x591A;&#x5C11;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x6211;&#x90FD;&#x53EF;&#x4EE5;&#x5B8C;&#x6574;&#x5730;&#x4F20;&#x9012;&#x5230; func &#x4E2D;&#x53BB;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x5F71;&#x54CD; foo &#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x4E86;&#x3002;&#x8FD9;&#x65F6;&#x8FD8;&#x6709;&#x8BFB;&#x8005;&#x4F1A;&#x95EE;&#xFF0C;&#x5982;&#x679C; foo &#x51FD;&#x6570;&#x8FD8;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E9B;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x5462;&#xFF1F;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> height<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;I am %s, age %s, height %s&quot;</span> <span class="token operator">%</span> <span class="token punctuation">(</span>name<span class="token punctuation">,</span> age<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x65F6;&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x628A; wrapper &#x51FD;&#x6570;&#x6307;&#x5B9A;&#x5173;&#x952E;&#x5B57;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># args&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;kwargs&#x4E00;&#x4E2A;&#x5B57;&#x5178;</span>
+        logging<span class="token punctuation">.</span>warn<span class="token punctuation">(</span><span class="token string">&quot;%s is running&quot;</span> <span class="token operator">%</span> func<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> wrapper
+</code></pre>
+<h2 id="&#x5E26;&#x53C2;&#x6570;&#x7684;&#x88C5;&#x9970;&#x5668;">&#x5E26;&#x53C2;&#x6570;&#x7684;&#x88C5;&#x9970;&#x5668;</h2>
+<p>&#x88C5;&#x9970;&#x5668;&#x8FD8;&#x6709;&#x66F4;&#x5927;&#x7684;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x4F8B;&#x5982;&#x5E26;&#x53C2;&#x6570;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x88C5;&#x9970;&#x5668;&#x8C03;&#x7528;&#x4E2D;&#xFF0C;&#x8BE5;&#x88C5;&#x9970;&#x5668;&#x63A5;&#x6536;&#x552F;&#x4E00;&#x7684;&#x53C2;&#x6570;&#x5C31;&#x662F;&#x6267;&#x884C;&#x4E1A;&#x52A1;&#x7684;&#x51FD;&#x6570; foo &#x3002;&#x88C5;&#x9970;&#x5668;&#x7684;&#x8BED;&#x6CD5;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5728;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x63D0;&#x4F9B;&#x5176;&#x5B83;&#x53C2;&#x6570;&#xFF0C;&#x6BD4;&#x5982;<code>@decorator(a)</code>&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x5C31;&#x4E3A;&#x88C5;&#x9970;&#x5668;&#x7684;&#x7F16;&#x5199;&#x548C;&#x4F7F;&#x7528;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x5927;&#x7684;&#x7075;&#x6D3B;&#x6027;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x88C5;&#x9970;&#x5668;&#x4E2D;&#x6307;&#x5B9A;&#x65E5;&#x5FD7;&#x7684;&#x7B49;&#x7EA7;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0D;&#x540C;&#x4E1A;&#x52A1;&#x51FD;&#x6570;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x7684;&#x65E5;&#x5FD7;&#x7EA7;&#x522B;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">use_logging</span><span class="token punctuation">(</span>level<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">decorator</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> level <span class="token operator">==</span> <span class="token string">&quot;warn&quot;</span><span class="token punctuation">:</span>
+                logging<span class="token punctuation">.</span>warn<span class="token punctuation">(</span><span class="token string">&quot;%s is running&quot;</span> <span class="token operator">%</span> func<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> level <span class="token operator">==</span> <span class="token string">&quot;info&quot;</span><span class="token punctuation">:</span>
+                logging<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token string">&quot;%s is running&quot;</span> <span class="token operator">%</span> func<span class="token punctuation">.</span>__name__<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> wrapper
+
+    <span class="token keyword">return</span> decorator
+
+@use_logging<span class="token punctuation">(</span>level<span class="token operator">=</span><span class="token string">&quot;warn&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&apos;foo&apos;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;i am %s&quot;</span> <span class="token operator">%</span> name<span class="token punctuation">)</span>
+
+foo<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684; use_logging &#x662F;&#x5141;&#x8BB8;&#x5E26;&#x53C2;&#x6570;&#x7684;&#x88C5;&#x9970;&#x5668;&#x3002;&#x5B83;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5BF9;&#x539F;&#x6709;&#x88C5;&#x9970;&#x5668;&#x7684;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5C01;&#x88C5;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x542B;&#x6709;&#x53C2;&#x6570;&#x7684;&#x95ED;&#x5305;&#x3002;&#x5F53;&#x6211; &#x4EEC;&#x4F7F;&#x7528;<code>@use_logging(level=&quot;warn&quot;)</code>&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;Python &#x80FD;&#x591F;&#x53D1;&#x73B0;&#x8FD9;&#x4E00;&#x5C42;&#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x5E76;&#x628A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x5230;&#x88C5;&#x9970;&#x5668;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x3002;</p>
+<p><code>@use_logging(level=&quot;warn&quot;)</code>&#x7B49;&#x4EF7;&#x4E8E;<code>@decorator</code></p>
+<h2 id="&#x7C7B;&#x88C5;&#x9970;&#x5668;">&#x7C7B;&#x88C5;&#x9970;&#x5668;</h2>
+<p>&#x6CA1;&#x9519;&#xFF0C;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x662F;&#x7C7B;&#xFF0C;&#x76F8;&#x6BD4;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x5177;&#x6709;&#x7075;&#x6D3B;&#x5EA6;&#x5927;&#x3001;&#x9AD8;&#x5185;&#x805A;&#x3001;&#x5C01;&#x88C5;&#x6027;&#x7B49;&#x4F18;&#x70B9;&#x3002;&#x4F7F;&#x7528;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x4E3B;&#x8981;&#x4F9D;&#x9760;&#x7C7B;&#x7684;<code>__call__</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x4F7F;&#x7528; <code>@</code> &#x5F62;&#x5F0F;&#x5C06;&#x88C5;&#x9970;&#x5668;&#x9644;&#x52A0;&#x5230;&#x51FD;&#x6570;&#x4E0A;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">class</span> <span class="token class-name">Foo</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>_func <span class="token operator">=</span> func
+
+    <span class="token keyword">def</span> <span class="token function">__call__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&apos;class decorator runing&apos;</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_func<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&apos;class decorator ending&apos;</span><span class="token punctuation">)</span>
+
+@Foo
+<span class="token keyword">def</span> <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&apos;bar&apos;</span><span class="token punctuation">)</span>
+
+bar<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="functoolswraps">functools.wraps</h2>
+<p>&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x6781;&#x5927;&#x5730;&#x590D;&#x7528;&#x4E86;&#x4EE3;&#x7801;&#xFF0C;&#x4F46;&#x662F;&#x4ED6;&#x6709;&#x4E00;&#x4E2A;&#x7F3A;&#x70B9;&#x5C31;&#x662F;&#x539F;&#x51FD;&#x6570;&#x7684;&#x5143;&#x4FE1;&#x606F;&#x4E0D;&#x89C1;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;&#x51FD;&#x6570;&#x7684;<code>docstring</code>&#x3001;<code>__name__</code>&#x3001;&#x53C2;&#x6570;&#x5217;&#x8868;&#xFF0C;&#x5148;&#x770B;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment">#&#x88C5;&#x9970;&#x5668;</span>
+<span class="token keyword">def</span> <span class="token function">logged</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">with_logging</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span> func<span class="token punctuation">.</span>__name__      <span class="token comment"># &#x8F93;&#x51FA; &apos;with_logging&apos;</span>
+        <span class="token keyword">print</span> func<span class="token punctuation">.</span>__doc__       <span class="token comment"># &#x8F93;&#x51FA; None</span>
+        <span class="token keyword">return</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> with_logging
+
+<span class="token comment"># &#x51FD;&#x6570;</span>
+@logged
+<span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+   <span class="token triple-quoted-string string">&quot;&quot;&quot;does some math&quot;&quot;&quot;</span>
+   <span class="token keyword">return</span> x <span class="token operator">+</span> x <span class="token operator">*</span> x
+
+logged<span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E0D;&#x96BE;&#x53D1;&#x73B0;&#xFF0C;&#x51FD;&#x6570; <code>f</code> &#x88AB;<code>with_logging</code>&#x53D6;&#x4EE3;&#x4E86;&#xFF0C;&#x5F53;&#x7136;&#x5B83;&#x7684;<code>docstring</code>&#xFF0C;<code>__name__</code>&#x5C31;&#x662F;&#x53D8;&#x6210;&#x4E86;<code>with_logging</code>&#x51FD;&#x6570;&#x7684;&#x4FE1;&#x606F;&#x4E86;&#x3002;&#x597D;&#x5728;&#x6211;&#x4EEC;&#x6709;<code>functools.wraps</code>&#xFF0C;<code>wraps</code>&#x672C;&#x8EAB;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5B83;&#x80FD;&#x628A;&#x539F;&#x51FD;&#x6570;&#x7684;&#x5143;&#x4FE1;&#x606F;&#x62F7;&#x8D1D;&#x5230;&#x88C5;&#x9970;&#x5668;&#x91CC;&#x9762;&#x7684; <code>func</code> &#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x8FD9;&#x4F7F;&#x5F97;&#x88C5;&#x9970;&#x5668;&#x91CC;&#x9762;&#x7684; <code>func</code> &#x51FD;&#x6570;&#x4E5F;&#x6709;&#x548C;&#x539F;&#x51FD;&#x6570; foo &#x4E00;&#x6837;&#x7684;&#x5143;&#x4FE1;&#x606F;&#x4E86;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> functools <span class="token keyword">import</span> wraps
+<span class="token keyword">def</span> <span class="token function">logged</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    @wraps<span class="token punctuation">(</span>func<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">with_logging</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span> func<span class="token punctuation">.</span>__name__      <span class="token comment"># &#x8F93;&#x51FA; &apos;f&apos;</span>
+        <span class="token keyword">print</span> func<span class="token punctuation">.</span>__doc__       <span class="token comment"># &#x8F93;&#x51FA; &apos;does some math&apos;</span>
+        <span class="token keyword">return</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> with_logging
+
+@logged
+<span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+   <span class="token triple-quoted-string string">&quot;&quot;&quot;does some math&quot;&quot;&quot;</span>
+   <span class="token keyword">return</span> x <span class="token operator">+</span> x <span class="token operator">*</span> x
+</code></pre>
+<h2 id="&#x88C5;&#x9970;&#x5668;&#x987A;&#x5E8F;">&#x88C5;&#x9970;&#x5668;&#x987A;&#x5E8F;</h2>
+<p>&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8FD8;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">@a
+@b
+@c
+<span class="token keyword">def</span> <span class="token function">f</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+</code></pre>
+<p>&#x5B83;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x662F;&#x4ECE;&#x91CC;&#x5230;&#x5916;&#xFF0C;&#x6700;&#x5148;&#x8C03;&#x7528;&#x6700;&#x91CC;&#x5C42;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x6700;&#x540E;&#x8C03;&#x7528;&#x6700;&#x5916;&#x5C42;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5B83;&#x7B49;&#x6548;&#x4E8E;</p>
+<pre class="language-"><code class="lang-python">f <span class="token operator">=</span> a<span class="token punctuation">(</span>b<span class="token punctuation">(</span>c<span class="token punctuation">(</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<ol>
+<li><a href="https://foofish.net/python-decorator.html" target="_blank">&#x7406;&#x89E3; Python &#x88C5;&#x9970;&#x5668;</a></li>
+</ol>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://yangzh.cn" target="_blank">yangzh</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2018-10-22 22:59:05 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="exception.html" class="navigation navigation-prev " aria-label="Previous page: 异常处理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="module.html" class="navigation navigation-next " aria-label="Next page: 模块">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"装饰器","level":"2.4","depth":1,"next":{"title":"模块","level":"2.5","depth":1,"path":"syntax/module.md","ref":"syntax/module.md","articles":[]},"previous":{"title":"异常处理","level":"2.3","depth":1,"path":"syntax/exception.md","ref":"syntax/exception.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","include-codeblock","ace","-lunr","-search","search-pro","collapsible-menu","-livereload","prism","-highlight","url-embed","katex-gf","page-footer-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"collapsible-menu":{},"ace":{},"page-footer-ex":{"copyright":"By [yangzh](http://yangzh.cn)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"hline":true,"filename":"./FOOTER.md"},"fontsettings":{"theme":"white","family":"sans","size":2},"url-embed":{},"katex-gf":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn","开始之前":"http://yangjh.gitee.io/appendix"}},"gitbook":"*"},"file":{"path":"syntax/decorator.md","mtime":"2018-10-22T14:59:05.825Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-19T08:16:55.828Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
