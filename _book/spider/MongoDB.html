@@ -1,0 +1,1270 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据存储 · Python基础</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="yangjh">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex-gf/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../flask/flask.html" />
+    
+    
+    <link rel="prev" href="MySQL.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://yangzh.cn" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://yangjh.gitee.io/appendix" target="_blank" class="custom-link">开始之前</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">语法</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../syntax/syntax.html">
+            
+                <a href="../syntax/syntax.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    语法基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../syntax/variable.html">
+            
+                <a href="../syntax/variable.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../syntax/numbers.html">
+            
+                <a href="../syntax/numbers.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    数字类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../syntax/operator.html">
+            
+                <a href="../syntax/operator.html">
+            
+                    
+                        <b>2.1.3.</b>
+                    
+                    运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../syntax/sequence.html">
+            
+                <a href="../syntax/sequence.html">
+            
+                    
+                        <b>2.1.4.</b>
+                    
+                    序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../syntax/string.html">
+            
+                <a href="../syntax/string.html">
+            
+                    
+                        <b>2.1.5.</b>
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../syntax/list.html">
+            
+                <a href="../syntax/list.html">
+            
+                    
+                        <b>2.1.6.</b>
+                    
+                    列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../syntax/dictionary.html">
+            
+                <a href="../syntax/dictionary.html">
+            
+                    
+                        <b>2.1.7.</b>
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../syntax/tuple.html">
+            
+                <a href="../syntax/tuple.html">
+            
+                    
+                        <b>2.1.8.</b>
+                    
+                    元组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../syntax/if.html">
+            
+                <a href="../syntax/if.html">
+            
+                    
+                        <b>2.1.9.</b>
+                    
+                    分支控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../syntax/function.html">
+            
+                <a href="../syntax/function.html">
+            
+                    
+                        <b>2.1.10.</b>
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../syntax/loop.html">
+            
+                <a href="../syntax/loop.html">
+            
+                    
+                        <b>2.1.11.</b>
+                    
+                    循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../syntax/oop.html">
+            
+                <a href="../syntax/oop.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    面向对象编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../syntax/class.html">
+            
+                <a href="../syntax/class.html">
+            
+                    
+                        <b>2.2.1.</b>
+                    
+                    类和对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../syntax/overload.html">
+            
+                <a href="../syntax/overload.html">
+            
+                    
+                        <b>2.2.2.</b>
+                    
+                    操作符重载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../syntax/inheritance.html">
+            
+                <a href="../syntax/inheritance.html">
+            
+                    
+                        <b>2.2.3.</b>
+                    
+                    继承和多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../syntax/exception.html">
+            
+                <a href="../syntax/exception.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../syntax/decorator.html">
+            
+                <a href="../syntax/decorator.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../syntax/module.html">
+            
+                <a href="../syntax/module.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">进阶</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../advanced/buildInFunctions.html">
+            
+                <a href="../advanced/buildInFunctions.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    内置函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../advanced/dictfunction.html">
+            
+                <a href="../advanced/dictfunction.html">
+            
+                    
+                        <b>3.1.1.</b>
+                    
+                    dict函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../advanced/zipfunction.html">
+            
+                <a href="../advanced/zipfunction.html">
+            
+                    
+                        <b>3.1.2.</b>
+                    
+                    zip函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../advanced/listfunction.html">
+            
+                <a href="../advanced/listfunction.html">
+            
+                    
+                        <b>3.1.3.</b>
+                    
+                    list函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../advanced/minfunction.html">
+            
+                <a href="../advanced/minfunction.html">
+            
+                    
+                        <b>3.1.4.</b>
+                    
+                    min函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../advanced/iterator.html">
+            
+                <a href="../advanced/iterator.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    可迭代对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../advanced/yield.html">
+            
+                <a href="../advanced/yield.html">
+            
+                    
+                        <b>3.2.1.</b>
+                    
+                    yield
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../advanced/underline.html">
+            
+                <a href="../advanced/underline.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    单、双下划线的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../re/regular.html">
+            
+                <a href="../re/regular.html">
+            
+                    
+                        <b>3.4.</b>
+                    
+                    正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../advanced/argparse.html">
+            
+                <a href="../advanced/argparse.html">
+            
+                    
+                        <b>3.5.</b>
+                    
+                    命令行参数模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">数据抓取</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="spider.html">
+            
+                <a href="spider.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    网络爬虫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="HTTPPackage.html">
+            
+                <a href="HTTPPackage.html">
+            
+                    
+                        <b>4.1.1.</b>
+                    
+                    基本库的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="pyquery.html">
+            
+                <a href="pyquery.html">
+            
+                    
+                        <b>4.1.2.</b>
+                    
+                    解析库pyquery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="storage.html">
+            
+                <a href="storage.html">
+            
+                    
+                        <b>4.1.3.</b>
+                    
+                    数据存储
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.3.1" data-path="MySQL.html">
+            
+                <a href="MySQL.html">
+            
+                    
+                        <b>4.1.3.1.</b>
+                    
+                    数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.1.3.2" data-path="MongoDB.html">
+            
+                <a href="MongoDB.html">
+            
+                    
+                        <b>4.1.3.2.</b>
+                    
+                    数据存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">网络应用开发</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../flask/flask.html">
+            
+                <a href="../flask/flask.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Flask
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../flask/install.html">
+            
+                <a href="../flask/install.html">
+            
+                    
+                        <b>5.1.1.</b>
+                    
+                    安装Flask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../flask/structure.html">
+            
+                <a href="../flask/structure.html">
+            
+                    
+                        <b>5.1.2.</b>
+                    
+                    Flask应用的基本结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../flask/jinja.html">
+            
+                <a href="../flask/jinja.html">
+            
+                    
+                        <b>5.1.3.</b>
+                    
+                    Jinja2模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../flask/wtf.html">
+            
+                <a href="../flask/wtf.html">
+            
+                    
+                        <b>5.1.4.</b>
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../flask/database.html">
+            
+                <a href="../flask/database.html">
+            
+                    
+                        <b>5.1.5.</b>
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../flask/mail.html">
+            
+                <a href="../flask/mail.html">
+            
+                    
+                        <b>5.1.6.</b>
+                    
+                    电子邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">社会网络分析</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../sna/">
+            
+                <a href="../sna/">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    社会网络分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../sna/graphtheory.html">
+            
+                <a href="../sna/graphtheory.html">
+            
+                    
+                        <b>6.1.1.</b>
+                    
+                    图论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../sna/centrality.html">
+            
+                <a href="../sna/centrality.html">
+            
+                    
+                        <b>6.1.2.</b>
+                    
+                    中心性、权力与瓶颈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../sna/component.html">
+            
+                <a href="../sna/component.html">
+            
+                    
+                        <b>6.1.3.</b>
+                    
+                    派系、聚类和组元
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">相关扩展包</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../package/networkX.html">
+            
+                <a href="../package/networkX.html">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    networkX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../package/matplotlib.html">
+            
+                <a href="../package/matplotlib.html">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    matplotlib
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据存储</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mongodb">MongoDB</h1>
+<p>MongoDB &#x662F;&#x4E00;&#x6B3E;&#x5F00;&#x6E90;&#x7684;&#x975E;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x8F6F;&#x4EF6;&#xFF0C;&#x6027;&#x80FD;&#x4F18;&#x5F02;&#xFF0C;&#x5728;&#x8BF8;&#x591A;&#x5927;&#x578B;&#x9879;&#x76EE;&#x4E2D;&#x8868;&#x73B0;&#x826F;&#x597D;&#xFF0C;&#x662F;&#x975E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7684;&#x9996;&#x9009;&#x3002;</p>
+<h2 id="&#x5728;macos&#x4E2D;&#x7684;&#x5B89;&#x88C5;">&#x5728;macOS&#x4E2D;&#x7684;&#x5B89;&#x88C5;</h2>
+<p>MongoDB &#x53EA;&#x652F;&#x6301;macOS 10.11&#x53CA;&#x4EE5;&#x540E;&#x7684;&#x4EA7;&#x54C1;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x5B89;&#x88C5;">&#x4F7F;&#x7528;&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x5B89;&#x88C5;</h3>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x5728;macOS &#x4E2D;&#x7684;&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;Homebrew&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#x3002;</p>
+<pre class="language-"><code class="lang-bash">brew <span class="token function">install</span> mongodb
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x6307;&#x4EE4;&#x5C06;&#x5B89;&#x88C5;MongoDB&#x7684;&#x6700;&#x65B0;&#x53D1;&#x884C;&#x7248;&#xFF0C;&#x5E76;&#x4F1A;&#x81EA;&#x52A8;&#x5B89;&#x88C5;MongoDB&#x6240;&#x9700;&#x8981;&#x7684;&#x4F9D;&#x8D56;&#x73AF;&#x5883;&#x3002;</p>
+<h3 id="&#x8FD0;&#x884C;&#x524D;&#x7684;&#x51C6;&#x5907;">&#x8FD0;&#x884C;&#x524D;&#x7684;&#x51C6;&#x5907;</h3>
+<p>&#x5728;&#x542F;&#x52A8;MongoDB&#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x521B;&#x5EFA;MongoDB&#x8BFB;&#x5199;&#x6570;&#x636E;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;MongoDB&#x4F1A;&#x4EE5;<code>/data/db</code>&#x4E3A;&#x9ED8;&#x8BA4;&#x76EE;&#x5F55;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x5C06;&#x521B;&#x5EFA;&#x9ED8;&#x8BA4;&#x7684;<code>/data/db</code>&#x76EE;&#x5F55;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">mkdir</span> -p /data/db
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x76EE;&#x5F55;&#x540E;&#xFF0C;&#x4E3A;&#x7ED9;&#x76EE;&#x5F55;&#x6307;&#x5B9A;&#x8BFB;&#x5199;&#x6743;&#x9650;&#x3002;&#x7136;&#x540E;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x5C06;MongoDB&#x52A0;&#x5165;&#x5230;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#x4E2D;&#xFF0C;&#x4EE5;&#x4FBF;&#x6BCF;&#x6B21;&#x542F;&#x52A8;&#x65F6;&#x90FD;&#x53EF;&#x81EA;&#x52A8;&#x542F;&#x52A8;MongoDB&#x670D;&#x52A1;&#x3002;</p>
+<pre class="language-"><code class="lang-bash">brew services start mongodb
+</code></pre>
+<h3 id="&#x5B89;&#x88C5;pymongo&#x5E93;">&#x5B89;&#x88C5;PyMongo&#x5E93;</h3>
+<p>&#x542F;&#x52A8;&#x865A;&#x62DF;python&#x73AF;&#x5883;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;pip&#x5B89;&#x88C5;PyMongo&#x5E93;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"> &#x1F449;  <span class="token function">source</span> bin/activate
+<span class="token punctuation">(</span>spider<span class="token punctuation">)</span> 
+ &#x1F449;  pip3 <span class="token function">install</span> pymongo
+Collecting pymongo
+  Downloading https://files.pythonhosted.org/packages/d7/ac/d2e324c1f9bcf653fa106785371a16b4709506a35b04948655de8b961a85/pymongo-3.7.2-cp37-cp37m-macosx_10_9_x86_64.whl <span class="token punctuation">(</span>307kB<span class="token punctuation">)</span>
+    100% <span class="token operator">|</span>&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;<span class="token operator">|</span> 317kB 1.6MB/s 
+Installing collected packages: pymongo
+Successfully installed pymongo-3.7.2
+</code></pre>
+<h3 id="&#x5B89;&#x88C5;robo-3t">&#x5B89;&#x88C5;Robo 3T</h3>
+<p>MongoDB&#x5E76;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x7684;&#x56FE;&#x5F62;&#x5316;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#xFF0C;&#x53EA;&#x63D0;&#x4F9B;Mongo shell&#x7684;&#x547D;&#x4EE4;&#x884C;&#x65B9;&#x5F0F;&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8BF8;&#x5982;Robo 3T&#x8FD9;&#x6837;&#x7684;&#x56FE;&#x5F62;&#x5316;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x3001;&#x4FEE;&#x6539;&#x7B49;&#x7BA1;&#x7406;&#x5DE5;&#x4F5C;&#x3002;&#x4F7F;&#x7528;Homebrew&#x5B89;&#x88C5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">brew <span class="token function">install</span> robo-3t
+</code></pre>
+<p>&#x5B89;&#x88C5;&#x540E;&#xFF0C;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x627E;&#x5230;robo-3t&#xFF0C;&#x8FDB;&#x884C;&#x5FC5;&#x8981;&#x7684;&#x914D;&#x7F6E;&#xFF08;&#x6307;&#x5B9A;&#x4E3B;&#x673A;&#x540D;&#x548C;&#x7AEF;&#x53E3;&#xFF09;&#xFF0C;&#x5373;&#x53EF;&#x5BF9;MongoDB&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x3002;</p>
+<h2 id="&#x8FDE;&#x63A5;mongodb">&#x8FDE;&#x63A5;MongoDB</h2>
+<p>&#x4F7F;&#x7528;PyMongo&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;Python&#x4E2D;&#x5BF9;MongoDB&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x8FDE;&#x63A5;&#x5230;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4F7F;&#x7528;MongoClient&#x65B9;&#x6CD5;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> pymongo
+
+client <span class="token operator">=</span> pymongo<span class="token punctuation">.</span>MongoClient<span class="token punctuation">(</span><span class="token string">&apos;mongodb://localhost:27017&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5E93;">&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5E93;</h2>
+<p>MongoDB&#x4E2D;&#x5EFA;&#x7ACB;&#x548C;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x76F4;&#x63A5;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&#x5373;&#x53EF;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x6570;&#x636E;&#x5E93;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;MongoDB&#x5C31;&#x4F1A;&#x521B;&#x5EFA;&#x8BE5;&#x6570;&#x636E;&#x5E93;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">db <span class="token operator">=</span> client<span class="token punctuation">[</span><span class="token string">&apos;weibo&apos;</span><span class="token punctuation">]</span>
+</code></pre>
+<h2 id="&#x6307;&#x5B9A;&#x96C6;&#x5408;">&#x6307;&#x5B9A;&#x96C6;&#x5408;</h2>
+<p>MongoDB&#x4E2D;&#x7684;&#x96C6;&#x5408;&#xFF08;collection&#xFF09;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;MySQL&#x7B49;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x8868;&#xFF08;table&#xFF09;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#xFF0C;&#x624D;&#x80FD;&#x8FDB;&#x884C;&#x5B58;&#x5165;&#x3001;&#x4FEE;&#x6539;&#x7B49;&#x64CD;&#x4F5C;&#x3002;&#x4F7F;&#x7528;Collection&#x5BF9;&#x8C61;&#xFF0C;&#x5373;&#x53EF;&#x6307;&#x5B9A;&#x96C6;&#x5408;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> pymongo
+client <span class="token operator">=</span> pymongo<span class="token punctuation">.</span>MongoClient<span class="token punctuation">(</span><span class="token string">&apos;mongodb://localhost:27017&apos;</span><span class="token punctuation">)</span>
+db <span class="token operator">=</span> client<span class="token punctuation">[</span><span class="token string">&apos;weibo&apos;</span><span class="token punctuation">]</span>
+collection <span class="token operator">=</span> db<span class="token punctuation">[</span><span class="token string">&apos;yangjh&apos;</span><span class="token punctuation">]</span>
+</code></pre>
+<h2 id="&#x63D2;&#x5165;&#x6570;&#x636E;">&#x63D2;&#x5165;&#x6570;&#x636E;</h2>
+<p>&#x63A8;&#x8350;&#x4F7F;&#x7528;<code>insert_one()</code>&#x548C;<code>insert_many()</code>&#x65B9;&#x6CD5;&#x6765;&#x5206;&#x522B;&#x63D2;&#x5165;&#x5355;&#x6761;&#x8BB0;&#x5F55;&#x548C;&#x591A;&#x6761;&#x8BB0;&#x5F55;&#x3002;</p>
+<pre class="language-"><code class="lang-python">card <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;20183210&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&apos;yangjh&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;age&quot;</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;gender&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;male&apos;</span>
+<span class="token punctuation">}</span>
+
+result <span class="token operator">=</span> collection<span class="token punctuation">.</span>insert_one<span class="token punctuation">(</span>card<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>inserted_id<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token operator">&lt;</span>pymongo.results.InsertOneResult object at 0x10436da48<span class="token operator">&gt;</span>
+5bf8b3f897c32c4128ae8f6f
+</code></pre>
+<p><code>insert_one()</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x8C03;&#x7528;&#x5176;<code>inserted_id</code>&#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;<code>_id</code>&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>insert_many()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x4E00;&#x6B21;&#x63D2;&#x5165;&#x591A;&#x6761;&#x8BB0;&#x5F55;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">card1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;20183211&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&apos;yangzh&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;age&quot;</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;gender&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;male&apos;</span>
+<span class="token punctuation">}</span>
+
+card2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;id&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;20183212&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> <span class="token string">&apos;yangzhh&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;age&quot;</span><span class="token punctuation">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;gender&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;female&apos;</span>
+<span class="token punctuation">}</span>
+result <span class="token operator">=</span> collection<span class="token punctuation">.</span>insert_many<span class="token punctuation">(</span><span class="token punctuation">[</span>card1<span class="token punctuation">,</span> card2<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>inserted_ids<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x67E5;&#x8BE2;&#x6570;&#x636E;">&#x67E5;&#x8BE2;&#x6570;&#x636E;</h2>
+<p>&#x67E5;&#x8BE2;&#x6570;&#x636E;&#xFF0C;&#x4F7F;&#x7528;<code>find_one()</code>&#x6216;<code>find()</code>&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#xFF0C;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;<code>find_one()</code>&#x65B9;&#x6CD5;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x662F;&#x5355;&#x6761;&#xFF0C;&#x800C;<code>find()</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x5168;&#x90E8;&#x7ED3;&#x679C;&#x3002;</p>
+<pre class="language-"><code class="lang-python">results <span class="token operator">=</span> collection<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&apos;age&apos;</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>results<span class="token punctuation">)</span>
+<span class="token keyword">for</span> result <span class="token keyword">in</span> results<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token operator">&lt;</span>pymongo.cursor.Cursor object at 0x103afe550<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span><span class="token string">&apos;_id&apos;</span><span class="token keyword">:</span> ObjectId<span class="token punctuation">(</span><span class="token string">&apos;5bf8b3f897c32c4128ae8f6f&apos;</span><span class="token punctuation">)</span>, <span class="token string">&apos;id&apos;</span><span class="token keyword">:</span> <span class="token string">&apos;20183210&apos;</span>, <span class="token string">&apos;name&apos;</span><span class="token keyword">:</span> <span class="token string">&apos;yangjh&apos;</span>, <span class="token string">&apos;age&apos;</span><span class="token keyword">:</span> 20, <span class="token string">&apos;gender&apos;</span><span class="token keyword">:</span> <span class="token string">&apos;male&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;_id&apos;</span><span class="token keyword">:</span> ObjectId<span class="token punctuation">(</span><span class="token string">&apos;5bf8b81c97c32c433d302e60&apos;</span><span class="token punctuation">)</span>, <span class="token string">&apos;id&apos;</span><span class="token keyword">:</span> <span class="token string">&apos;20183210&apos;</span>, <span class="token string">&apos;name&apos;</span><span class="token keyword">:</span> <span class="token string">&apos;yangjh&apos;</span>, <span class="token string">&apos;age&apos;</span><span class="token keyword">:</span> 20, <span class="token string">&apos;gender&apos;</span><span class="token keyword">:</span> <span class="token string">&apos;male&apos;</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">&apos;_id&apos;</span><span class="token keyword">:</span> ObjectId<span class="token punctuation">(</span><span class="token string">&apos;5bf8b81c97c32c433d302e61&apos;</span><span class="token punctuation">)</span>, <span class="token string">&apos;id&apos;</span><span class="token keyword">:</span> <span class="token string">&apos;20183211&apos;</span>, <span class="token string">&apos;name&apos;</span><span class="token keyword">:</span> <span class="token string">&apos;yangzh&apos;</span>, <span class="token string">&apos;age&apos;</span><span class="token keyword">:</span> 20, <span class="token string">&apos;gender&apos;</span><span class="token keyword">:</span> <span class="token string">&apos;male&apos;</span><span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x4E3A;Cursor&#x7C7B;&#x578B;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x751F;&#x6210;&#x5668;&#xFF0C;&#x9700;&#x8981;&#x904D;&#x5386;&#x624D;&#x80FD;&#x83B7;&#x53D6;&#x5176;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x5728;&#x4F7F;&#x7528;find()&#x6216;find_one()&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4EE5;&#x5BF9;&#x8C61;&#x7684;&#x5F62;&#x5F0F;&#x4F20;&#x5165;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x3002;&#x5E38;&#x89C1;&#x7684;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x603B;&#x7ED3;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7B26;&#x53F7;</th>
+<th>&#x542B;&#x4E49;</th>
+<th>&#x793A;&#x4F8B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>&#x7B49;&#x4E8E;</td>
+<td>{&apos;age&apos;:20</td>
+</tr>
+<tr>
+<td>$lt</td>
+<td>&#x5C0F;&#x4E8E;</td>
+<td>{&apos;age&apos;:{&apos;$lt&apos;:20}}</td>
+</tr>
+<tr>
+<td>$gt</td>
+<td>&#x5927;&#x4E8E;</td>
+<td>{&apos;age&apos;:{&apos;$gt&apos;:20}}</td>
+</tr>
+<tr>
+<td>$lte</td>
+<td>&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;</td>
+<td>{&apos;age&apos;:{&apos;$lte&apos;:20}}</td>
+</tr>
+<tr>
+<td>$gte</td>
+<td>&#x5927;&#x4E8E;&#x7B49;&#x4E8E;</td>
+<td>{&apos;age&apos;:{&apos;$gte&apos;:20}}</td>
+</tr>
+<tr>
+<td>$ne</td>
+<td>&#x4E0D;&#x7B49;&#x4E8E;</td>
+<td>{&apos;age&apos;:{&apos;$ne&apos;:20}}</td>
+</tr>
+<tr>
+<td>$in</td>
+<td>&#x5728;&#x8303;&#x56F4;&#x5185;</td>
+<td>{&apos;age&apos;:{&apos;$in&apos;:[20,30]}}</td>
+</tr>
+<tr>
+<td>$nin</td>
+<td>&#x4E0D;&#x5728;&#x8303;&#x56F4;&#x5185;</td>
+<td>{&apos;age&apos;:{&apos;$nin&apos;:[20,30]}}</td>
+</tr>
+<tr>
+<td>$regex</td>
+<td>&#x5339;&#x914D;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</td>
+<td>{&apos;name&apos;:{&apos;$regex&apos;:&apos;^yangzh&apos;}}</td>
+</tr>
+<tr>
+<td>$exists</td>
+<td>&#x5C5E;&#x6027;&#x662F;&#x5426;&#x5B58;&#x5728;</td>
+<td>{&apos;age&apos;:{&apos;$exists&apos;:True}}</td>
+</tr>
+<tr>
+<td>$type</td>
+<td>&#x7C7B;&#x578B;&#x5224;&#x65AD;</td>
+<td>{&apos;age&apos;:{&apos;$type&apos;:&apos;int&apos;}}</td>
+</tr>
+<tr>
+<td>$text</td>
+<td>&#x6587;&#x672C;&#x67E5;&#x8BE2;</td>
+<td>{&apos;$text&apos;:{&apos;$search&apos;:&apos;yang&apos;}}</td>
+</tr>
+<tr>
+<td>$where</td>
+<td>&#x9AD8;&#x7EA7;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;</td>
+<td>{&apos;$where&apos;:&apos;python&#x8868;&#x8FBE;&#x5F0F;&apos;}</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x8BA1;&#x6570;">&#x8BA1;&#x6570;</h2>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>count()</code>&#x65B9;&#x6CD5;&#x7EDF;&#x8BA1;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<h2 id="&#x6392;&#x5E8F;">&#x6392;&#x5E8F;</h2>
+<p>&#x4F7F;&#x7528;<code>sort()</code>&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x6392;&#x5E8F;&#x65F6;&#x9700;&#x8981;&#x4F20;&#x5165;&#x5B57;&#x6BB5;&#x540D;&#x53CA;&#x5347;&#x964D;&#x5E8F;&#x6807;&#x8BB0;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">results <span class="token operator">=</span> collection<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token string">&apos;name&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5C06;&#x4EE5;name&#x5B57;&#x6BB5;&#x4E3A;&#x4F9D;&#x636E;&#xFF0C;&#x6309;&#x7167;&#x5B57;&#x6BCD;&#x5347;&#x5E8F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x3002;&#x82E5;&#x8981;&#x5012;&#x5E8F;&#xFF0C;&#x5219;&#x4F20;&#x5165;<code>pymongo.DESCENDING</code>&#x3002;</p>
+<h2 id="&#x504F;&#x79FB;&#x548C;&#x9650;&#x5B9A;">&#x504F;&#x79FB;&#x548C;&#x9650;&#x5B9A;</h2>
+<p>&#x4F7F;&#x7528;<code>skip()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;&#x6307;&#x5B9A;&#x7684;&#x4F4D;&#x7F6E;&#x83B7;&#x53D6;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x3002;&#x4F7F;&#x7528;<code>limit()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x9650;&#x5B9A;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x91CF;&#x7ED3;&#x679C;&#x3002;</p>
+<h2 id="&#x66F4;&#x65B0;">&#x66F4;&#x65B0;</h2>
+<p>&#x4F7F;&#x7528;<code>update_one()</code>&#x65B9;&#x6CD5;&#x548C;<code>update_many()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x66F4;&#x65B0;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h2 id="&#x5220;&#x9664;">&#x5220;&#x9664;</h2>
+<p>&#x4F7F;&#x7528;<code>delete_one()</code>&#x65B9;&#x6CD5;&#x548C;<code>delete_many()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h2 id="&#x5176;&#x4ED6;&#x64CD;&#x4F5C;">&#x5176;&#x4ED6;&#x64CD;&#x4F5C;</h2>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;<code>fine_one_and_delete()</code>&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<ol>
+<li><a href="https://docs.mongodb.com/" target="_blank">https://docs.mongodb.com/</a></li>
+<li><a href="https://api.mongodb.com/python/current/" target="_blank">https://api.mongodb.com/python/current/</a></li>
+<li><a href="https://docs.mongodb.com/manual/reference/operator/query/" target="_blank">MongoDB&#x67E5;&#x8BE2;&#x64CD;&#x4F5C;&#x7B26;&#x624B;&#x518C;</a></li>
+</ol>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://yangzh.cn" target="_blank">yangzh</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2018-11-24 11:34:23 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="MySQL.html" class="navigation navigation-prev " aria-label="Previous page: 数据存储">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../flask/flask.html" class="navigation navigation-next " aria-label="Next page: Flask">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据存储","level":"4.1.3.2","depth":3,"next":{"title":"Flask","level":"5.1","depth":1,"path":"flask/flask.md","ref":"flask/flask.md","articles":[{"title":"安装Flask","level":"5.1.1","depth":2,"path":"flask/install.md","ref":"flask/install.md","articles":[]},{"title":"Flask应用的基本结构","level":"5.1.2","depth":2,"path":"flask/structure.md","ref":"flask/structure.md","articles":[]},{"title":"Jinja2模板","level":"5.1.3","depth":2,"path":"flask/jinja.md","ref":"flask/jinja.md","articles":[]},{"title":"表单","level":"5.1.4","depth":2,"path":"flask/wtf.md","ref":"flask/wtf.md","articles":[]},{"title":"数据库","level":"5.1.5","depth":2,"path":"flask/database.md","ref":"flask/database.md","articles":[]},{"title":"电子邮件","level":"5.1.6","depth":2,"path":"flask/mail.md","ref":"flask/mail.md","articles":[]}]},"previous":{"title":"数据存储","level":"4.1.3.1","depth":3,"path":"spider/MySQL.md","ref":"spider/MySQL.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","include-codeblock","ace","-lunr","-search","search-pro","collapsible-menu","-livereload","prism","-highlight","url-embed","katex-gf","page-footer-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"collapsible-menu":{},"ace":{},"page-footer-ex":{"copyright":"By [yangzh](http://yangzh.cn)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"hline":true,"filename":"./FOOTER.md"},"fontsettings":{"theme":"white","family":"sans","size":2},"url-embed":{},"katex-gf":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn","开始之前":"http://yangjh.gitee.io/appendix"}},"gitbook":"*"},"file":{"path":"spider/MongoDB.md","mtime":"2018-11-24T03:34:23.962Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-24T03:35:03.845Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

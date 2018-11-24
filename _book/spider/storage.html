@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>networkX · Python基础</title>
+        <title>数据存储 · Python基础</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -71,10 +71,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="matplotlib.html" />
+    <link rel="next" href="MySQL.html" />
     
     
-    <link rel="prev" href="../sna/component.html" />
+    <link rel="prev" href="pyquery.html" />
     
 
     </head>
@@ -612,9 +612,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../spider/spider.html">
+        <li class="chapter " data-level="4.1" data-path="spider.html">
             
-                <a href="../spider/spider.html">
+                <a href="spider.html">
             
                     
                         <b>4.1.</b>
@@ -628,9 +628,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.1.1" data-path="../spider/HTTPPackage.html">
+        <li class="chapter " data-level="4.1.1" data-path="HTTPPackage.html">
             
-                <a href="../spider/HTTPPackage.html">
+                <a href="HTTPPackage.html">
             
                     
                         <b>4.1.1.</b>
@@ -643,9 +643,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.2" data-path="../spider/pyquery.html">
+        <li class="chapter " data-level="4.1.2" data-path="pyquery.html">
             
-                <a href="../spider/pyquery.html">
+                <a href="pyquery.html">
             
                     
                         <b>4.1.2.</b>
@@ -658,9 +658,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.3" data-path="../spider/storage.html">
+        <li class="chapter active" data-level="4.1.3" data-path="storage.html">
             
-                <a href="../spider/storage.html">
+                <a href="storage.html">
             
                     
                         <b>4.1.3.</b>
@@ -674,9 +674,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.1.3.1" data-path="../spider/MySQL.html">
+        <li class="chapter " data-level="4.1.3.1" data-path="MySQL.html">
             
-                <a href="../spider/MySQL.html">
+                <a href="MySQL.html">
             
                     
                         <b>4.1.3.1.</b>
@@ -689,9 +689,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.1.3.2" data-path="../spider/MongoDB.html">
+        <li class="chapter " data-level="4.1.3.2" data-path="MongoDB.html">
             
-                <a href="../spider/MongoDB.html">
+                <a href="MongoDB.html">
             
                     
                         <b>4.1.3.2.</b>
@@ -912,9 +912,9 @@
         
         
     
-        <li class="chapter active" data-level="7.1" data-path="networkX.html">
+        <li class="chapter " data-level="7.1" data-path="../package/networkX.html">
             
-                <a href="networkX.html">
+                <a href="../package/networkX.html">
             
                     
                         <b>7.1.</b>
@@ -927,9 +927,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.2" data-path="matplotlib.html">
+        <li class="chapter " data-level="7.2" data-path="../package/matplotlib.html">
             
-                <a href="matplotlib.html">
+                <a href="../package/matplotlib.html">
             
                     
                         <b>7.2.</b>
@@ -972,7 +972,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >networkX</a>
+        <a href=".." >数据存储</a>
     </h1>
 </div>
 
@@ -987,9 +987,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="networkx">networkX</h1>
-<p>NetworkX &#x662F;&#x4E00;&#x4E2A;&#x7528;Python&#x8BED;&#x8A00;&#x5F00;&#x53D1;&#x7684;&#x56FE;&#x8BBA;&#x4E0E;&#x590D;&#x6742;&#x7F51;&#x7EDC;&#x5EFA;&#x6A21;&#x6269;&#x5C55;&#x5305;&#xFF0C;&#x63D0;&#x4F9B;&#x5E38;&#x7528;&#x7684;&#x56FE;&#x4E0E;&#x590D;&#x6742;&#x7F51;&#x7EDC;&#x5206;&#x6790;&#x7B97;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x7F51;&#x7EDC;&#x6570;&#x636E;&#x5206;&#x6790;&#x3001;&#x4EFF;&#x771F;&#x5EFA;&#x6A21;&#x7B49;&#x5DE5;&#x4F5C;&#x3002;networkx&#x652F;&#x6301;&#x521B;&#x5EFA;&#x7B80;&#x5355;&#x65E0;&#x5411;&#x56FE;&#x3001;&#x6709;&#x5411;&#x56FE;&#x548C;&#x591A;&#x91CD;&#x56FE;&#xFF08;multigraph&#xFF09;&#xFF1B;&#x5185;&#x7F6E;&#x8BB8;&#x591A;&#x6807;&#x51C6;&#x7684;&#x56FE;&#x8BBA;&#x7B97;&#x6CD5;&#xFF0C;&#x8282;&#x70B9;&#x53EF;&#x4E3A;&#x4EFB;&#x610F;&#x6570;&#x636E;&#xFF1B;&#x652F;&#x6301;&#x4EFB;&#x610F;&#x7684;&#x8FB9;&#x503C;&#x7EF4;&#x5EA6;&#xFF0C;&#x529F;&#x80FD;&#x4E30;&#x5BCC;&#xFF0C;&#x7B80;&#x5355;&#x6613;&#x7528;&#x3002;</p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://yangzh.cn" target="_blank">yangzh</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2018-10-30 15:11:07 </span> </footer>
+                                <h1 id="&#x6570;&#x636E;&#x5B58;&#x50A8;">&#x6570;&#x636E;&#x5B58;&#x50A8;</h1>
+<p>&#x83B7;&#x53D6;&#x5230;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x3001;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#x8D77;&#x6765;&#xFF0C;&#x4EE5;&#x4FBF;&#x518D;&#x6B21;&#x5229;&#x7528;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x7528;&#x6CD5;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x800C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x65B9;&#x5F0F;&#x5219;&#x5206;&#x4E3A;&#x4F7F;&#x7528;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x548C;&#x975E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5176;&#x5404;&#x81EA;&#x7684;&#x4EE3;&#x8868;&#x6570;&#x636E;&#x5E93;&#x4EA7;&#x54C1;&#x662F;MySQL&#x548C;MongoDB&#xFF0C;&#x7686;&#x4E3A;&#x5F00;&#x6E90;&#x4EA7;&#x54C1;&#xFF0C;&#x4ECE;&#x6027;&#x80FD;&#x548C;&#x5B89;&#x5168;&#x6027;&#x89D2;&#x5EA6;&#x90FD;&#x5177;&#x6709;&#x5F88;&#x5F3A;&#x7684;&#x7ADE;&#x4E89;&#x529B;&#x3002;&#x56E0;&#x800C;&#xFF0C;&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x8FD9;&#x4E24;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x5728;Python&#x4E2D;&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://yangzh.cn" target="_blank">yangzh</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2018-11-24 09:11:28 </span> </footer>
                                 
                                 </section>
                             
@@ -1016,12 +1017,12 @@
 
             
                 
-                <a href="../sna/component.html" class="navigation navigation-prev " aria-label="Previous page: 派系、聚类和组元">
+                <a href="pyquery.html" class="navigation navigation-prev " aria-label="Previous page: 解析库pyquery">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="matplotlib.html" class="navigation navigation-next " aria-label="Next page: matplotlib">
+                <a href="MySQL.html" class="navigation navigation-next " aria-label="Next page: 数据存储">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1032,7 +1033,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"networkX","level":"7.1","depth":1,"next":{"title":"matplotlib","level":"7.2","depth":1,"path":"package/matplotlib.md","ref":"package/matplotlib.md","articles":[]},"previous":{"title":"派系、聚类和组元","level":"6.1.3","depth":2,"path":"sna/component.md","ref":"sna/component.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","include-codeblock","ace","-lunr","-search","search-pro","collapsible-menu","-livereload","prism","-highlight","url-embed","katex-gf","page-footer-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"collapsible-menu":{},"ace":{},"page-footer-ex":{"copyright":"By [yangzh](http://yangzh.cn)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"hline":true,"filename":"./FOOTER.md"},"fontsettings":{"theme":"white","family":"sans","size":2},"url-embed":{},"katex-gf":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn","开始之前":"http://yangjh.gitee.io/appendix"}},"gitbook":"*"},"file":{"path":"package/networkX.md","mtime":"2018-10-30T07:11:07.297Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-24T03:35:03.845Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数据存储","level":"4.1.3","depth":2,"next":{"title":"数据存储","level":"4.1.3.1","depth":3,"path":"spider/MySQL.md","ref":"spider/MySQL.md","articles":[]},"previous":{"title":"解析库pyquery","level":"4.1.2","depth":2,"path":"spider/pyquery.md","ref":"spider/pyquery.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","include-codeblock","ace","-lunr","-search","search-pro","collapsible-menu","-livereload","prism","-highlight","url-embed","katex-gf","page-footer-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"collapsible-menu":{},"ace":{},"page-footer-ex":{"copyright":"By [yangzh](http://yangzh.cn)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"localized-footer":{"hline":true,"filename":"./FOOTER.md"},"fontsettings":{"theme":"white","family":"sans","size":2},"url-embed":{},"katex-gf":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn","开始之前":"http://yangjh.gitee.io/appendix"}},"gitbook":"*"},"file":{"path":"spider/storage.md","mtime":"2018-11-24T01:11:28.761Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-24T03:35:03.845Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -43,7 +43,9 @@
 * [网络爬虫](spider/spider.md)
   * [基本库的使用](spider/HTTPPackage.md)
   * [解析库pyquery](spider/pyquery.md)
-  * [MySQL的存储](spider/MySQL.md)
+  * [数据存储](spider/storage.md)
+    * [数据存储](spider/MySQL.md)
+    * [数据存储](spider/MongoDB.md)
 
 ## 网络应用开发
 
