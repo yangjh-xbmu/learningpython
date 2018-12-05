@@ -1,6 +1,7 @@
 # Summary
 
 * [简介](README.md)
+* [开发环境的搭建](IDE.md)
 
 ## 语法
 
