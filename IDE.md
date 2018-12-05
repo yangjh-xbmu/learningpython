@@ -6,7 +6,7 @@ Python支持多个平台，其中在Mac、类UNIX平台中已默认安装，Wind
 
 在目前的MacOs中，内置的Python版本为2.7。如果要安装Python3，步骤如下：
 
-## 安装Xcode
+### 安装Xcode
 
 在终端中运行如下命令：
 
@@ -14,7 +14,7 @@ Python支持多个平台，其中在Mac、类UNIX平台中已默认安装，Wind
 xcode-select --install
 ```
 
-## 安装Homebrew
+### 安装Homebrew
 
 在终端中运行如下命令：
 
@@ -28,7 +28,7 @@ Homebrew安装完后，使用vim或者其他编辑器将如下内容添加到`~/
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 ```
 
-## 安装Python3
+### 安装Python3
 
 在终端中运行如下指令：
 
@@ -36,7 +36,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 brew install python3
 ```
 
-## 使用Python3
+### 使用Python3
 
 使用Homebrew安装Python3后，系统就有两个Python环境，如果要使用系统自带的Python2
 ，则使用如下指令：
