@@ -31,10 +31,10 @@ except IOError:
 
 上述代码的执行流程如下：
 
-27. 先执行介于try和except之间的语句。
-28. 如果没有异常，则except语句块中的代码会被跳过。
-29. 如果文件不存在，则产生异常，在try语句块中的其他代码会被跳过。
-30. 当异常发生时，如果异常类型和except关键字后的异常名称匹配，就执行except分支中的代码。上述代码中只能处理IOError异常，如要处理其他类型的异常，还需要添加更多的except分支。
+1. 先执行介于try和except之间的语句。
+1. 如果没有异常，则except语句块中的代码会被跳过。
+1. 如果文件不存在，则产生异常，在try语句块中的其他代码会被跳过。
+1. 当异常发生时，如果异常类型和except关键字后的异常名称匹配，就执行except分支中的代码。上述代码中只能处理IOError异常，如要处理其他类型的异常，还需要添加更多的except分支。
 
 ### 多个except
 
@@ -110,9 +110,9 @@ except ValueError:
 except:
     print("something is wrong")
 ```
+
 当用户输入的年龄小于0时，程序显示结果为：
 
 ```python
 only positive integers are allowed
 ```
-

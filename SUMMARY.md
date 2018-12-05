@@ -44,8 +44,9 @@
   * [基本库的使用](spider/HTTPPackage.md)
   * [解析库pyquery](spider/pyquery.md)
   * [数据存储](spider/storage.md)
-    * [数据存储](spider/MySQL.md)
-    * [数据存储](spider/MongoDB.md)
+    * [MySQL](spider/MySQL.md)
+    * [MongoDB](spider/MongoDB.md)
+  * [使用Selenium抓取动态页面](spider/Selenium.md)
 
 ## 网络应用开发
 
