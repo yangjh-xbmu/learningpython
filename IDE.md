@@ -79,7 +79,7 @@ source bin/activate
 
 使用venv命令创建的虚拟环境是一个独立于系统python目录的轻量级python目录，虚拟环境目录和系统python目录之间共享的是python标准库，而每个虚拟目录各自拥有独立的python扩展以及各自的pip包管理，如果系统有多个版本的python主库，也可以基于其自身创建不同版本的python虚拟环境。
 
-在一个虚拟环境中，只能有一个版本的python。而在系统环境中，可以由多个版本的pyhton
+在一个虚拟环境中，只能有一个版本的python。而在系统环境中，可以有多个版本的pyhton。
 
 ## 编辑器
 
@@ -107,4 +107,4 @@ python hello.py
 
 1. 安装Python扩展。
 1. 安装语法提示插件。
-1. 选择解释器。当 VSCode 遇到 Python 虚拟环境的时候时常会无法找到正确的 Python 解释器和虚拟环境，导致调试无法进行，在工作目录中设置 Python 的解释器，这样可以避免项目之间发生版本冲突。正确设置`python.pythonPath`即可。
+1. 选择解释器。当 VSCode 遇到 Python 虚拟环境的时候时常会无法找到正确的 Python 解释器和虚拟环境，导致调试无法进行。解决的方案是：在工作目录中设置 Python 的解释器，这样可以避免项目之间发生版本冲突。正确设置`python.pythonPath`即可。
