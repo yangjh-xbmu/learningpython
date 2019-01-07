@@ -41,7 +41,12 @@ browser = webdriver.Chrome()
 这样我们就得到了Chrome浏览器对象。还可以在初始化时传入参数，比如无界面模式：
 
 ```python
-chrome_options = web
+from selenium import webdriver
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--headless')
+
+browser = webdriver.Chrome(chrome_options=chrome_options)
+```
 
 ### 访问页面
 
@@ -106,4 +111,57 @@ Selenium提供了获取多个单个节点方法`find_element_XX()`，其中查�
 
 ### 延时等待
 
-在Selenium中，`get()`方法会在网页框架加载结束后执行，如果某些页面有额外的Ajax请求，我们在网页源代码中也不一定能成功获取信息，故我们需要延时等待一段时间。
+在Selenium中，`get()`方法会在网页框架加载结束后执行，如果某些页面有额外的Ajax请求，我们在网页源代码中也不一定能成功获取信息，故我们需要延时等待一段时间。Selenium提供的延时等待方式有两种：一种是隐式等待，一种是显式等待。
+
+#### 隐式等待
+
+当查找节点而节点没有立即出现的时候，隐式等待将等待一段时间（默认是0）再查找DOM。如：
+
+```python
+from selenium import webdriver
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--headless')
+
+browser = webdriver.Chrome(chrome_options=chrome_options)
+browser.implicitly_wait(10)
+
+browser.get('https://www.taobao.com')
+input_first = browser.find_elements_by_css_selector('.J_Cat')
+
+for i in input_first:
+    print(i.tag_name, i.text)
+
+browser.close
+```
+
+#### 显式等待
+
+常用的延时等待更多的是显式等待，因为页面的加载时间，主要受到网络条件的影响。显式等待指定要查找的节点，然后指定一个最长等待时间。如果在规定时间内该节点没有加载，则会抛出超时异常。
+
+```python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--headless')
+browser = webdriver.Chrome(chrome_options=chrome_options)
+
+browser.get('https://www.taobao.com')
+wait = WebDriverWait(browser, 10)
+
+input = wait.until(EC.presence_of_element_located(
+    (By.CSS_SELECTOR, 'a[class="logo-bd clearfix"]')))
+print(input.text)
+
+browser.close
+```
+
+上述代码使用WebDriverWait对象，指定等待时间，然后调用until方法，传入要等待的条件。这样达到的效果时，如果10秒钟内指定的节点加载，就返回节点，否则抛出超时异常。
+
+完整的等待的条件及含义，可查询[Selenium官方网站](https://www.seleniumhq.org/docs/03_webdriver.jsp)。
+
+## 扩展阅读
+
+1. [Selenium官方资料](https://www.seleniumhq.org/docs/03_webdriver.jsp)
