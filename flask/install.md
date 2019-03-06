@@ -15,7 +15,7 @@ cd flasky
 python3 -m venv venv
 ```
 
-使用python3内置命令venv创建一个名为venv的虚拟环境，在这个虚拟环境中所作的一些设置，不会改变全局的Python设置。
+使用python3内置命令`venv`创建一个名为`venv`的虚拟环境，在这个虚拟环境中所作的一些设置，不会改变全局的Python设置。
 
 ## 使用虚拟环境
 
@@ -38,3 +38,14 @@ python
 >>> import flask
 >>>
 ```
+
+有时会遇见pip工具无法使用的情况，需要重新强制安装工具才可：
+
+```bash
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py --force-reinstall
+```
+
+## 参考资料
+
+[1]GRINBERG M. Flask web development: developing web applications with Python[M]. 第2版. Sebastopol, California: O’Reilly, 2018.
