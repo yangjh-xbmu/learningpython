@@ -73,4 +73,4 @@ flask run
 
 ## 参考资料
 
-1. [Flask Web开发-基于Python的Web应用开发实战](https://www.amazon.cn/dp/B07GRV89VL/ref=sr_1_1?s=books&ie=UTF8&qid=1540221653&sr=1-1&keywords=flask+web%E5%BC%80%E5%8F%91+%E7%AC%AC2%E7%89%88)
+[1]GRINBERG M. Flask web development: developing web applications with Python[M]. 2nd edition. Sebastopol, California: O’Reilly, 2018.

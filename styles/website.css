@@ -17,7 +17,7 @@
 
 .markdown-section h3:before {
     /*内容显示为：计数器h2counter的值+点+计数器h3counter的值，格式：1.1*/
-    content: counter(h2counter) "." counter(h3counter) " ";
+    content: counter(h2counter) "."counter(h3counter) " ";
 }
 
 .markdown-section h3 {
@@ -60,4 +60,8 @@ a[title="查看运行效果"]:active {
     background-color: #D91E18;
     box-shadow: 0px 3px 9px 2px #BFBFBF;
     text-decoration: none;
+}
+
+.book.font-family-1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
