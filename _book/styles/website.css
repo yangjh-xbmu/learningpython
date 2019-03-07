@@ -65,4 +65,5 @@ a[title="查看运行效果"]:active {
 .book.font-family-1 {
     font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     font-weight: 300;
+    font-size: 17px;
 }
