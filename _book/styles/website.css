@@ -67,3 +67,7 @@ a[title="查看运行效果"]:active {
     font-weight: 300;
     font-size: 17px;
 }
+
+.book-summary {
+    font-size: 14px;
+}
