@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>yield · Python基础</title>
+        <title>使用模型 · Python基础</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -75,10 +75,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="underline.html" />
+    <link rel="next" href="../sna/" />
     
     
-    <link rel="prev" href="iterator.html" />
+    <link rel="prev" href="app.html" />
     
 
     </head>
@@ -462,9 +462,9 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="buildInFunctions.html">
+        <li class="chapter " data-level="3.1" data-path="../advanced/buildInFunctions.html">
             
-                <a href="buildInFunctions.html">
+                <a href="../advanced/buildInFunctions.html">
             
                     
                         <b>3.1.</b>
@@ -478,9 +478,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1.1" data-path="dictfunction.html">
+        <li class="chapter " data-level="3.1.1" data-path="../advanced/dictfunction.html">
             
-                <a href="dictfunction.html">
+                <a href="../advanced/dictfunction.html">
             
                     
                         <b>3.1.1.</b>
@@ -493,9 +493,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.1.2" data-path="zipfunction.html">
+        <li class="chapter " data-level="3.1.2" data-path="../advanced/zipfunction.html">
             
-                <a href="zipfunction.html">
+                <a href="../advanced/zipfunction.html">
             
                     
                         <b>3.1.2.</b>
@@ -508,9 +508,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.1.3" data-path="listfunction.html">
+        <li class="chapter " data-level="3.1.3" data-path="../advanced/listfunction.html">
             
-                <a href="listfunction.html">
+                <a href="../advanced/listfunction.html">
             
                     
                         <b>3.1.3.</b>
@@ -523,9 +523,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.1.4" data-path="minfunction.html">
+        <li class="chapter " data-level="3.1.4" data-path="../advanced/minfunction.html">
             
-                <a href="minfunction.html">
+                <a href="../advanced/minfunction.html">
             
                     
                         <b>3.1.4.</b>
@@ -543,9 +543,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="iterator.html">
+        <li class="chapter " data-level="3.2" data-path="../advanced/iterator.html">
             
-                <a href="iterator.html">
+                <a href="../advanced/iterator.html">
             
                     
                         <b>3.2.</b>
@@ -559,9 +559,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="3.2.1" data-path="yield.html">
+        <li class="chapter " data-level="3.2.1" data-path="../advanced/yield.html">
             
-                <a href="yield.html">
+                <a href="../advanced/yield.html">
             
                     
                         <b>3.2.1.</b>
@@ -579,9 +579,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="underline.html">
+        <li class="chapter " data-level="3.3" data-path="../advanced/underline.html">
             
-                <a href="underline.html">
+                <a href="../advanced/underline.html">
             
                     
                         <b>3.3.</b>
@@ -609,9 +609,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="argparse.html">
+        <li class="chapter " data-level="3.5" data-path="../advanced/argparse.html">
             
-                <a href="argparse.html">
+                <a href="../advanced/argparse.html">
             
                     
                         <b>3.5.</b>
@@ -866,9 +866,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2" data-path="../django/django.html">
+        <li class="chapter " data-level="5.2" data-path="django.html">
             
-                <a href="../django/django.html">
+                <a href="django.html">
             
                     
                         <b>5.2.</b>
@@ -882,9 +882,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="5.2.1" data-path="../django/app.html">
+        <li class="chapter " data-level="5.2.1" data-path="app.html">
             
-                <a href="../django/app.html">
+                <a href="app.html">
             
                     
                         <b>5.2.1.</b>
@@ -897,9 +897,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2.2" data-path="../django/model.html">
+        <li class="chapter active" data-level="5.2.2" data-path="model.html">
             
-                <a href="../django/model.html">
+                <a href="model.html">
             
                     
                         <b>5.2.2.</b>
@@ -1057,7 +1057,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >yield</a>
+        <a href=".." >使用模型</a>
     </h1>
 </div>
 
@@ -1072,43 +1072,97 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="yield">yield</h1>
-<p>&#x53EF;&#x4EE5;&#x5C06;yield&#x7B80;&#x5355;&#x7C7B;&#x6BD4;&#x4E3A;return&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x9664;&#x4E86;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x8FD8;&#x4F1A;&#x8BB0;&#x4F4F;&#x8FD9;&#x4E2A;&#x8FD4;&#x56DE;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E0B;&#x6B21;&#x8FED;&#x4EE3;&#x5C31;&#x4ECE;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x540E;(&#x4E0B;&#x4E00;&#x884C;)&#x5F00;&#x59CB;&#x3002;yield&#x4E0E;retrun&#x8BED;&#x53E5;&#x6700;&#x5927;&#x7684;&#x5DEE;&#x522B;&#x662F;&#xFF0C;return&#x8BED;&#x53E5;&#x4E4B;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x4E0D;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x800C;yield&#x8BED;&#x53E5;&#x4E4B;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x4F9D;&#x7136;&#x5F97;&#x5230;&#x6267;&#x884C;&#x3002;</p>
-<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">yield_test</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">yield</span> call<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;i=&quot;</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;yield&#x51FD;&#x6570;&#x7B2C; %d &#x6B21;&#x8FED;&#x4EE3;&#x7ED3;&#x675F;&quot;</span><span class="token operator">%</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;yield&#x51FD;&#x6570;&#x6574;&#x4F53;&#x7ED3;&#x675F;&apos;</span><span class="token punctuation">)</span>
-
-<span class="token keyword">def</span> <span class="token function">call</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> i<span class="token operator">*</span><span class="token number">2</span>
-
-<span class="token comment">#&#x4F7F;&#x7528;for&#x5FAA;&#x73AF;&#x83B7;&#x53D6;&#x8FED;&#x4EE3;&#x5668;&#x4E2D;&#x7684;&#x503C;</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> yield_test<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;yield &#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;:&apos;</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span>
+                                <h1 id="&#x6A21;&#x578B;&#x7684;&#x521B;&#x5EFA;&#x53CA;&#x4F7F;&#x7528;">&#x6A21;&#x578B;&#x7684;&#x521B;&#x5EFA;&#x53CA;&#x4F7F;&#x7528;</h1>
+<p>Django &#x6846;&#x67B6;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;&#x4E0E; MVC &#x6A21;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x4FE1;&#x606F;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x5728;&#x6A21;&#x578B;&#xFF08;model&#xFF09;&#x4E2D;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x548C;&#x5904;&#x7406;&#x6570;&#x636E;&#xFF0C;&#x548C;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x3001;&#x65F6;&#x533A;&#x7B49;&#x7B49;&#x5FC5;&#x8981;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x53EF;&#x901A;&#x8FC7;&#x9879;&#x76EE;&#x7684;&#x914D;&#x7F6E;&#x6A21;&#x5757; <code>settings.py</code> &#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x3002;</p>
+<h2 id="&#x914D;&#x7F6E;&#x9879;&#x76EE;&#x4FE1;&#x606F;">&#x914D;&#x7F6E;&#x9879;&#x76EE;&#x4FE1;&#x606F;</h2>
+<h3 id="&#x8BBE;&#x7F6E;&#x65F6;&#x533A;">&#x8BBE;&#x7F6E;&#x65F6;&#x533A;</h3>
+<p>&#x6253;&#x5F00;&#x9879;&#x76EE;&#x4E2D;&#x7684; <code>settings.py</code> &#x6587;&#x4EF6;&#xFF0C;&#x4FEE;&#x6539;&#x5176;&#x4E2D;&#x7684;&#x65F6;&#x533A;&#x8BBE;&#x7F6E;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">TIME_ZONE <span class="token operator">=</span> <span class="token string">&apos;Asia/Shanghai&apos;</span>
 </code></pre>
-<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash">yield &#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;: 0
-i<span class="token operator">=</span> 0
-yield&#x51FD;&#x6570;&#x7B2C; 0 &#x6B21;&#x8FED;&#x4EE3;&#x7ED3;&#x675F;
-yield &#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;: 2
-i<span class="token operator">=</span> 1
-yield&#x51FD;&#x6570;&#x7B2C; 1 &#x6B21;&#x8FED;&#x4EE3;&#x7ED3;&#x675F;
-yield &#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;: 4
-i<span class="token operator">=</span> 2
-yield&#x51FD;&#x6570;&#x7B2C; 2 &#x6B21;&#x8FED;&#x4EE3;&#x7ED3;&#x675F;
-yield &#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;: 6
-i<span class="token operator">=</span> 3
-yield&#x51FD;&#x6570;&#x7B2C; 3 &#x6B21;&#x8FED;&#x4EE3;&#x7ED3;&#x675F;
-yield &#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;: 8
-i<span class="token operator">=</span> 4
-yield&#x51FD;&#x6570;&#x7B2C; 4 &#x6B21;&#x8FED;&#x4EE3;&#x7ED3;&#x675F;
-yield&#x51FD;&#x6570;&#x6574;&#x4F53;&#x7ED3;&#x675F;
+<p>&#x73B0;&#x5728;&#x542F;&#x52A8;Django&#x5185;&#x7F6E;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x9879;&#x76EE;&#x7684;&#x65F6;&#x95F4;&#x4E0D;&#x518D;&#x662F;UTC&#x65F6;&#x95F4;&#xFF0C;&#x800C;&#x662F;&#x672C;&#x5730;&#x65F6;&#x95F4;&#x4E86;&#x3002;</p>
+<h2 id="&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;">&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;</h2>
+<p>Django &#x7684;&#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x5E93;&#x4E3A; SQLite&#xFF0C;&#x65E0;&#x9700;&#x989D;&#x5916;&#x5B89;&#x88C5;&#x8F6F;&#x4EF6;&#x548C;&#x5E93;&#xFF0C;&#x76F4;&#x63A5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x5B83;&#x7684;&#x6570;&#x636E;&#x5E93;&#x5B58;&#x50A8;&#x4FE1;&#x606F;&#x3002;&#x5728;&#x5B66;&#x4E60;&#x9636;&#x6BB5;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4; SQLite &#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5C06;&#x5B66;&#x4E60;&#x91CD;&#x70B9;&#x5148;&#x653E;&#x5230;&#x6A21;&#x578B;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x4F7F;&#x7528;&#x4E0A;&#x6765;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x4FDD;&#x6301;&#x6570;&#x636E;&#x5E93;&#x7684;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x4E0D;&#x53D8;&#x3002;</p>
+<pre class="language-"><code class="lang-python">DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&apos;default&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&apos;ENGINE&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;django.db.backends.sqlite3&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;NAME&apos;</span><span class="token punctuation">:</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span> <span class="token string">&apos;db.sqlite3&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p>&#x4E00;&#x4E2A;&#x5E26;&#x6709; yield &#x7684;&#x51FD;&#x6570;&#x5C31;&#x662F;&#x4E00;&#x4E2A; generator&#xFF0C;&#x5B83;&#x548C;&#x666E;&#x901A;&#x51FD;&#x6570;&#x4E0D;&#x540C;&#xFF0C;&#x751F;&#x6210;&#x4E00;&#x4E2A; generator &#x770B;&#x8D77;&#x6765;&#x50CF;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;&#x4F46;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x51FD;&#x6570;&#x4EE3;&#x7801;&#xFF0C;&#x76F4;&#x5230;&#x5BF9;&#x5176;&#x8C03;&#x7528; <code>next()</code>&#xFF08;&#x5728; <code>for</code> &#x5FAA;&#x73AF;&#x4E2D;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x7528; <code>next()</code>&#xFF09;&#x624D;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x3002;&#x867D;&#x7136;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x4ECD;&#x6309;&#x51FD;&#x6570;&#x7684;&#x6D41;&#x7A0B;&#x6267;&#x884C;&#xFF0C;&#x4F46;&#x6BCF;&#x6267;&#x884C;&#x5230;&#x4E00;&#x4E2A; yield &#x8BED;&#x53E5;&#x5C31;&#x4F1A;&#x4E2D;&#x65AD;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x503C;&#xFF0C;&#x4E0B;&#x6B21;&#x6267;&#x884C;&#x65F6;&#x4ECE; yield &#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x8BED;&#x53E5;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x3002;&#x770B;&#x8D77;&#x6765;&#x5C31;&#x597D;&#x50CF;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5728;&#x6B63;&#x5E38;&#x6267;&#x884C;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x88AB; yield &#x4E2D;&#x65AD;&#x4E86;&#x6570;&#x6B21;&#xFF0C;&#x6BCF;&#x6B21;&#x4E2D;&#x65AD;&#x90FD;&#x4F1A;&#x901A;&#x8FC7; yield &#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7684;&#x8FED;&#x4EE3;&#x503C;&#x3002;</p>
-<p>yield &#x7684;&#x597D;&#x5904;&#x662F;&#x663E;&#x800C;&#x6613;&#x89C1;&#x7684;&#xFF0C;&#x628A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6539;&#x5199;&#x4E3A;&#x4E00;&#x4E2A; generator &#x5C31;&#x83B7;&#x5F97;&#x4E86;&#x8FED;&#x4EE3;&#x80FD;&#x529B;&#xFF0C;&#x6BD4;&#x8D77;&#x7528;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x4FDD;&#x5B58;&#x72B6;&#x6001;&#x6765;&#x8BA1;&#x7B97;&#x4E0B;&#x4E00;&#x4E2A; <code>next()</code> &#x7684;&#x503C;&#xFF0C;&#x4E0D;&#x4EC5;&#x4EE3;&#x7801;&#x7B80;&#x6D01;&#xFF0C;&#x800C;&#x4E14;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x5F02;&#x5E38;&#x6E05;&#x6670;&#x3002;</p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://yangzh.cn" target="_blank">yangzh</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2018-11-17 09:36:08 </span> </footer>
+<h2 id="&#x521B;&#x5EFA;&#x6A21;&#x578B;">&#x521B;&#x5EFA;&#x6A21;&#x578B;</h2>
+<p>&#x6A21;&#x578B;&#x662F;&#x771F;&#x5B9E;&#x6570;&#x636E;&#x7684;&#x7B80;&#x5355;&#x660E;&#x786E;&#x7684;&#x63CF;&#x8FF0;&#x3002;&#x5B83;&#x5305;&#x542B;&#x4E86;&#x50A8;&#x5B58;&#x7684;&#x6570;&#x636E;&#x6240;&#x5FC5;&#x8981;&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x884C;&#x4E3A;&#x3002;&#x6211;&#x4EEC;&#x60F3;&#x5F00;&#x53D1;&#x7684;&#x6295;&#x7968;app&#x9700;&#x8981;&#x95EE;&#x9898;&#xFF08;Question&#xFF09;&#x548C;&#x9009;&#x9879;&#xFF08;Choice&#xFF09;&#x4E24;&#x4E2A;&#x6A21;&#x578B;&#xFF0C;&#x95EE;&#x9898;&#x6A21;&#x578B;&#x5305;&#x62EC;&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#x3001;&#x53D1;&#x5E03;&#x65F6;&#x95F4;&#xFF0C;&#x9009;&#x9879;&#x6A21;&#x578B;&#x9700;&#x8981;&#x9009;&#x9879;&#x63CF;&#x8FF0;&#x548C;&#x5F53;&#x524D;&#x7968;&#x6570;&#x3002;&#x6BCF;&#x4E2A;&#x9009;&#x9879;&#x5C5E;&#x4E8E;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x3002;&#x6A21;&#x578B;&#x6570;&#x636E;&#x5173;&#x7CFB;&#x56FE;<sup><a href="#fn_1" id="reffn_1">1</a></sup>&#x5982;&#x4E0B;&#xFF1A;</p>
+<figure id="fig5.2.2.1"><img src="../images/django-entry.png" alt="&#x6A21;&#x578B;&#x6570;&#x636E;&#x5173;&#x7CFB;&#x56FE;"><figcaption>&#x56FE; 5.2.2-1  &#x6A21;&#x578B;&#x6570;&#x636E;&#x5173;&#x7CFB;&#x56FE;</figcaption></figure>
+<p>&#x5728;&#x5E94;&#x7528;&#x7684;<code>model.py</code>&#x4E2D;&#x5199;&#x5165;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+
+<span class="token keyword">class</span> <span class="token class-name">Question</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    question_text <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">)</span>
+    pub_date <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span><span class="token string">&apos;date published&apos;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Choice</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    question <span class="token operator">=</span> models<span class="token punctuation">.</span>ForeignKey<span class="token punctuation">(</span>Question<span class="token punctuation">,</span> on_delete<span class="token operator">=</span>models<span class="token punctuation">.</span>CASCADE<span class="token punctuation">)</span>
+    choice_text <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">)</span>
+    votes <span class="token operator">=</span> models<span class="token punctuation">.</span>IntegerField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5C31;&#x662F;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x8868;&#x7684;&#x5B57;&#x6BB5;&#x4FE1;&#x606F;&#xFF08;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#x3001;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x3001;&#x5B57;&#x6BB5;&#x5C5E;&#x6027;&#x7B49;&#x7B49;&#xFF09;&#x3002;</p>
+<h2 id="&#x6FC0;&#x6D3B;&#x6A21;&#x578B;">&#x6FC0;&#x6D3B;&#x6A21;&#x578B;</h2>
+<p>&#x6709;&#x4E86;&#x5B57;&#x6BB5;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Django&#x63D0;&#x4F9B;&#x7684;&#x6307;&#x4EE4;&#xFF0C;&#x751F;&#x6210;&#x6570;&#x636E;&#x6A21;&#x578B;&#x3002;</p>
+<pre class="language-"><code class="lang-bash">python manage.py makemigrations polls
+</code></pre>
+<p>&#x4F60;&#x5C06;&#x4F1A;&#x770B;&#x5230;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x7684;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">Migrations <span class="token keyword">for</span> <span class="token string">&apos;polls&apos;</span><span class="token keyword">:</span>
+  polls/migrations/0001_initial.py:
+    - Create model Choice
+    - Create model Question
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x8FD0;&#x884C; <code>makemigrations</code> &#x547D;&#x4EE4;&#xFF0C;Django &#x4F1A;&#x68C0;&#x6D4B;&#x4F60;&#x5BF9;&#x6A21;&#x578B;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#xFF08;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x5DF2;&#x7ECF;&#x53D6;&#x5F97;&#x4E86;&#x65B0;&#x7684;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x628A;&#x4FEE;&#x6539;&#x7684;&#x90E8;&#x5206;&#x50A8;&#x5B58;&#x4E3A;&#x4E00;&#x6B21;<strong>&#x8FC1;&#x79FB;</strong>&#x3002;&#x6240;&#x8C13;&#x8FC1;&#x79FB;&#xFF0C;&#x5C31;&#x662F;&#x6570;&#x636E;&#x5E93;&#x7ED3;&#x6784;&#x53D8;&#x5316;&#x7684;&#x50A8;&#x5B58;&#x5F62;&#x5F0F;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x5185;&#x7F6E;&#x670D;&#x52A1;&#x5668;&#x8F93;&#x51FA;&#x4E00;&#x4E9B;&#x8B66;&#x544A;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">You have 17 unapplied migration<span class="token punctuation">(</span>s<span class="token punctuation">)</span>. Your project may not work properly <span class="token keyword">until</span> you apply the migrations <span class="token keyword">for</span> app<span class="token punctuation">(</span>s<span class="token punctuation">)</span>: admin, auth, contenttypes, sessions.
+Run <span class="token string">&apos;python manage.py migrate&apos;</span> to apply them.
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x4FE1;&#x606F;&#x7684;&#x610F;&#x601D;&#x662F;&#x9879;&#x76EE;&#x6709;&#x4E00;&#x4E9B;&#x8FC1;&#x79FB;&#xFF0C;&#x4F46;&#x8FD9;&#x4E9B;&#x8FC1;&#x79FB;&#x6CA1;&#x6709;&#x6267;&#x884C;&#xFF0C;&#x53EF;&#x80FD;&#x5BF9;&#x8FD0;&#x884C;&#x4EA7;&#x751F;&#x5F71;&#x54CD;&#x3002;&#x8981;&#x6267;&#x884C;&#x8FC1;&#x79FB;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>migrate</code>&#x6307;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">python manage.py migrate
+</code></pre>
+<p>&#x5728;&#x7EC8;&#x7AEF;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8F93;&#x51FA;&#x5982;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial<span class="token punctuation">..</span>. OK
+  Applying auth.0001_initial<span class="token punctuation">..</span>. OK
+  Applying admin.0001_initial<span class="token punctuation">..</span>. OK
+  Applying admin.0002_logentry_remove_auto_add<span class="token punctuation">..</span>. OK
+  Applying admin.0003_logentry_add_action_flag_choices<span class="token punctuation">..</span>. OK
+  Applying contenttypes.0002_remove_content_type_name<span class="token punctuation">..</span>. OK
+  Applying auth.0002_alter_permission_name_max_length<span class="token punctuation">..</span>. OK
+  Applying auth.0003_alter_user_email_max_length<span class="token punctuation">..</span>. OK
+  Applying auth.0004_alter_user_username_opts<span class="token punctuation">..</span>. OK
+  Applying auth.0005_alter_user_last_login_null<span class="token punctuation">..</span>. OK
+  Applying auth.0006_require_contenttypes_0002<span class="token punctuation">..</span>. OK
+  Applying auth.0007_alter_validators_add_error_messages<span class="token punctuation">..</span>. OK
+  Applying auth.0008_alter_user_username_max_length<span class="token punctuation">..</span>. OK
+  Applying auth.0009_alter_user_last_name_max_length<span class="token punctuation">..</span>. OK
+  Applying auth.0010_alter_group_name_max_length<span class="token punctuation">..</span>. OK
+  Applying auth.0011_update_proxy_permissions<span class="token punctuation">..</span>. OK
+  Applying sessions.0001_initial<span class="token punctuation">..</span>. OK
+</code></pre>
+<p>&#x73B0;&#x5728;&#x518D;&#x542F;&#x52A8;&#x5185;&#x7F6E;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4E4B;&#x524D;&#x7684;&#x76F8;&#x5173;&#x8B66;&#x544A;&#x4FE1;&#x606F;&#x6D88;&#x5931;&#x4E86;&#x3002;</p>
+<h2 id="&#x6570;&#x636E;&#x5E93;&#x7684;&#x751F;&#x6210;&#x4E0E;&#x8FC1;&#x79FB;">&#x6570;&#x636E;&#x5E93;&#x7684;&#x751F;&#x6210;&#x4E0E;&#x8FC1;&#x79FB;</h2>
+<p>&#x8FC1;&#x79FB;&#x662F;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5B83;&#x80FD;&#x8BA9;&#x4F60;&#x5728;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#x6301;&#x7EED;&#x7684;&#x6539;&#x53D8;&#x6570;&#x636E;&#x5E93;&#x7ED3;&#x6784;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x5220;&#x9664;&#x548C;&#x521B;&#x5EFA;&#x8868;&#xFF0C;&#x8FC1;&#x79FB;&#x4F7F;&#x5F97;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x4E13;&#x6CE8;&#x4E8E;&#x4F7F;&#x6570;&#x636E;&#x5E93;&#x5E73;&#x6ED1;&#x5347;&#x7EA7;&#x800C;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x6570;&#x636E;&#x3002;&#x6539;&#x53D8;&#x6A21;&#x578B;&#x9700;&#x8981;&#x8FD9;&#x4E09;&#x6B65;&#xFF1A;</p>
+<ol>
+<li>&#x7F16;&#x8F91; <code>models.py</code> &#x6587;&#x4EF6;&#xFF0C;&#x6539;&#x53D8;&#x6A21;&#x578B;&#x3002;</li>
+<li>&#x8FD0;&#x884C; <code>python manage.py makemigrations</code> &#x4E3A;&#x6A21;&#x578B;&#x7684;&#x6539;&#x53D8;&#x751F;&#x6210;&#x8FC1;&#x79FB;&#x6587;&#x4EF6;&#x3002;</li>
+<li>&#x8FD0;&#x884C; <code>python manage.py migrate</code> &#x6765;&#x5E94;&#x7528;&#x6570;&#x636E;&#x5E93;&#x8FC1;&#x79FB;&#x3002;</li>
+</ol>
+<p>&#x6570;&#x636E;&#x5E93;&#x8FC1;&#x79FB;&#x88AB;&#x5206;&#x89E3;&#x6210;&#x751F;&#x6210;&#x548C;&#x5E94;&#x7528;&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x662F;&#x4E3A;&#x4E86;&#x8BA9;&#x4F60;&#x80FD;&#x591F;&#x5728;&#x4EE3;&#x7801;&#x63A7;&#x5236;&#x7CFB;&#x7EDF;&#x4E0A;&#x63D0;&#x4EA4;&#x8FC1;&#x79FB;&#x6570;&#x636E;&#x5E76;&#x4F7F;&#x5176;&#x80FD;&#x5728;&#x591A;&#x4E2A;&#x5E94;&#x7528;&#x91CC;&#x4F7F;&#x7528;&#xFF1B;&#x8FD9;&#x4E0D;&#x4EC5;&#x4EC5;&#x4F1A;&#x8BA9;&#x5F00;&#x53D1;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#xFF0C;&#x4E5F;&#x7ED9;&#x522B;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x548C;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x4F7F;&#x7528;&#x5E26;&#x6765;&#x65B9;&#x4FBF;&#x3002;</p>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<ol>
+<li><a href="https://docs.djangoproject.com/zh-hans/2.2/intro/tutorial02/" target="_blank">&#x6570;&#x636E;&#x5E93;&#x914D;&#x7F6E;&#x53CA;&#x6A21;&#x578B;&#x521B;&#x5EFA;</a></li>
+</ol>
+<blockquote id="fn_1">
+<sup>1</sup>. &#x6A21;&#x578B;&#x5B9E;&#x4F53;&#x5173;&#x7CFB;&#x56FE;&#x4F7F;&#x7528;<a href="https://editor.ponyorm.com" target="_blank">PonyORM&#x5728;&#x7EBF;&#x7F16;&#x8F91;&#x5DE5;&#x5177;</a>&#x5236;&#x4F5C;&#x3002;<a href="#reffn_1" title="Jump back to footnote [1] in the text."> &#x21A9;</a>
+</blockquote>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://yangzh.cn" target="_blank">yangzh</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2019-04-08 19:48:46 </span> </footer>
                                 
                                 </section>
                             
@@ -1135,12 +1189,12 @@ yield&#x51FD;&#x6570;&#x6574;&#x4F53;&#x7ED3;&#x675F;
 
             
                 
-                <a href="iterator.html" class="navigation navigation-prev " aria-label="Previous page: 可迭代对象">
+                <a href="app.html" class="navigation navigation-prev " aria-label="Previous page: 创建APP">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="underline.html" class="navigation navigation-next " aria-label="Next page: 单、双下划线的区别">
+                <a href="../sna/" class="navigation navigation-next " aria-label="Next page: 社会网络分析">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1151,7 +1205,7 @@ yield&#x51FD;&#x6570;&#x6574;&#x4F53;&#x7ED3;&#x675F;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"yield","level":"3.2.1","depth":2,"next":{"title":"单、双下划线的区别","level":"3.3","depth":1,"path":"advanced/underline.md","ref":"advanced/underline.md","articles":[]},"previous":{"title":"可迭代对象","level":"3.2","depth":1,"path":"advanced/iterator.md","ref":"advanced/iterator.md","articles":[{"title":"yield","level":"3.2.1","depth":2,"path":"advanced/yield.md","ref":"advanced/yield.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","include-codeblock","ace","-lunr","-search","search-pro","collapsible-menu","-livereload","prism","-highlight","url-embed","katex-gf","image-captions","page-footer-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"collapsible-menu":{},"ace":{},"page-footer-ex":{"copyright":"By [yangzh](http://yangzh.cn)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"fontsettings":{"theme":"white","family":"sans","size":2},"url-embed":{},"katex-gf":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"image-captions":{"caption":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"re/regular.html#fig3.4.1","level":"3.4","list_caption":"Figure: PNG","alt":"PNG","nro":1,"url":"\\images\\pyreflow.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"PNG","attributes":{},"skip":false,"key":"3.4.1"},{"backlink":"spider/spider.html#fig4.1.1","level":"4.1","list_caption":"Figure: PNG","alt":"PNG","nro":2,"url":"\\images\\http.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"PNG","attributes":{},"skip":false,"key":"4.1.1"},{"backlink":"django/model.html#fig5.2.2.1","level":"5.2.2","list_caption":"Figure: 模型数据关系图","alt":"模型数据关系图","nro":3,"url":"../images/django-entry.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"模型数据关系图","attributes":{},"skip":false,"key":"5.2.2.1"},{"backlink":"sna/centrality.html#fig6.1.2.1","level":"6.1.2","list_caption":"Figure: 网络结构图","alt":"网络结构图","nro":4,"url":"/images/DegreeCentralityFigure.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"网络结构图","attributes":{},"skip":false,"key":"6.1.2.1"},{"backlink":"sna/centrality.html#fig6.1.2.2","level":"6.1.2","list_caption":"Figure: 亲近中心性","alt":"亲近中心性","nro":5,"url":"/images/ClosenessCentralityFigure.png","index":2,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"亲近中心性","attributes":{},"skip":false,"key":"6.1.2.2"}]},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn","开始之前":"http://yangjh.gitee.io/appendix"}},"gitbook":"*"},"file":{"path":"advanced/yield.md","mtime":"2018-11-17T01:36:08.305Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-08T11:49:55.354Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"使用模型","level":"5.2.2","depth":2,"next":{"title":"社会网络分析","level":"6.1","depth":1,"path":"sna/README.md","ref":"sna/README.md","articles":[{"title":"图论","level":"6.1.1","depth":2,"path":"sna/graphtheory.md","ref":"sna/graphtheory.md","articles":[]},{"title":"中心性、权力与瓶颈","level":"6.1.2","depth":2,"path":"sna/centrality.md","ref":"sna/centrality.md","articles":[]},{"title":"派系、聚类和组元","level":"6.1.3","depth":2,"path":"sna/component.md","ref":"sna/component.md","articles":[]}]},"previous":{"title":"创建APP","level":"5.2.1","depth":2,"path":"django/app.md","ref":"django/app.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","include-codeblock","ace","-lunr","-search","search-pro","collapsible-menu","-livereload","prism","-highlight","url-embed","katex-gf","image-captions","page-footer-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"collapsible-menu":{},"ace":{},"page-footer-ex":{"copyright":"By [yangzh](http://yangzh.cn)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"fontsettings":{"theme":"white","family":"sans","size":2},"url-embed":{},"katex-gf":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"image-captions":{"caption":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"re/regular.html#fig3.4.1","level":"3.4","list_caption":"Figure: PNG","alt":"PNG","nro":1,"url":"\\images\\pyreflow.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"PNG","attributes":{},"skip":false,"key":"3.4.1"},{"backlink":"spider/spider.html#fig4.1.1","level":"4.1","list_caption":"Figure: PNG","alt":"PNG","nro":2,"url":"\\images\\http.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"PNG","attributes":{},"skip":false,"key":"4.1.1"},{"backlink":"django/model.html#fig5.2.2.1","level":"5.2.2","list_caption":"Figure: 模型数据关系图","alt":"模型数据关系图","nro":3,"url":"../images/django-entry.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"模型数据关系图","attributes":{},"skip":false,"key":"5.2.2.1"},{"backlink":"sna/centrality.html#fig6.1.2.1","level":"6.1.2","list_caption":"Figure: 网络结构图","alt":"网络结构图","nro":4,"url":"/images/DegreeCentralityFigure.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"网络结构图","attributes":{},"skip":false,"key":"6.1.2.1"},{"backlink":"sna/centrality.html#fig6.1.2.2","level":"6.1.2","list_caption":"Figure: 亲近中心性","alt":"亲近中心性","nro":5,"url":"/images/ClosenessCentralityFigure.png","index":2,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"亲近中心性","attributes":{},"skip":false,"key":"6.1.2.2"}]},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn","开始之前":"http://yangjh.gitee.io/appendix"}},"gitbook":"*"},"file":{"path":"django/model.md","mtime":"2019-04-08T11:48:46.403Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-08T11:49:55.354Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -22,6 +22,7 @@
         "-highlight",
         "url-embed",
         "katex-gf",
+        "image-captions",
         "page-footer-ex"
     ],
 
@@ -62,6 +63,9 @@
             "css": [
                 "prismjs/themes/prism-solarizedlight.css"
             ]
+        },
+        "image-captions": {
+            "caption": "图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_"
         },
         "page-footer-ex": {
             "copyright": "By [yangzh](http://yangzh.cn)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布",
