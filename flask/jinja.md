@@ -78,7 +78,7 @@ Jinja2 提供了灵活的多种控制结构，用来改变模板的渲染流程�
 
 ### 分支
 
-```django
+```html
 {% if user %}
     hello,{{ user }}!
 {% esle %}
@@ -88,7 +88,7 @@ Jinja2 提供了灵活的多种控制结构，用来改变模板的渲染流程�
 
 ### 循环
 
-```django
+```html
 <ul>
     {% for comment in comments %}
         <li>{{ comment }}</li>
@@ -100,7 +100,7 @@ Jinja2 提供了灵活的多种控制结构，用来改变模板的渲染流程�
 
 Jinja2中的宏类似Python中的函数。例如定义宏：
 
-```django
+```html
 {% macro render_comment(comment) %}
     <li>{{ comment }}</li>
 {% endmacro %}
@@ -108,13 +108,13 @@ Jinja2中的宏类似Python中的函数。例如定义宏：
 
 使用宏：
 
-```django
+```html
 {{render_comment(comment)}}
 ```
 
 宏还可以单独存放，然后在需要使用的模板中导入：
 
-```django
+```html
 {% import 'macros.html' as macros %}
 {{ macros.render_comment(comment)}}
 ```
@@ -123,7 +123,7 @@ Jinja2中的宏类似Python中的函数。例如定义宏：
 
 需要在多处重复使用的模板代码，可以单独存放，然后在需要使用的地方引入：
 
-```django
+```html
 {% include 'common.html' %}
 ```
 
@@ -131,7 +131,7 @@ Jinja2中的宏类似Python中的函数。例如定义宏：
 
 除了引入外，Jinja2模板引擎还可以继承。首先，定义可重用的区块（使用`block`和`endblock`指令），比如新建一个名为`base.html`的基础模板：
 
-```django
+```html
 <html>
     <head>
     {% block head %}
@@ -146,7 +146,7 @@ Jinja2中的宏类似Python中的函数。例如定义宏：
 
 基础模板中定义的区块可以在衍生模板中覆盖：
 
-```django
+```html
 {% extends 'base.html' %}
 {% block body %}
 <h1>Hello，world!</h1>
@@ -196,7 +196,7 @@ Flask-Bootstrap的基础模板定义了很多区块，都可在衍生模板中�
 
 ### 基于Flask-Bootstrap基础模板创建模板
 
-```django
+```html
 {% extends "bootstrap/base.html" %}
 ```
 
@@ -218,7 +218,7 @@ def internal_server_error(e):
 
 错误处理函数中的模板，我们可以使用Flask-Bootstrap提供的基础模板创建，更进一步，我们可以再在其基础模板上创建具有统一页面布局的模板。例如我们基于Flask-Bootstrap提供的基础模板创建名为`base.html`的模板：
 
-```django
+```html
 {% extends "bootstrap/base.html" %}
 
 {% block title %}Flasky{% endblock %}
@@ -232,7 +232,7 @@ def internal_server_error(e):
 
 将上述base.html模板保存到templates目录中，基于该目录，我们创建自定义错误信息模板如下：
 
-```django
+```html
 {% extends "base.html" %}
 
 {% block title %}Flasky - 找不到页面{% endblock %}
@@ -259,7 +259,7 @@ url_for('index',_external=True) #生成应用根URL的绝对地址，如http://l
 
 默认情况下，Flask会在根目录中的static的子目录中寻找静态文件。使用`url_for()`的`static`参数可以指定静态文件,`filename`参数用来指定文件所在位置，如：
 
-```django
+```html
 {% block head %}
 {{ super() }}
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico')}}" type="image/x-icon">
@@ -288,7 +288,7 @@ moment = Moment(app)
 
 ### 在模板中引入Moment.js库
 
-```django
+```html
 {% block scripts %}
 {{ super() }}
 {{ moment.include_moment() }}
@@ -298,7 +298,7 @@ moment = Moment(app)
 
 ### 在衍生模板中使用moment
 
-```django
+```html
     <p>本地时间为：{{ moment(current_time).format('LLL') }}</p>
     <p>过去了{{ moment(current_time).fromNow(refresh=True) }}</p>
 ```

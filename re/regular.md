@@ -254,7 +254,7 @@ print(result)
 
 上面的代码运行结果如下：
 
-```dash
+```bash
 <re.Match object; span=(0, 1), match='d'>
 d
 (0, 1)
