@@ -46,7 +46,7 @@ WTForms支持所有的HTML标准字段（如复选框、文本字段、密码、
 
 比如在templates/index.html中，渲染表单：
 
-```django
+```html
 {% import "bootstrap/wtf.html" as wtf %}
  {{ wtf.quick_form(form) }}
 ```
@@ -105,7 +105,7 @@ def index():
 
 然后再模板中设定闪现消息出现的位置：
 
-```django
+```html
 {% block content %}
 <div class="container">
     {% for message in get_flashed_messages() %}

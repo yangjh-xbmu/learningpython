@@ -224,7 +224,7 @@ def index():
 
 上述代码中新增了变量`known`，这个变量被传给模板，可用于显示自定义的欢迎消息。对应在`index.html`模板中：
 
-```django
+```html
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 {% block title %}Flasky - 首页{% endblock %}
