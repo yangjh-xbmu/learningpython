@@ -59,8 +59,11 @@
   * [数据库](flask/database.md)
   * [电子邮件](flask/mail.md)
 * [Django](django/django.md)
-  * [创建APP](django/app.md)
-  * [使用模型](django/model.md)
+  * [一个快速上手的案例](django/tutorial/intro.md)
+    * [创建APP](django/tutorial/app.md)
+    * [使用模型](django/tutorial/model.md)
+    * [后台管理](django/tutorial/admin.md)
+    * [创建视图](django/tutorial/views.md)
 
 ## 社会网络分析
 
