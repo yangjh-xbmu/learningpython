@@ -59,20 +59,30 @@ detail(request=<HttpRequest object>, question_id=34)
 
 虽然我们现在可以将模板文件直接放在 polls/templates 文件夹中（而不是再建立一个 polls 子文件夹），但是这样做不太好。Django 将会选择第一个匹配的模板文件，如果你有一个模板文件正好和**另一个应用中的某个模板文件重名**，Django 没有办法区分它们。我们需要帮助 Django 选择正确的模板，最简单的方法就是把他们放入各自的**命名空间**中，也就是把这些模板放入一个**和自身应用重名的子文件夹**里。
 
+例如，`polls`的首页模板内容为：
+
+```python
+{% if latest_question_list %}
+<ul>
+    {% for question in latest_question_list %}
+    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
+```
+
 ## 在视图中使用模板
 
 在视图`polls/view.py`中，载入模板、填充上下文，再返回由它生成的`HTTPResponse`对象，这就是在视图中使用模板的常用流程，Django 为此提供了一个快捷函数：`render()`
 
 ```python
 from django.http import HttpResponse
-from django.template import loader
-
 from .models import Question
-
 
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    template = loader.get_template('polls/index.html')
     context = {
         'latest_question_list': latest_question_list,
     }
