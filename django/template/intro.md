@@ -48,10 +48,9 @@ def index(request):
     ```
 1. 在模板文件中引入自定义标签之后，就可以通过自定义标签获取数据了：
     ```html
-    {% load blog_tags %}
-        {% get_recent_entries as recent_entry_lists %}
-            {% for entry in recent_entry_lists %}
+    \{\% load blog_tags \%\}
+        \{\% get_recent_entries as recent_entry_lists \%\}
+            \{\% for entry in recent_entry_lists \%\}
                 do something
-            {% endfor %}
+            \{\% endfor \%\}
     ```
-# 介绍

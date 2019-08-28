@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>后台管理 · Python基础</title>
+        <title>模版 · Python基础</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -75,10 +75,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="views.html" />
+    <link rel="next" href="../../sna/" />
     
     
-    <link rel="prev" href="model.html" />
+    <link rel="prev" href="../view/intro.html" />
     
 
     </head>
@@ -882,9 +882,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="5.2.1" data-path="intro.html">
+        <li class="chapter " data-level="5.2.1" data-path="../tutorial/intro.html">
             
-                <a href="intro.html">
+                <a href="../tutorial/intro.html">
             
                     
                         <b>5.2.1.</b>
@@ -898,9 +898,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="5.2.1.1" data-path="app.html">
+        <li class="chapter " data-level="5.2.1.1" data-path="../tutorial/app.html">
             
-                <a href="app.html">
+                <a href="../tutorial/app.html">
             
                     
                         <b>5.2.1.1.</b>
@@ -913,9 +913,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2.1.2" data-path="model.html">
+        <li class="chapter " data-level="5.2.1.2" data-path="../tutorial/model.html">
             
-                <a href="model.html">
+                <a href="../tutorial/model.html">
             
                     
                         <b>5.2.1.2.</b>
@@ -928,9 +928,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="5.2.1.3" data-path="admin.html">
+        <li class="chapter " data-level="5.2.1.3" data-path="../tutorial/admin.html">
             
-                <a href="admin.html">
+                <a href="../tutorial/admin.html">
             
                     
                         <b>5.2.1.3.</b>
@@ -943,9 +943,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2.1.4" data-path="views.html">
+        <li class="chapter " data-level="5.2.1.4" data-path="../tutorial/views.html">
             
-                <a href="views.html">
+                <a href="../tutorial/views.html">
             
                     
                         <b>5.2.1.4.</b>
@@ -1008,9 +1008,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2.5" data-path="../template/intro.html">
+        <li class="chapter active" data-level="5.2.5" data-path="intro.html">
             
-                <a href="../template/intro.html">
+                <a href="intro.html">
             
                     
                         <b>5.2.5.</b>
@@ -1168,7 +1168,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >后台管理</a>
+        <a href="../.." >模版</a>
     </h1>
 </div>
 
@@ -1183,26 +1183,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x540E;&#x53F0;&#x7BA1;&#x7406;">&#x540E;&#x53F0;&#x7BA1;&#x7406;</h1>
-<p>Django &#x5168;&#x81EA;&#x52A8;&#x5730;&#x6839;&#x636E;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x540E;&#x53F0;&#x754C;&#x9762;&#x3002;&#x7BA1;&#x7406;&#x754C;&#x9762;&#x4E0D;&#x662F;&#x4E3A;&#x4E86;&#x7F51;&#x7AD9;&#x7684;&#x8BBF;&#x95EE;&#x8005;&#xFF0C;&#x800C;&#x662F;&#x4E3A;&#x7BA1;&#x7406;&#x8005;&#x51C6;&#x5907;&#x7684;&#x3002;</p>
-<h2 id="&#x521B;&#x5EFA;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x53F7;">&#x521B;&#x5EFA;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x53F7;</h2>
-<p>Django &#x63D0;&#x4F9B;&#x4E86;&#x529F;&#x80FD;&#x5168;&#x9762;&#x7684;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7A0B;&#x5E8F;&#xFF0C;&#x9996;&#x5148;&#x6211;&#x4EEC;&#x589E;&#x52A0;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash">python manage.py createsuperuser
-</code></pre>
-<p>&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x3001;&#x90AE;&#x7BB1;&#x3001;&#x5BC6;&#x7801;&#x7B49;&#x4FE1;&#x606F;&#x540E;&#xFF0C;Django&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x6237;&#x4FE1;&#x606F;&#x3002;</p>
-<h2 id="&#x6DFB;&#x52A0;&#x5F15;&#x7528;&#x5230;&#x540E;&#x53F0;&#x7BA1;&#x7406;">&#x6DFB;&#x52A0;&#x5F15;&#x7528;&#x5230;&#x540E;&#x53F0;&#x7BA1;&#x7406;</h2>
-<p>&#x6253;&#x5F00; <code>polls/admin.py</code> &#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x6DFB;&#x52A0;&#x9700;&#x8981;&#x5728;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7684;&#x5E94;&#x7528;&#xFF1A;</p>
-<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+                                <h1 id="&#x6A21;&#x677F;">&#x6A21;&#x677F;</h1>
+<h2 id="&#x5982;&#x4F55;&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x4F7F;&#x7528;&#x9759;&#x6001;&#x6587;&#x4EF6;&#xFF1F;">&#x5982;&#x4F55;&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x4F7F;&#x7528;&#x9759;&#x6001;&#x6587;&#x4EF6;&#xFF1F;</h2>
+<ol>
+<li>&#x5728;<code>settings.py</code>&#x4E2D;</li>
+</ol>
+<h2 id="&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4ECE;&#x4F55;&#x800C;&#x6765;&#xFF1F;">&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4ECE;&#x4F55;&#x800C;&#x6765;&#xFF1F;</h2>
+<h3 id="&#x901A;&#x8FC7;&#x89C6;&#x56FE;&#x4F20;&#x9012;">&#x901A;&#x8FC7;&#x89C6;&#x56FE;&#x4F20;&#x9012;</h3>
+<p>&#x5728;&#x89C6;&#x56FE;&#x4E2D;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;<code>render()</code>&#x51FD;&#x6570;&#x4F20;&#x9012;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">index</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    entries <span class="token operator">=</span> models<span class="token punctuation">.</span>Entry<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    page <span class="token operator">=</span> request<span class="token punctuation">.</span>GET<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&apos;page&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    entry_list<span class="token punctuation">,</span> paginator <span class="token operator">=</span> make_paginator<span class="token punctuation">(</span>entries<span class="token punctuation">,</span> page<span class="token punctuation">)</span>
+    page_data <span class="token operator">=</span> pagination_data<span class="token punctuation">(</span>paginator<span class="token punctuation">,</span> page<span class="token punctuation">)</span>
 
-<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Question
-
-admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Question<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> render<span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token string">&apos;blog/index.html&apos;</span><span class="token punctuation">,</span> <span class="token builtin">locals</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre>
-<h2 id="&#x8FDB;&#x5165;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x754C;&#x9762;">&#x8FDB;&#x5165;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x754C;&#x9762;</h2>
-<pre class="language-"><code class="lang-bash">python manage.py runserve
+<p>&#x5982;&#x4E0A;&#x4F8B;&#x4E2D;&#xFF0C;&#x5C31;&#x5C06;&#x53D8;&#x91CF;&#xFF1A;<code>entries&#x3001;page&#x3001;entry_list,pageinator,page_data</code>&#xFF0C;&#x901A;&#x8FC7;<code>locals()</code>&#x51FD;&#x6570;&#xFF0C;&#x4F20;&#x9012;&#x5230;&#x89C6;&#x56FE;<code>blog/index.html</code>&#x4E2D;&#x3002;</p>
+<p>&#x5728;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x6A21;&#x677F;&#x63D0;&#x4F9B;&#x7684;&#x8BED;&#x6CD5;&#x6807;&#x7B7E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4F20;&#x9012;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;&#x4E86;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-html">{% if entry.abstract %}
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{ entry.abstract }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+{% else %}
 </code></pre>
-<p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;<code>http://127.0.0.1:8000/admin/</code> &#x3002;&#x4F60;&#x5E94;&#x8BE5;&#x4F1A;&#x770B;&#x89C1;&#x7BA1;&#x7406;&#x5458;&#x767B;&#x5F55;&#x754C;&#x9762;&#xFF0C;&#x8F93;&#x5165;&#x4E4B;&#x524D;&#x8BBE;&#x7F6E;&#x7684;&#x7BA1;&#x7406;&#x5458;&#x4FE1;&#x606F;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x754C;&#x9762;&#x4E2D;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://yangzh.cn" target="_blank">yangzh</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2019-04-11 08:51:01 </span> </footer>
+<h3 id="&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;&#x6807;&#x7B7E;&#x83B7;&#x53D6;">&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;&#x6807;&#x7B7E;&#x83B7;&#x53D6;</h3>
+<ol>
+<li>&#x5728;&#x5E94;&#x7528;&#x4E2D;&#x521B;&#x5EFA;<code>templatetags</code>&#x5305;&#x3002;</li>
+<li>&#x5728;&#x6B64;&#x5305;&#x4E2D;&#x65B0;&#x5EFA;Python&#x6587;&#x4EF6;&#x3002;</li>
+<li><p>&#x5728;Python&#x6587;&#x4EF6;&#x4E2D;&#xFF1A;
+ ```python
+ from django import template
+ from ..models import Category, Tag, Entry</p>
+<p> register = template.Library()</p>
+</li>
+</ol>
+<pre class="language-"><code>@register.simple_tag
+def get_recent_entries(num=5):
+    return Entry.objects.all().order_by(&apos;-created_time&apos;)[:num]
+```
+</code></pre><ol>
+<li>&#x5728;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x4E2D;&#x5F15;&#x5165;&#x81EA;&#x5B9A;&#x4E49;&#x6807;&#x7B7E;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;&#x6807;&#x7B7E;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x4E86;&#xFF1A;<pre class="language-"><code class="lang-html"> \{\% load blog_tags \%\}
+     \{\% get_recent_entries as recent_entry_lists \%\}
+         \{\% for entry in recent_entry_lists \%\}
+             do something
+         \{\% endfor \%\}
+</code></pre>
+</li>
+</ol>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://yangzh.cn" target="_blank">yangzh</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2019-08-28 21:37:42 </span> </footer>
                                 
                                 </section>
                             
@@ -1229,12 +1256,12 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
 
             
                 
-                <a href="model.html" class="navigation navigation-prev " aria-label="Previous page: 使用模型">
+                <a href="../view/intro.html" class="navigation navigation-prev " aria-label="Previous page: 视图">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="views.html" class="navigation navigation-next " aria-label="Next page: 创建视图">
+                <a href="../../sna/" class="navigation navigation-next " aria-label="Next page: 社会网络分析">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1245,7 +1272,7 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"后台管理","level":"5.2.1.3","depth":3,"next":{"title":"创建视图","level":"5.2.1.4","depth":3,"path":"django/tutorial/views.md","ref":"django/tutorial/views.md","articles":[]},"previous":{"title":"使用模型","level":"5.2.1.2","depth":3,"path":"django/tutorial/model.md","ref":"django/tutorial/model.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","include-codeblock","ace","-lunr","-search","search-pro","collapsible-menu","-livereload","prism","-highlight","url-embed","katex-gf","image-captions","page-footer-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"collapsible-menu":{},"ace":{},"page-footer-ex":{"copyright":"By [yangzh](http://yangzh.cn)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"fontsettings":{"theme":"white","family":"sans","size":2},"url-embed":{},"katex-gf":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"image-captions":{"caption":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"re/regular.html#fig3.4.1","level":"3.4","list_caption":"Figure: PNG","alt":"PNG","nro":1,"url":"\\images\\pyreflow.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"PNG","attributes":{},"skip":false,"key":"3.4.1"},{"backlink":"spider/spider.html#fig4.1.1","level":"4.1","list_caption":"Figure: PNG","alt":"PNG","nro":2,"url":"\\images\\http.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"PNG","attributes":{},"skip":false,"key":"4.1.1"},{"backlink":"django/tutorial/model.html#fig5.2.1.2.1","level":"5.2.1.2","list_caption":"Figure: 模型数据关系图","alt":"模型数据关系图","nro":3,"url":"../images/django-entry.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"模型数据关系图","attributes":{},"skip":false,"key":"5.2.1.2.1"},{"backlink":"sna/centrality.html#fig6.1.2.1","level":"6.1.2","list_caption":"Figure: 网络结构图","alt":"网络结构图","nro":4,"url":"/images/DegreeCentralityFigure.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"网络结构图","attributes":{},"skip":false,"key":"6.1.2.1"},{"backlink":"sna/centrality.html#fig6.1.2.2","level":"6.1.2","list_caption":"Figure: 亲近中心性","alt":"亲近中心性","nro":5,"url":"/images/ClosenessCentralityFigure.png","index":2,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"亲近中心性","attributes":{},"skip":false,"key":"6.1.2.2"}]},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn","开始之前":"http://yangjh.gitee.io/appendix"}},"gitbook":"*"},"file":{"path":"django/tutorial/admin.md","mtime":"2019-04-11T00:51:01.644Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-28T13:38:14.843Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"模版","level":"5.2.5","depth":2,"next":{"title":"社会网络分析","level":"6.1","depth":1,"path":"sna/README.md","ref":"sna/README.md","articles":[{"title":"图论","level":"6.1.1","depth":2,"path":"sna/graphtheory.md","ref":"sna/graphtheory.md","articles":[]},{"title":"中心性、权力与瓶颈","level":"6.1.2","depth":2,"path":"sna/centrality.md","ref":"sna/centrality.md","articles":[]},{"title":"派系、聚类和组元","level":"6.1.3","depth":2,"path":"sna/component.md","ref":"sna/component.md","articles":[]}]},"previous":{"title":"视图","level":"5.2.4","depth":2,"path":"django/view/intro.md","ref":"django/view/intro.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","include-codeblock","ace","-lunr","-search","search-pro","collapsible-menu","-livereload","prism","-highlight","url-embed","katex-gf","image-captions","page-footer-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"collapsible-menu":{},"ace":{},"page-footer-ex":{"copyright":"By [yangzh](http://yangzh.cn)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"fontsettings":{"theme":"white","family":"sans","size":2},"url-embed":{},"katex-gf":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"qq":true,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":true,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"image-captions":{"caption":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"yangjh","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"re/regular.html#fig3.4.1","level":"3.4","list_caption":"Figure: PNG","alt":"PNG","nro":1,"url":"\\images\\pyreflow.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"PNG","attributes":{},"skip":false,"key":"3.4.1"},{"backlink":"spider/spider.html#fig4.1.1","level":"4.1","list_caption":"Figure: PNG","alt":"PNG","nro":2,"url":"\\images\\http.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"PNG","attributes":{},"skip":false,"key":"4.1.1"},{"backlink":"django/tutorial/model.html#fig5.2.1.2.1","level":"5.2.1.2","list_caption":"Figure: 模型数据关系图","alt":"模型数据关系图","nro":3,"url":"../images/django-entry.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"模型数据关系图","attributes":{},"skip":false,"key":"5.2.1.2.1"},{"backlink":"sna/centrality.html#fig6.1.2.1","level":"6.1.2","list_caption":"Figure: 网络结构图","alt":"网络结构图","nro":4,"url":"/images/DegreeCentralityFigure.png","index":1,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"网络结构图","attributes":{},"skip":false,"key":"6.1.2.1"},{"backlink":"sna/centrality.html#fig6.1.2.2","level":"6.1.2","list_caption":"Figure: 亲近中心性","alt":"亲近中心性","nro":5,"url":"/images/ClosenessCentralityFigure.png","index":2,"caption_template":"图 _PAGE_LEVEL_-_PAGE_IMAGE_NUMBER_  _CAPTION_","label":"亲近中心性","attributes":{},"skip":false,"key":"6.1.2.2"}]},"title":"Python基础","links":{"sidebar":{"Home":"http://yangzh.cn","开始之前":"http://yangjh.gitee.io/appendix"}},"gitbook":"*"},"file":{"path":"django/template/intro.md","mtime":"2019-08-28T13:37:42.284Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-28T13:38:14.843Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
