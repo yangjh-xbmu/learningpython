@@ -67,7 +67,6 @@
   * [模型](django/model/intro.md)
   * [路由](django/route/intro.md)
   * [视图](django/view/intro.md)
-  * [模板](django/template/intro.md)
 
 ## 社会网络分析
 
