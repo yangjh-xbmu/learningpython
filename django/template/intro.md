@@ -53,5 +53,4 @@ def index(request):
             {% for entry in recent_entry_lists %}
                 do something
             {% endfor %}
-        </dl>
     ```
