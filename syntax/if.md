@@ -4,7 +4,7 @@
 
 ## 分支判断
 
-Python使用`if-else`进行控制声明。语法如下：
+Python 使用`if-else`进行控制声明。语法如下：
 
 ```python
 if boolean-expression:
@@ -13,7 +13,7 @@ else:
    #statements
 ```
 
-在每一个if程序块中，必须使用相同数量的缩进，否则会产生语法错误。这是Python和其他语言非常不同的一点。
+在每一个 if 程序块中，必须使用相同数量的缩进，否则会产生语法错误。这是 Python 和其他语言非常不同的一点。
 
 现在我们看一个例子：
 
@@ -25,9 +25,9 @@ else:
     print("奇数")
 ```
 
-运行结果将根据i的值发生变化。
+运行结果将根据 i 的值发生变化。
 
-如果需要判断多个条件，我们就可以使用if-elif-else控制声明，例如：
+如果需要判断多个条件，我们就可以使用 if-elif-else 控制声明，例如：
 
 ```python
 today = "monday"
@@ -50,11 +50,11 @@ else:
    print("something else")
 ```
 
-我们可以根据实际需求，添加对应的多个elif条件。
+我们可以根据实际需求，添加对应的多个 elif 条件。
 
 ### 分支嵌套
 
-我们可以在if声明语句块中嵌套使用if声明。例如：
+我们可以在 if 声明语句块中嵌套使用 if 声明。例如：
 
 ```python
 today = "holiday"
@@ -70,7 +70,7 @@ else:
 
 ## 三元运算符
 
-在其他语言中，有类似`condition？true：false`的三元运算符，在Python中，可以这样实现：
+在其他语言中，有类似`condition？true：false`的三元运算符，在 Python 中，可以这样实现：
 
 ```python
 true if condition else false
@@ -81,7 +81,6 @@ true if condition else false
 ```python
 def b(a):
     return a+2 if a > 10 else 5
-
 
 print(b(11), b(4))
 ```
