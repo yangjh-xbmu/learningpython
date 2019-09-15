@@ -76,6 +76,10 @@
   * [中心性、权力与瓶颈](sna/centrality.md)
   * [派系、聚类和组元](sna/component.md)
 
+## 开发WOX插件
+
+* [准备工作](wox/prepare.md)
+
 ## 相关扩展包
 
 * [networkX](package/networkX.md)
