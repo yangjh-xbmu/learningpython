@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" >
+	<title>西安交通大学校友网</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="Keywords" content="西安交通大学校友网"/>
+    <meta name="Description" content="交大人的网络家园"/>
+    <link type="image/x-icon" rel="icon" href="/static/alumni/red-theme/images/favicon.ico">
+	<link type="image/x-icon" rel="shortcut icon" href="/static/alumni/red-theme/images/favicon.ico">
+    <!-- lilong-->
+	<script type="text/javascript" src="/static/alumni/js/jquery1.10.js"></script>
+	<script type="text/javascript" src="/static/alumni/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/static/alumni/js/image.js"></script>
+	<!--图片插件-->
+	<script type="text/javascript" src="/static/alumni/fileUpload/swfobject.js"></script>
+	<!-- 极速上传 -->
+	<script type="text/javascript" src="/static/alumni/ImageUploader/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="/static/alumni/ImageUploader/ImageUploader.js" charset="utf-8"></script>
+    <!-- QQ表情 -->
+    <link rel="stylesheet" type="text/css" href="/static/alumni/QQbq/emoticon.css" />
+    <script src="/static/alumni/QQbq/jquery.emoticons.js" type="text/javascript"></script>
+	<!-- end -->
+	<!-- 日期 -->
+	<script type="text/javascript" src="/static/components/calendar/WdatePicker.js"></script>
+	<!-- end -->
+	
+	<!--<link rel="stylesheet" href="/themes/default/css/screen.css" type="text/css" media="screen, projection"/>
+    <link rel="stylesheet" href="/themes/default/css/print.css" type="text/css" media="print"/>
+    [if lt IE 8]>
+    <link rel="stylesheet" href="/themes/default/css/ie.css" type="text/css" media="screen, projection"/>
+    <![endif]-->
+
+	<!-- plugins -->
+    <script type="text/javascript" src="/static/components/global.js"></script>
+
+    <script type="text/javascript" src="/static/components/jquery-xheditor/xheditor-1.1.6-en.min.js"></script>
+
+    <script type="text/javascript" src="/static/components/jquery-form/jquery.form.js"></script>
+
+   <!-- <link rel="stylesheet" type="text/css" href="/static/components/jquery-datePicker/jquery.datePicker.css"/>
+    <script type="text/javascript" src="/static/components/jquery-datePicker/jquery.datePicker.js"></script>
+    <script type="text/javascript" src="/static/components/jquery-datePicker/date.js"></script>-->
+
+    <link rel="stylesheet" type="text/css" href="/static/components/jquery-fancybox/jquery.fancybox-1.3.4.css"/>
+    <script type="text/javascript" src="/static/components/jquery-fancybox/jquery.fancybox-1.3.4.js"></script>
+    <script type="text/javascript" src="/static/components/jquery-fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/static/components/jquery-aqLayer/jquery.aqLayer.css"/>
+    <script type="text/javascript" src="/static/components/jquery-aqLayer/jquery.aqLayer.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/static/components/jquery-adubyTree/themes/adubytree.css"/>
+    <script type="text/javascript" src="/static/components/jquery-adubyTree/jquery.adubytree.js"></script>
+    <script type="text/javascript" src="/static/components/jquery-adubyTree/jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript" src="/static/components/jquery-cycle/jquery.cycle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/static/components/jquery-autocomplete/jquery.autocomplete.css"/>
+    <script type="text/javascript" src="/static/components/jquery-autocomplete/jquery.autocomplete.js"></script>
+
+	
+    <script type="text/javascript" src="/static/components/jquery-raty/jquery.raty.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="/static/components/jquery-pagination/pagination.css"/>
+    <script type="text/javascript" src="/static/components/jquery-pagination/jquery.pagination.js"></script>
+    
+    <link rel="stylesheet" href="/themes/default/css/style.css" type="text/css" media="screen, projection"/>
+   <!-- <link rel="stylesheet" href="/themes/default/css/widget.css" type="text/css" media="screen, projection"/>-->
+    
+	<!--弹出jquery对话框  5.0.4 取消-->
+	<!--<script src="/static/components/artDialog-5.0.4/artDialog.min.js" type="text/javascript"></script>
+	<link id="artDialog-skin" href="/static/components/artDialog-5.0.4/skins/green.css" rel="stylesheet" />-->
+	<!--弹出jquery对话框  4.1.6 启用-->
+	<script src="/static/components/jquery-artdialog/jquery.artDialog.js" type="text/javascript"></script>
+	<link id="artDialog-skin" href="/static/components/jquery-artdialog/skins/green.css" rel="stylesheet" />
+    <script type="text/javascript">
+	function returnToIndex(){
+		window.location.href="/";
+	}
+	
+    $(document).ready(function(){
+		var hasLeftColumn = $.trim($('#body .left-column').html())!='';
+		var hasRightColumn = $.trim($('#body .right-column').html())!='';
+		if(!hasLeftColumn) {
+			$('#body .left-column').remove();
+			$('#body .main-column').addClass('span-16');
+		}
+		if(!hasRightColumn) {
+			$('#body .right-column').remove();
+			$('#body .main-column').addClass('span-19');
+			$('#body .main-column').addClass('last');
+		}
+		if(!hasLeftColumn && !hasRightColumn) {
+			$('#body .left-column').remove();
+			$('#body .right-column').remove();
+			$('#body .main-column').addClass('span-24');
+			$('#body .main-column').addClass('last');
+		}
+		//处理加载失败的图片
+		/*$(".allbody img").each(function(){
+			$(this).error(function(){
+			       $(this).attr('src', '/static/alumni/red-theme/images/default/sbpic.png');
+			});
+	    });	*/		
+    });
+    function cutstr(str,len)
+	{
+	   var str_length = 0;
+	   var str_len = 0;
+	      str_cut = new String();
+	      str_len = str.length;
+	      for(var i = 0;i<str_len;i++)
+	     {
+	        a = str.charAt(i);
+	        str_length++;
+	        if(escape(a).length > 4)
+	        {
+	         //中文字符的长度经编码之后大于4
+	         str_length++;
+	         }
+	         str_cut = str_cut.concat(a);
+	         if(str_length>=len)
+	         {
+	        	 str_cut = str_cut.concat("...");
+	         return str_cut;
+	         }
+	    }
+	    //如果给定字符串小于指定长度，则返回源字符串；
+	    if(str_length<len){
+	     return  str;
+	    }
+	}
+	function cutstrNum(str,len)
+	{
+	   var str_length = 0;
+	   var str_len = 0;
+	      str_len = str.length;
+	      for(var i = 0;i<str_len;i++)
+	     {
+	        a = str.charAt(i);
+	        str_length++;
+	        if(escape(a).length > 4)
+	        {
+	         //中文字符的长度经编码之后大于4
+	         str_length++;
+	         }
+	    }
+	    //如果给定字符串小于指定长度，则返回源字符串；
+	    if(str_length<len){
+	     	return  true;
+	    }else{
+	    	return  false;
+	    }
+	}
+	</script>
+	<!--  lilong -->
+	<link rel="stylesheet" type="text/css" href="/static/alumni/red-theme/css/bootmain.css" />
+	<link rel="stylesheet" type="text/css" href="/static/alumni/red-theme/css/zyqcss.css" />
+	<link href="/static/alumni/red-theme/css/page.css" rel="stylesheet">
+	<link href="/static/alumni/red-theme/css/activity.css" rel="stylesheet">
+	<link href="/static/alumni/red-theme/css/feed.css" rel="stylesheet" media="screen">
+	<!-- end -->
+</head>
+<!-- 浏览器提示
+<script language="JavaScript" type="text/javascript">
+if ((navigator.userAgent.indexOf('MSIE') >= 0) 
+    && (navigator.userAgent.indexOf('Opera') < 0)){
+	document.write('<div id="warndiv" class="alert fade in" style="margin-bottom:0px; padding:12px 0; text-align:center;"><button type="button" class="close" data-dismiss="alert" style="right:0px;" onclick="warndiv()">×</button>尊敬的用户您好，您的浏览器版本可能太低或不是访问本网站的最佳浏览器，请您<strong class="mal5 mar5"><a href="http://www.google.cn/intl/zh-CN/chrome/browser/" target="_blank" class="bul">升级浏览器</a></strong>以便您更好的浏览 </div>')
+}
+    function warndiv(){
+    	$("#warndiv").hide();
+    }
+</script>
+浏览器提示 end -->
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar" class="allbody">
+  	<div class="navbar navbar-inverse navbar-fixed-top zyqtop">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar">栏目一</span> <span class="icon-bar">栏目二</span> <span class="icon-bar">栏目三</span> </button>
+            <a class="brand" href="/"><img src="/static/alumni/red-theme/images/xywlogo.png"></a>
+            <div class="input-append searcha"> <i class="icon-search"></i>
+              <form id="globalsearch" action="/globalsearch" method="post">
+                <input type="text" class="span3" name="title" placeholder="搜人/ 活动/ 圈子/ 新鲜事">
+                <button type="button" onclick="javascript:art.dialog({title:'温馨提示',content: '<span style=color:red>你还没有登录!请登录后再执行相关操作,<a href=/loginone>登录</a>!</span>'});" class="btn">搜索</button>
+              </form>  
+            </div>
+        </div>
+    </div>
+    <!--bsnava-->
+<div class="bs-docs-social bsnava "><div class="container"> 
+    <ul class="nav-pills clearfix">
+    	<li  > <a href="/home">个人中心</a></li>
+    	<!--?length lt 6 -->
+				<li >
+					<a  href="/news" >
+						新闻
+					</a>
+				</li>
+				<li >
+					<a  href="/branch" >
+						校友会
+					</a>
+				</li>
+				<li >
+					<a  href="/../donation/index" >
+						捐赠
+					</a>
+				</li>
+				<li >
+					<a  href="/myclass" >
+						班级
+					</a>
+				</li>
+				<li >
+					<a  href="/company" >
+						校友企业
+					</a>
+				</li>
+        <li class="dropdown pull-left"> <a href="#" data-toggle="dropdown">更多<i class="icon-angle-down"></i></a>
+            <ul class="dropdown-menu">
+						<li >
+							<a  href="/homecoming" >
+								值年返校
+							</a>
+						</li>
+						<li >
+							<a  href="/events" >
+								活动
+							</a>
+						</li>
+						<li >
+							<a  href="/newsletter" >
+								校友汇刊
+							</a>
+						</li>
+						<li >
+							<a  href="/groups" >
+								圈子
+							</a>
+						</li>
+						<li >
+							<a  href="/voice" >
+								校友之声
+							</a>
+						</li>
+						<li >
+							<a  href="/famous" >
+								桃李芬芳
+							</a>
+						</li>
+                <!--<li><a href="/calendar">活动</a></li>
+                <li class="divider"> </li><li> <a href="#">设置</a> </li> -->
+            </ul>
+        </li>
+		<!--没登陆-->
+			<li class="floatr indlan">
+				<a href="javascript:;" onclick="loadPage('loginForm','/system/user/login-form');" data-target="#loginForm" role="button" data-toggle="modal" class="button button-rounded button-flat-primary button-small">登录</a>
+				<a href="/register" class="button button-rounded button-flat-primary button-small">注册</a>
+			</li>
+	</ul>
+</div>
+<div id="loginForm" class="modalb hide fade in" style="text-align: left;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;"></div>
+
+</div>  	 <!-- end bsnava--> 
+</div>
+
+	<!--left menu-->
+	<!--flag标识是登录还是没登陆，在RouteController-->
+	<div class="container contop">
+		<div class="row">
+		    <!--left-->
+<div class="span2" id="73cc475d-d4a8-4b2c-9895-beece9476deb">
+		<ul class="nav nav-list bs-docs-sidenav affix leftnava">
+								<li >
+									<a href="/donation/index" title="校友捐赠">
+											<i class="icon-zy icon-le17 icon-heart icon-large"></i><i class="icon-chevron-right"></i>校友捐赠
+									</a>
+								</li>
+						
+					
+								<li >
+									<a href="/donation/guide" title="捐赠指南">
+											<i class="icon-zy icon-le17 icon-question-sign icon-large"></i><i class="icon-chevron-right"></i>捐赠指南
+									</a>
+								</li>
+						
+					
+								<li class="active">
+									<a href="/donation/namelist" title="捐赠芳名榜">
+											<i class="icon-zy icon-le17 icon-trophy icon-large"></i><i class="icon-chevron-right"></i>捐赠芳名榜
+									</a>
+								</li>
+						
+					
+					
+						
+					
+								<li >
+									<a href="/donation/msg" title="捐赠寄语">
+											<i class="icon-zy icon-le17 icon-comment icon-large"></i><i class="icon-chevron-right"></i>捐赠寄语
+									</a>
+								</li>
+						
+					
+						
+					
+								<li >
+									<a href="/donation/reward" title="捐赠致谢">
+											<i class="icon-zy icon-le17 icon-exclamation-sign icon-large"></i><i class="icon-chevron-right"></i>捐赠致谢
+									</a>
+								</li>
+						
+					
+								<li >
+									<a href="/donation/card" title="校友卡办理">
+											<i class="icon-zy icon-le17 icon-credit-card icon-large"></i><i class="icon-chevron-right"></i>校友卡办理
+									</a>
+								</li>
+						
+					
+		</ul>
+	
+</div>
+<div id="groupsForm" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:700px;">
+</div>		    <!-- end left--> 
+		<div class="span10">
+			 <!--right-->
+<section class="rbox">
+<div class="page-header">
+    <h3 class="text-center">捐赠芳名榜</h3>
+</div>
+<div class="">
+	<form class="form-horizontal bdheng alert alert-block well40" action="/donation/namelist">
+		<table>
+			<tbody>
+				<tr>
+					<td>
+					    <label class="bdhengla" for="input01" data-valtype="label">捐赠人/企业：</label>
+					</td>
+					<td>
+    <input class="" type="text" id="donateUserName" name="donateUserName" value="" style="width:66%;"    >
+
+					    &nbsp;
+					</td>
+					<td>
+					 <label class="bdhengla" for="input01" data-valtype="label">捐赠编号：</label>
+					</td>
+					<td>
+    <input class="" type="text" id="billnum" name="billnum" value="" style="width:85%;"    >
+
+				    &nbsp;
+				    </td>
+				</tr>
+				<tr>
+					<td>
+						<label class="bdhengla" for="input01" data-valtype="label">捐赠项目：</label>
+					</td>
+					<td>
+					    <div class="btn-group">
+    <select id="donationid" name="donationid" style="width:70%;">
+    	<option value="0">--请选择--</option>
+            <option value="522097"    
+    
+>机械科百年庆典-活动专项基金</option>
+            <option value="2090"    
+    
+>其他</option>
+            <option value="522098"    
+    
+>机械科百年庆典-奖学奖教基金</option>
+            <option value="2218075"    
+    
+>蒋大宗基金</option>
+            <option value="2354104"    
+    
+>金禾经济研究中心校友奖学金</option>
+            <option value="2219299"    
+    
+>陈金贤、朱楚珠经济管理科学奖励基金</option>
+            <option value="522212"    
+    
+>《校友之声》项目</option>
+            <option value="2304365"    
+    
+>姚熹铁电奖学金 </option>
+            <option value="523917"    
+    
+>“1200大教室”改造翻修并冠名“八零会堂”项目</option>
+            <option value="102"    
+    
+>校园绿化工程</option>
+            <option value="101"    
+    
+>资助贫困生爱心捐赠</option>
+            <option value="522367"    
+    
+>1979级思源专项基金</option>
+            <option value="1155"    
+    
+>年度捐赠</option>
+            <option value="68"    
+    
+>校庆捐赠</option>
+            <option value="522349"    
+    
+>测控校友基金</option>
+            <option value="522100"    
+    
+>机械科百年庆典-教学支持与科研合作基金</option>
+            <option value="2220616"    
+    
+>校友亲和基金</option>
+            <option value="464"    
+    
+>交通大学西迁纪念馆项目</option>
+            <option value="118221"    
+    
+>77、78级捐赠助学专项基金暨毕业30周年纪念石</option>
+            <option value="465"    
+    
+>西安交通大学生命科学馆命名项目</option>
+            <option value="466"    
+    
+>医学学术报告厅命名项目</option>
+            <option value="441"    
+    
+>钱学森图书馆改造、扩建项目</option>
+            <option value="1464583"    
+    
+>学子关爱基金</option>
+            <option value="2211986"    
+    
+>万人千元</option>
+            <option value="93941"    
+    
+>钟兆琳奖学金</option>
+    </select>
+					    </div>
+					</td>
+					<td>
+						<button type="submit" class="btn btn-success">搜索</button>
+					</td>
+					<td>
+					</td>
+					
+				</tr>
+			</tbody>
+		</table>
+	    <input type="hidden" id="orderWay" name="orderWay" value=""/>
+	    
+	</form>
+    <tbody>
+			<table class="table table-striped table-bordered">
+				<thead>
+			        <tr class="thinfo">
+			            <th width="15%">捐赠者</th>
+			            <th width="17%">
+				        		<a href="/donation/namelist?orderWay=moneyasc">金额（单位）
+				        			<small class="icon-caret-down icon-large mal5 red"></small>
+				        		</a>
+			        	</th>
+			        	<th width="26%">所捐项目</th>
+			            <th width="12%">
+				        		<a href="/donation/namelist?orderWay=donatetimeasc">捐赠时间
+				        			<small class="icon-caret-down icon-large mal5 red"></small>
+				        		</a>
+			        	</th>
+			        	<th width="11%">捐赠方式</th>
+			            <th width="11%">用户类型</th>
+			            <!--<th>
+				        		<a href="/donation/namelist?orderWay=billnumasc">捐赠编号
+				        			<small class="icon-caret-down icon-large mal5 red"></small>
+				        		</a>
+			        	</th>-->
+			        </tr>
+			    </thead>
+				<!--billnum donateUserName(donatorid) donatetime  donatortype  paymenttype  donation.name-->
+				    <tr>
+		                 <td>
+                 				<a href="javascript:void(0);" target="_blank" title="">
+											汪霞
+								</a>
+						 </td>
+		                 <td>
+		                 				
+		                 	
+										1000 
+								(人民币
+		                   		)
+							
+		                 </td>
+		                 <td>
+		                 	<a href="/donation/item-view?donationId=2354104&type=1" title="金禾经济研究中心校友奖学金">
+		                 			金禾经济研究中心校友奖学金
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		2017-06-22
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		支票汇款
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		个人用户
+		                 	</a>
+		                 </td>
+		                 <!--<td title="AlumniDonation-20170622583">
+		                 			Alum ...
+		                 </td>-->
+		            </tr>
+				    <tr>
+		                 <td>
+                 				<a href="/donation/myrec?userId=1982134" target="_blank" title="王珊">
+											王珊
+								</a>
+						 </td>
+		                 <td>
+		                 				
+		                 	
+										1000 
+								(人民币
+		                   		)
+							
+		                 </td>
+		                 <td>
+		                 	<a href="/donation/item-view?donationId=2354104&type=1" title="金禾经济研究中心校友奖学金">
+		                 			金禾经济研究中心校友奖学金
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		2017-06-22
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		支票汇款
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		个人用户
+		                 	</a>
+		                 </td>
+		                 <!--<td title="AlumniDonation-20170622716">
+		                 			Alum ...
+		                 </td>-->
+		            </tr>
+				    <tr>
+		                 <td>
+                 				<a href="javascript:void(0);" target="_blank" title="">
+											王炜
+								</a>
+						 </td>
+		                 <td>
+		                 				
+		                 	
+										1000 
+								(人民币
+		                   		)
+							
+		                 </td>
+		                 <td>
+		                 	<a href="/donation/item-view?donationId=2354104&type=1" title="金禾经济研究中心校友奖学金">
+		                 			金禾经济研究中心校友奖学金
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		2017-06-22
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		支票汇款
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		个人用户
+		                 	</a>
+		                 </td>
+		                 <!--<td title="AlumniDonation-20170622252">
+		                 			Alum ...
+		                 </td>-->
+		            </tr>
+				    <tr>
+		                 <td>
+                 				<a href="javascript:void(0);" target="_blank" title="">
+											徐丽丽
+								</a>
+						 </td>
+		                 <td>
+		                 				
+		                 	
+										1000 
+								(人民币
+		                   		)
+							
+		                 </td>
+		                 <td>
+		                 	<a href="/donation/item-view?donationId=2354104&type=1" title="金禾经济研究中心校友奖学金">
+		                 			金禾经济研究中心校友奖学金
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		2017-06-22
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		支票汇款
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		个人用户
+		                 	</a>
+		                 </td>
+		                 <!--<td title="AlumniDonation-20170622703">
+		                 			Alum ...
+		                 </td>-->
+		            </tr>
+				    <tr>
+		                 <td>
+                 				<a href="javascript:void(0);" target="_blank" title="">
+											徐清浩
+								</a>
+						 </td>
+		                 <td>
+		                 				
+		                 	
+										1000 
+								(人民币
+		                   		)
+							
+		                 </td>
+		                 <td>
+		                 	<a href="/donation/item-view?donationId=2354104&type=1" title="金禾经济研究中心校友奖学金">
+		                 			金禾经济研究中心校友奖学金
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		2017-06-22
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		支票汇款
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		个人用户
+		                 	</a>
+		                 </td>
+		                 <!--<td title="AlumniDonation-2017062280">
+		                 			Alum ...
+		                 </td>-->
+		            </tr>
+				    <tr>
+		                 <td>
+                 				<a href="javascript:void(0);" target="_blank" title="">
+											杨光明
+								</a>
+						 </td>
+		                 <td>
+		                 				
+		                 	
+										1000 
+								(人民币
+		                   		)
+							
+		                 </td>
+		                 <td>
+		                 	<a href="/donation/item-view?donationId=2354104&type=1" title="金禾经济研究中心校友奖学金">
+		                 			金禾经济研究中心校友奖学金
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		2017-06-22
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		支票汇款
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		个人用户
+		                 	</a>
+		                 </td>
+		                 <!--<td title="AlumniDonation-20170622227">
+		                 			Alum ...
+		                 </td>-->
+		            </tr>
+				    <tr>
+		                 <td>
+                 				<a href="javascript:void(0);" target="_blank" title="">
+											杨兆颖
+								</a>
+						 </td>
+		                 <td>
+		                 				
+		                 	
+										1000 
+								(人民币
+		                   		)
+							
+		                 </td>
+		                 <td>
+		                 	<a href="/donation/item-view?donationId=2354104&type=1" title="金禾经济研究中心校友奖学金">
+		                 			金禾经济研究中心校友奖学金
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		2017-06-22
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		支票汇款
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		个人用户
+		                 	</a>
+		                 </td>
+		                 <!--<td title="AlumniDonation-20170622936">
+		                 			Alum ...
+		                 </td>-->
+		            </tr>
+				    <tr>
+		                 <td>
+                 				<a href="javascript:void(0);" target="_blank" title="">
+											李晟罡
+								</a>
+						 </td>
+		                 <td>
+		                 				
+		                 	
+										1000 
+								(人民币
+		                   		)
+							
+		                 </td>
+		                 <td>
+		                 	<a href="/donation/item-view?donationId=2354104&type=1" title="金禾经济研究中心校友奖学金">
+		                 			金禾经济研究中心校友奖学金
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		2017-06-22
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		支票汇款
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		个人用户
+		                 	</a>
+		                 </td>
+		                 <!--<td title="AlumniDonation-2017062233">
+		                 			Alum ...
+		                 </td>-->
+		            </tr>
+				    <tr>
+		                 <td>
+                 				<a href="/donation/myrec?userId=1744911" target="_blank" title="李涵">
+											李涵
+								</a>
+						 </td>
+		                 <td>
+		                 				
+		                 	
+										1000 
+								(人民币
+		                   		)
+							
+		                 </td>
+		                 <td>
+		                 	<a href="/donation/item-view?donationId=2354104&type=1" title="金禾经济研究中心校友奖学金">
+		                 			金禾经济研究中心校友奖学金
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		2017-06-22
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		支票汇款
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		个人用户
+		                 	</a>
+		                 </td>
+		                 <!--<td title="AlumniDonation-20170622187">
+		                 			Alum ...
+		                 </td>-->
+		            </tr>
+				    <tr>
+		                 <td>
+                 				<a href="javascript:void(0);" target="_blank" title="">
+											李坤
+								</a>
+						 </td>
+		                 <td>
+		                 				
+		                 	
+										1000 
+								(人民币
+		                   		)
+							
+		                 </td>
+		                 <td>
+		                 	<a href="/donation/item-view?donationId=2354104&type=1" title="金禾经济研究中心校友奖学金">
+		                 			金禾经济研究中心校友奖学金
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		2017-06-22
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		 亲临学校
+		                 	</a>
+		                 </td>
+		                 <td>
+		                 	<a href="javascript:void(0);">
+		                 		个人用户
+		                 	</a>
+		                 </td>
+		                 <!--<td title="AlumniDonation-20170622623">
+		                 			Alum ...
+		                 </td>-->
+		            </tr>
+		    </table>
+    </tbody>
+	
+    <div id="pagination658023a6-cdc1-446b-9744-41d6ca863250" style="pagination pagination-small text-center pat20 "></div>   
+ </div>
+</section>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#pagination658023a6-cdc1-446b-9744-41d6ca863250").pagination(19266, {
+			prev_text:'上一页',		//上一页按钮文本
+			next_text:'下一页',		//下一页按钮文本
+			num_edge_entries:1,     //两侧显示的首尾分页的条目数
+			num_display_entries:6,	//连续分页主体部分分页条数目数
+	        items_per_page: 10,	//显示条数
+	        current_page: 7-1,		//当前页索引
+	        callback: function(pageNo, container){	//回调函数
+	        	//billnum=111&donateUserName=111
+				//billnum = document.getElementById("billnum").value;
+				//donateUserName = document.getElementById("donateUserName").value;	      
+				billnum = $("#billnum").val();
+				donateUserName = $("#donateUserName").val();
+				orderWay = $("#orderWay").val();
+	            if((pageNo+1)!=7) {
+					document.location.href='?pageNo=' + (pageNo+1)+'&pageSize='+10+'&billnum='+billnum+'&donateUserName='+donateUserName+'&orderWay='+orderWay+'&donationid='+0;
+	            }
+	            return false;
+	         }
+		});
+   });
+	function itemdelete(itemId){
+		//删除
+		art.dialog({
+	    	 title:'温馨提示',
+	    	 content:'捐赠记录:'+itemId+',删除后将无法恢复，您是否要删除？',
+	    	 okValue:'确认',
+	    	 cancelValue:'取消',
+	    	 cancel:true,
+	    	 ok:function(){
+	     	 	$.ajax({
+					url: "/donation/delalipay",
+					data:{
+						itemId:itemId
+					},
+					dataType:'json',
+					type:"get",
+					success:function(data){
+						if(data.flag){
+							//myClassStr=".clearfix."+donationId;
+							//alert(myClassStr);
+							//$(myClassStr).hide();
+							window.location.reload();
+						}
+					},
+					error:function(){
+						art.dialog({ title: '温馨提示', content:"捐赠记录删除出错！"});
+					}
+			   });
+	   		}
+	   	});
+    }
+</script>		      <!-- end right-->    
+		</div>
+	   </div>
+    </div>
+
+<div class="footer" style="clear:both;">
+	<div class="container">
+	    <ul class="footer-links">
+	        <li><a href="/blog/alumni">校友部</a></li>
+	        <li class="muted">|</li>
+	        <li><a href="http://alumni.xjtu.edu.cn:8000" target="_blank">友情链接</a></li>
+	        <li class="muted">|</li>
+	        <li><a href="#" target="_blank">帮助中心</a></li>
+	        <li class="muted">|</li>
+	        <li><a href="#" target="_blank">操作指南</a></li>
+	        <li class="muted">|</li>
+	        <li><a href="#" target="_blank">隐私条例</a></li>
+	    </ul>
+	    <p>Copyright © 2008 - 2014&nbsp;西安交通大学校友部&nbsp;All Rights Reserved &nbsp;&nbsp;<!--<i class="icon-envelope"></i>--> 
+	        
+	        联系邮箱：<a href="mailto:xygfb@mail.xjtu.edu.cn">xygfb@mail.xjtu.edu.cn</a>&nbsp;&nbsp;<!--<i class="icon-phone-sign"></i>-->服务热线：029-82665570 &nbsp;&nbsp;站点建设与维护：信息中心</p>
+	</div>
+</div>
+</body>
+</html>

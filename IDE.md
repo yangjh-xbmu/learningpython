@@ -1,5 +1,7 @@
 # Python 开发环境搭建
 
+## 在 Windows 中安装 Python 3
+
 Python 支持多个平台，其中在 Mac、类 UNIX 平台中已默认安装，Windows 平台中的安装也非常简单，从官方网站下载安装包安装即可，注意安装完成后将 Python 所在目录添加到系统路径（PATH）中。
 
 ## 在 MacOS 中安装 Python 3
