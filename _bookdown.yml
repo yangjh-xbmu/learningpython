@@ -1,0 +1,12 @@
+book_filename: learningpython
+clean: [packages.bib, bookdown.bbl]
+language:
+  label:
+    fig: "图 "
+    tab: "表 "
+  ui:
+    edit: "编辑"
+    chapter_name: ["第 ", " 章"]
+output_dir: "../bookdown-pub/learningpython"
+delete_merged_file: true
+new_session: true
